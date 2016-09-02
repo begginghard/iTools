@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|images|js|img|css|style|robots\.txt|) #在这里写要排除的资源等
+RewriteCond %{REQUEST_URI} !^.*(\.css|\.js|\.gif|\.png|\.jpg|\.jpeg)$ 
+RewriteRule ^(.*)$ index.php/$1 [L]
