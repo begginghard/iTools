@@ -4,10 +4,7 @@
     <meta charset="gb2312" />
     <meta name="robots" content="all" />
     <meta name="author" content="w3school.com.cn" />
-
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
-    </script>
-
     <title>开发者工具箱</title>
 </head>
 
