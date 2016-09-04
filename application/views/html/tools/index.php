@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-Cn">
 <head>
     <meta charset="gb2312" />
     <meta name="robots" content="all" />
     <meta name="author" content="w3school.com.cn" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
     <script src="<?php echo base_url();?>style/js/jquery-3.1.0.min.js"></script>
+    <script src="<?php echo base_url();?>style/js/jquery.json.js"></script>
+    <script src="<?php echo base_url();?>style/js/jquery.numberedtextarea.js"></script>
+    <script src="<?php echo base_url();?>style/js/json2.js"></script>
+    <script src="<?php echo base_url();?>style/js/jsoninit.js"></script>
     <title>开发者工具箱</title>
 </head>
 
 <body id="editor">
-
 <div id="wrapper">
     <div id="header">
         <div class="nav">
-            <div class="logo">开发者工具箱logoi
+            <div class="logo">开发者工具箱logo
             </div>
             <div class="nav_list">
                 <ul class="ul_div">
@@ -27,23 +30,25 @@
                 </ul>
             </div>
         </div>
-        <div id="ad">
+        <div id="ab">
             广告
         </div>
     </div>
     <div>
-        <div id="CodeArea">
-            <textarea id="TestCode" wrap="logical">
+        <div id="CodeArea" >
+            <textarea id="json-src" wrap="logical">
 	    </textarea>
         </div>
 
-        <div>world
+        <div  class="jiantou" style="float:left;">
+            <div class="botton-div">
+                <div class="bt"><a href="#">提交结果</a></div>
+                <div class="bt"><a href="#">复制结果</a></div>
+            </div>
         </div>
-<!--
-        <div id="result">
-            <iframe frameborder="0" name="i" src=""></iframe>
+
+        <div id="json-target">
         </div>
-    -->
     </div>
 
     <div id="footer">
@@ -54,16 +59,9 @@
     </div>
 </div>
 
-<script type="text/javascript">
-</script>
-
 <script>
-    $('.li_list').click(function(){
-        var txt = $(this).text();
-        $('#codeTitle').html(txt);
-    });
-
 </script>
+
 </body>
 </html>
 
