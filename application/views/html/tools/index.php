@@ -39,7 +39,7 @@
     </div>
     <div>
         <div id="CodeArea" >
-            <textarea id="json-src" ></textarea>
+            <textarea id="json-src" style="line-height:15px"></textarea>
         </div>
 
         <div  class="jiantou" style="float:left;">
@@ -49,11 +49,8 @@
             </div>
         </div>
 	
-	<div id="right-box"  style="height:510px;border-right:solid 1px #ddd;border-bottom:solid 1px #ddd;border-radius:0;resize: none;overflow-y:scroll; outline:black solid 1px;position:relative;">
-            <div id="line-num" style="background-color:#fafafa;padding:0px 8px;float:left;border-right:dashed 1px #eee;display:none;z-index:-1;color:#999;position:absolute;text-align:center;over-flow:hidden;">
-                <div>0</div>
-            </div>
-            <div id="json-target" class="ro" style="padding:0px 25px;over">
+	<div id="right-box"  style="height:510px;border-left:solid 1px #ddd;border-right:solid 1px #ddd;border-bottom:solid 1px #ddd;border-radius:0;resize: none;overflow-y:scroll;position:relative;">
+            <div id="json-target" class="ro" style="padding:0px 5px;over">
             </div>
         </div>
     </div>
@@ -80,6 +77,7 @@
         renderLine();
 
     }
+   init();
     $('#json-src').keyup(function(){
         init();
         var content = $.trim($(this).val());
@@ -100,14 +98,11 @@
         }
     });
     function renderLine(){
-        var line_num = $('#json-target').height()/20;
-        $('#line-num').html("");
-        var line_num_html = "";
-        for (var i = 1; i < line_num+1; i++) {
-            line_num_html += "<div>"+i+"<div>";
-        }
-        $('#line-num').html(line_num_html);
+	$('#json-src').attr("style","height:510px;padding:0 10px 10px 40px;border:0;border-right:solid 1px #ddd;border-bottom:solid 1px #ddd;border-radius:0;resize: none; outline:none; line-height:15px");
+            $('#json-target').attr("style","padding:0px 5px;");
+            $('.numberedtextarea-line-numbers').show();
     }
+   
 </script>
 
 </body>
