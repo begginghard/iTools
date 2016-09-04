@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-Cn">
+<html lang="zh-cn">
 <head>
     <meta charset="gb2312" />
     <meta name="robots" content="all" />
     <meta name="author" content="w3school.com.cn" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/numberedtextarea.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/font-awesome.min.css" />
     <script src="<?php echo base_url();?>style/js/jquery-3.1.0.min.js"></script>
     <script src="<?php echo base_url();?>style/js/jquery.json.js"></script>
     <script src="<?php echo base_url();?>style/js/jquery.numberedtextarea.js"></script>
@@ -36,8 +39,7 @@
     </div>
     <div>
         <div id="CodeArea" >
-            <textarea id="json-src" wrap="logical">
-	    </textarea>
+            <textarea id="json-src" ></textarea>
         </div>
 
         <div  class="jiantou" style="float:left;">
@@ -46,8 +48,13 @@
                 <div class="bt"><a href="#">复制结果</a></div>
             </div>
         </div>
-
-        <div id="json-target">
+	
+	<div id="right-box"  style="height:510px;border-right:solid 1px #ddd;border-bottom:solid 1px #ddd;border-radius:0;resize: none;overflow-y:scroll; outline:black solid 1px;position:relative;">
+            <div id="line-num" style="background-color:#fafafa;padding:0px 8px;float:left;border-right:dashed 1px #eee;display:none;z-index:-1;color:#999;position:absolute;text-align:center;over-flow:hidden;">
+                <div>0</div>
+            </div>
+            <div id="json-target" class="ro" style="padding:0px 25px;over">
+            </div>
         </div>
     </div>
 
@@ -59,9 +66,51 @@
     </div>
 </div>
 
-<script>
+<script type="text/javascript">
+    $('textarea').numberedtextarea();
+    var current_json = '';
+    var current_json_str = '';
+    var xml_flag = false;
+    var zip_flag = false;
+    var shown_flag = false;
+    function init(){
+        xml_flag = false;
+        zip_flag = false;
+        shown_flag = false;
+        renderLine();
+
+    }
+    $('#json-src').keyup(function(){
+        init();
+        var content = $.trim($(this).val());
+        var result = '';
+        if (content!='') {
+            try{
+                current_json = jsonlint.parse(content);
+                current_json_str = JSON.stringify(current_json);
+                //current_json = JSON.parse(content);
+                result = new JSONFormat(content,4).toString();
+            }catch(e){
+                result = '<span style="color: #f1592a;font-weight:bold;">' + e + '</span>';
+                current_json_str = result;
+            }
+            $('#json-target').html(result);
+        }else{
+            $('#json-target').html('');
+        }
+    });
+    function renderLine(){
+        var line_num = $('#json-target').height()/20;
+        $('#line-num').html("");
+        var line_num_html = "";
+        for (var i = 1; i < line_num+1; i++) {
+            line_num_html += "<div>"+i+"<div>";
+        }
+        $('#line-num').html(line_num_html);
+    }
 </script>
 
 </body>
 </html>
+
 
