@@ -13,6 +13,8 @@
     <script src="<?php echo base_url();?>style/js/jquery.numberedtextarea.js"></script>
     <script src="<?php echo base_url();?>style/js/json2.js"></script>
     <script src="<?php echo base_url();?>style/js/jsoninit.js"></script>
+    <script src="<?php echo base_url();?>style/js/jquery.zclip.min.js"></script>
+    <script src="<?php echo base_url();?>style/js/jsoninit.js"></script>
     <title>开发者工具箱</title>
 </head>
 
@@ -39,17 +41,22 @@
     </div>
     <div>
         <div id="CodeArea" >
-            <textarea id="json-src" style="line-height:15px"></textarea>
+            <textarea id="json-src" style="line-height:15px">
+{
+"Json解析":"鄙人小站,谢谢使用",
+"时间戳转换":"如有问题,欢迎交流myname2167"
+}
+		</textarea>
         </div>
 
         <div  class="jiantou" style="float:left;">
             <div class="botton-div">
-                <div class="bt"><a href="#">提交结果</a></div>
-                <div class="bt"><a href="#">复制结果</a></div>
+                <div class="bt zip">压缩结果</div>
+                <div class="bt hover" style="cursor:pointer"  id="copy">复制结果</div>
             </div>
         </div>
 	
-	<div id="right-box"  style="height:510px;border-left:solid 1px #ddd;border-right:solid 1px #ddd;border-bottom:solid 1px #ddd;border-radius:0;resize: none;overflow-y:scroll;position:relative;">
+	<div id="right-box"  style="height:510px;border-left:solid 1px #ddd;box-shadow: 1px 1px 50px #ECECEC;border-right:solid 1px #ddd;border-bottom:solid 1px #ddd;border-radius:0;resize: none;overflow-y:scroll;position:relative;">
             <div id="json-target" class="ro" style="padding:0px 5px;over">
             </div>
         </div>
@@ -62,7 +69,15 @@
         <p>京ICP备13051813号-5  京公网安备11010802014000</p>
     </div>
 </div>
-
+<br>
+<br>
+<a rel="#json-src">拷贝1</a>
+<p id="p1">拷贝内容1拷贝内容1拷贝内容1</p>
+<script>
+ $(function () {
+       $('#copy').zclip({path:'<?php echo base_url();?>style/js/ZeroClipboard.swf', copy: function () { return $("#json-target").text(); } });
+    });
+</script>
 <script type="text/javascript">
     $('textarea').numberedtextarea();
     var current_json = '';
@@ -77,10 +92,12 @@
         renderLine();
 
     }
-   init();
     $('#json-src').keyup(function(){
-        init();
-        var content = $.trim($(this).val());
+     keyup(); 
+    });
+function keyup(){
+	init();
+        var content = $.trim($('#json-src').val());
         var result = '';
         if (content!='') {
             try{
@@ -96,13 +113,28 @@
         }else{
             $('#json-target').html('');
         }
-    });
+
+}
+keyup();
     function renderLine(){
+
 	$('#json-src').attr("style","height:510px;padding:0 10px 10px 40px;border:0;border-right:solid 1px #ddd;border-bottom:solid 1px #ddd;border-radius:0;resize: none; outline:none; line-height:15px");
             $('#json-target').attr("style","padding:0px 5px;");
             $('.numberedtextarea-line-numbers').show();
     }
-   
+$('.zip').click(function(){
+    if (zip_flag) {
+        $('#json-src').keyup();
+	 $(this).html('');
+        $(this).html('压缩结果');
+    }else{
+        $('#json-target').html(current_json_str);
+	$(this).html('');
+	$(this).html('解压结果');
+        zip_flag = true;
+    }
+});
+  
 </script>
 
 </body>
