@@ -1,0 +1,66 @@
+diff --git a/style/css/index.css b/style/css/index.css
+index c10589d..4360594 100644
+--- a/style/css/index.css
++++ b/style/css/index.css
+@@ -147,6 +147,21 @@ a:active {
+     border: solid 1px #080808;
+ 
+ }
++.nav a {
++ display: inline-block;
++		  -webkit-transition: all 0.2s ease-in;
++		  -moz-transition: all 0.2s ease-in;
++		  -o-transition: all 0.2s ease-in;
++		  -ms-transition: all 0.2s ease-in;
++		  transition: all 0.2s ease-in;
++}
++	.nav a:hover{
++		  -webkit-transform:rotate(10deg);
++		  -moz-transform:rotate(10deg);
++		  -o-transform:rotate(10deg);
++		  -ms-transform:rotate(10deg);
++		  transform:rotate(10deg);
++		}
+ .logo {
+     float: left;
+     width: 10%;
+@@ -154,11 +169,13 @@ a:active {
+     line-height: 40px;
+     #background-color: azure;
+     margin-top:5px;
+-    margin-left: 0.5%;
++    margin-left: 1.5%;
+     margin-right: 0.5%;
++   text-align:center;
++   margin-top:5px;
+ }
+ .nav_list{
+-    width: 88.5%;
++    width: 87.5%;
+     height:40px;
+     line-height: 40px;
+    #background-color: azure;
+@@ -173,19 +190,19 @@ a:active {
+ }
+ .nav_list ul li{
+     float: left;
+-    width:14%;
++    width:12%;
+     background-color:#373D41;
+     #border: solid 1px #ffffff;
+     list-style: none;
+     text-align: center;
+     height:40px;
+     line-height: 40px;
+-
++    text-shadow:5px 6px 4px rgba(0,0,0,1);
+ 
+ }
+ .nav_list ul li:hover{
+-    background-color: #666666;
+-    border-radius: 10px;
++   # background-color: #666666;
++    #border-radius: 10px;
+ }
+ 
+ .nav_list ul li a{

@@ -23,4 +23,8 @@ class Tools extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->view('html/tools/index');
 	}
+	public function ct(){
+		$this->load->helper('url');
+                $this->load->view('html/tools/ct');
+	}
 }
