@@ -33,80 +33,81 @@ font-size:14px;
 }
 </style>
 <body id="editor">
-<div id="wrapper">
-<?php include('nav.php');?>
-     <div class="containter">
-   	 <p class="text-center"><span class="text">Unix时间戳(Unix timestamp)</span><span><input type="text" class="form-control" placeholder="Username"></span><span class="bttn"> <button type="button" class="btn btn-default">按钮 7</button></span><span><input type="text" class="form-control" placeholder="" width="wt200"></span></p>
- <p class="text-center"><span class="text">Unix时间戳(Unix timestamp)</span><span><input type="text" class="form-control" placeholder="Username"></span><span class="bttn"> <button type="button" class="btn btn-default">按钮 7</button></span><span><input type="text" class="form-control" placeholder="" width="wt200"></span></p>
-	 
+    <div id="wrapper">
+        <?php include('nav.php');?>
+        <div class="containter">
+            <p class="text-center">
+                <span class="text">Unix时间戳(Unix timestamp)</span>
+                <span><input type="text" class="form-control" placeholder="Unix timestamp"  id="input_1"></span>
+                <span class="bttn"> <button type="button" onclick="unixtobj();" class="btn btn-default">转换成北京时间</button></span>
+                <span><input id="result_1" type="text" class="form-control" placeholder="" width="wt200" disabled="disabled"></span>
+            </p>
+            <p class="text-center">
+                <span class="text">北京时间(yyyy-MM-dd HH:mm:ss)</span>
+                <span><input type="text" class="form-control" placeholder="北京时间" id="input_2"></span>
+                <span class="bttn"> <button type="button" onclick="bjToUnix();" class="btn btn-default">转换成Unix时间戳</button></span>
+                <span><input type="text" class="form-control" placeholder="" width="wt200" id="result_2" disabled="disabled"></span>
+            </p> 
+        </div>
+        <?php include('footer.php');?> 
     </div>
-
-   <?php include('footer.php');?> 
-</div>
-<script>
- $(function () {
-       $('#copy').zclip({path:'<?php echo base_url();?>style/js/ZeroClipboard.swf', copy: function () { return $("#json-target").text(); } });
-    });
-</script>
-<script type="text/javascript">
-    $('textarea').numberedtextarea();
-    var current_json = '';
-    var current_json_str = '';
-    var xml_flag = false;
-    var zip_flag = false;
-    var shown_flag = false;
-    function init(){
-        xml_flag = false;
-        zip_flag = false;
-        shown_flag = false;
-        renderLine();
-
-    }
-    $('#json-src').keyup(function(){
-     keyup(); 
-    });
-function keyup(){
-	init();
-        var content = $.trim($('#json-src').val());
-        var result = '';
-        if (content!='') {
-            try{
-                current_json = jsonlint.parse(content);
-                current_json_str = JSON.stringify(current_json);
-                //current_json = JSON.parse(content);
-                result = new JSONFormat(content,4).toString();
-            }catch(e){
-                result = '<span style="color: #f1592a;font-weight:bold;">' + e + '</span>';
-                current_json_str = result;
-            }
-            $('#json-target').html(result);
-        }else{
-            $('#json-target').html('');
+    
+    <script>
+    Date.prototype.Format = function(fmt)   
+    { //author: meizz   
+      var o = {   
+        "M+" : this.getMonth()+1,                 //月份   
+        "d+" : this.getDate(),                    //日   
+        "h+" : this.getHours(),                   //小时   
+        "m+" : this.getMinutes(),                 //分   
+        "s+" : this.getSeconds(),                 //秒   
+        "q+" : Math.floor((this.getMonth()+3)/3), //季度   
+        "S"  : this.getMilliseconds()             //毫秒   
+      };   
+      if(/(y+)/.test(fmt)) {   
+        fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));   
+      }
+      if(/(S+)/.test(fmt)) {
+        var replaceStr = "";
+        for (var i = 0; i < RegExp.$1.length - this.getMilliseconds().toString().length; i++) {
+            replaceStr += "0";
         }
+        fmt=fmt.replace(RegExp.$1, replaceStr + this.getMilliseconds());
+      }
+      for(var k in o)   
+        if(new RegExp("("+ k +")").test(fmt))   
+      fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));   
+      return fmt;   
+    }  
 
-}
-keyup();
-    function renderLine(){
 
-	$('#json-src').attr("style","height:510px;padding:0 10px 10px 40px;border:0;border-right:solid 1px #ddd;border-bottom:solid 1px #ddd;border-radius:0;resize: none; outline:none; line-height:15px");
-            $('#json-target').attr("style","padding:0px 5px;");
-            $('.numberedtextarea-line-numbers').show();
+    function unixtobj() {
+        var unixStamp = $("#input_1").val();
+        var newDate = new Date();
+        if(unixStamp.length == 13) {
+            newDate.setTime(parseInt(unixStamp));
+            $('#result_1').val(newDate.Format("yyyy-MM-dd hh:mm:ss,SSS"));
+        } else if(unixStamp.length == 10) {
+            newDate.setTime(parseInt(unixStamp) * 1000);
+            $('#result_1').val(newDate.Format("yyyy-MM-dd hh:mm:ss,SSS"));
+        } else {
+            alert("时间戳格式不正确,时间戳长度不为 10(秒) 或 13(毫秒)");
+            return;
+        }
     }
-$('.zip').click(function(){
-    if (zip_flag) {
-        $('#json-src').keyup();
-	 $(this).html('');
-        $(this).html('压缩结果');
-    }else{
-        $('#json-target').html(current_json_str);
-	$(this).html('');
-	$(this).html('解压结果');
-        zip_flag = true;
+    
+    function bjToUnix() {
+        var bjDateTime = $("#input_2").val();
+        var unixStamp = Date.parse(bjDateTime)
+        if(unixStamp.isNaN) {
+            alert("不能识别北京时间格式");
+            return;
+        } else {
+            $('#result_2').val(unixStamp)
+        }
     }
-});
-  
-</script>
 
+    </script>
 </body>
 </html>
 
