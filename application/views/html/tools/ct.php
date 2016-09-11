@@ -8,37 +8,37 @@
     <meta name="keywords" content="json格式化,json压缩,it工具箱,时间戳转换,www.123itools.com,json在线解析,json格式化工具" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/numberedtextarea.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/font-awesome.min.css" />
     <script src="<?php echo base_url();?>style/js/jquery-3.1.0.min.js"></script>
-    <script src="<?php echo base_url();?>style/js/jquery.json.js"></script>
-    <script src="<?php echo base_url();?>style/js/jquery.numberedtextarea.js"></script>
-    <script src="<?php echo base_url();?>style/js/json2.js"></script>
-    <script src="<?php echo base_url();?>style/js/jsoninit.js"></script>
-    <script src="<?php echo base_url();?>style/js/jquery.zclip.min.js"></script>
-    <script src="<?php echo base_url();?>style/js/jsoninit.js"></script>
     <title>开发者工具箱</title>
 </head>
-
+<style>
+.containter{
+    margin-top: 50px;
+    margin-bottom: 400px;
+}
+.text-center{
+height:50px;
+line-height:50px;
+font-size:14px;
+}
+.text{
+    position: relative;
+    top: -5px;
+    padding-right: 10px;
+}
+.bttn{
+    padding-right: 5px;
+    position: relative;
+    top: -5px;
+}
+</style>
 <body id="editor">
 <div id="wrapper">
 <?php include('nav.php');?>
-     <div>
-        <div id="CodeArea" >
-            <textarea id="json-src" style="line-height:15px"></textarea>
-        </div>
-
-        <div  class="jiantou" style="float:left;">
-            <div class="botton-div">
-                <div class="bt zip">压缩结果</div>
-                <div class="bt hover" style="cursor:pointer"  id="copy">复制结果</div>
-            </div>
-        </div>
-	
-	<div id="right-box"  style="height:510px;border-left:solid 1px #ddd;box-shadow: 1px 1px 50px #ECECEC;border-right:solid 1px #ddd;border-bottom:solid 1px #ddd;border-radius:0;resize: none;overflow-y:scroll;position:relative;">
-            <div id="json-target" class="ro" style="padding:0px 5px;over">
-            </div>
-        </div>
+     <div class="containter">
+   	 <p class="text-center"><span class="text">Unix时间戳(Unix timestamp)</span><span><input type="text" class="form-control" placeholder="Username"></span><span class="bttn"> <button type="button" class="btn btn-default">按钮 7</button></span><span><input type="text" class="form-control" placeholder="" width="wt200"></span></p>
+ <p class="text-center"><span class="text">Unix时间戳(Unix timestamp)</span><span><input type="text" class="form-control" placeholder="Username"></span><span class="bttn"> <button type="button" class="btn btn-default">按钮 7</button></span><span><input type="text" class="form-control" placeholder="" width="wt200"></span></p>
+	 
     </div>
 
    <?php include('footer.php');?> 
