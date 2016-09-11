@@ -25,6 +25,11 @@ class Tools extends CI_Controller {
 	}
 	public function ct(){
 		$this->load->helper('url');
-                $this->load->view('html/tools/ct');
+        $this->load->view('html/tools/ct');
 	}
+
+    public function regex() {
+        $this->load->helper('url');
+        $this->load->view('html/tools/regex');
+    }
 }

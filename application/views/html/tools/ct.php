@@ -14,7 +14,7 @@
 <style>
 .containter{
     margin-top: 50px;
-    margin-bottom: 400px;
+    margin-bottom: 350px;
 }
 .text-center{
 height:50px;
@@ -22,32 +22,33 @@ line-height:50px;
 font-size:14px;
 }
 .text{
-    position: relative;
-    top: -5px;
-    padding-right: 10px;
+    #position: relative;
+    #top: -5px;
+    #padding-right: 10px;
 }
 .bttn{
-    padding-right: 5px;
-    position: relative;
-    top: -5px;
+    #padding-right: 5px;
+    #position: relative;
+    #top: -5px;
 }
+.btn{color:white;}
 </style>
 <body id="editor">
     <div id="wrapper">
         <?php include('nav.php');?>
         <div class="containter">
-            <p class="text-center">
+            <p class="text-center form-inline ">
                 <span class="text">Unix时间戳(Unix timestamp)</span>
-                <span><input type="text" class="form-control" placeholder="Unix timestamp"  id="input_1"></span>
-                <span class="bttn"> <button type="button" onclick="unixtobj();" class="btn btn-default">转换成北京时间</button></span>
+                <span><input type="text" class="form-control" placeholder="Unix timestamp" value="<?php echo time();?>"  id="input_1"></span>
+                <span class="bttn"> <button type="button" onclick="unixtobj();" class="btn label-warning">转换成北京时间</button></span>
                 <span><input id="result_1" type="text" class="form-control" placeholder="" width="wt200" disabled="disabled"></span>
             </p>
-            <p class="text-center">
+            <p class="text-center form-inline">
                 <span class="text">北京时间(yyyy-MM-dd HH:mm:ss)</span>
-                <span><input type="text" class="form-control" placeholder="北京时间" id="input_2"></span>
-                <span class="bttn"> <button type="button" onclick="bjToUnix();" class="btn btn-default">转换成Unix时间戳</button></span>
+                <span><input type="text" class="form-control" placeholder="北京时间" id="input_2" value="<?php date_default_timezone_set('UTC'); echo date("Y-m-d H:i:s"); ?></span>
+                <span class="bttn"> <button type="button" onclick="bjToUnix();" class="btn label-warning" ?>">转换成Unix时间戳</button></span>
                 <span><input type="text" class="form-control" placeholder="" width="wt200" id="result_2" disabled="disabled"></span>
-            </p> 
+            </p>
         </div>
         <?php include('footer.php');?> 
     </div>
@@ -98,6 +99,9 @@ font-size:14px;
     
     function bjToUnix() {
         var bjDateTime = $("#input_2").val();
+        if (!bjDateTime) {
+            return false;
+        }
         var unixStamp = Date.parse(bjDateTime)
         if(unixStamp.isNaN) {
             alert("不能识别北京时间格式");
