@@ -24,6 +24,9 @@
             height:50px;
             line-height:50px;
         }
+        .tag span{
+            cursor: pointer;
+        }
         #pattern {
             width:%50;
         }
