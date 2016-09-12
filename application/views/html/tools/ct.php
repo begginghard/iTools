@@ -36,17 +36,27 @@ font-size:14px;
     <div id="wrapper">
         <?php include('nav.php');?>
         <div class="containter">
-            <p class="text-center form-inline ">
-                <span class="text">Unix时间戳(Unix timestamp)</span>
-                <span><input type="text" class="form-control" placeholder="Unix timestamp" value="<?php echo time();?>"  id="input_1"></span>
-                <span class="bttn"> <button type="button" onclick="unixtobj();" class="btn label-warning">转换成北京时间</button></span>
-                <span><input id="result_1" type="text" class="form-control" placeholder="" width="wt200" disabled="disabled"></span>
+            <p class="text-center form-inline">
+                <span><input type="text" class="form-control" disabled="disabled" style="width:250px; margin-right:40px" id="cur_unix_stamp" value="<?php echo time(); ?>" ></span>
+                <span><input type="text" class="form-control" disabled="disabled" style="width:250px;" id="cur_bj_datetime" value="<?php date_default_timezone_set("UTC"); echo date('Y-m-d h:i:s',time()); ?>"></span>
             </p>
             <p class="text-center form-inline">
-                <span class="text">北京时间(yyyy-MM-dd HH:mm:ss)</span>
-                <span><input type="text" class="form-control" placeholder="北京时间" id="input_2" value="<?php date_default_timezone_set('UTC'); echo date("Y-m-d H:i:s"); ?>"></span>
-                <span class="bttn"> <button type="button" onclick="bjToUnix();" class="btn label-warning">转换成Unix时间戳</button></span>
-                <span><input type="text" class="form-control" placeholder="" width="wt200" id="result_2" disabled="disabled"></span>
+                <span><input type="text" class="form-control" placeholder="Unix timestamp" style="width:250px" id="src_unix_stamp"></span>
+                <span class="bttn">
+                    <button type="button" onclick="unixToBj();" class="btn label-warning">
+                        <span class="glyphicon glyphicon-forward"></span>
+                    </button>
+                </span>
+                <span><input type="text" class="form-control" placeholder="yyyy-MM-dd HH:mm:ss" style="width:250px;" id="target_bj_datetime" ></span>
+            </p>
+            <p class="text-center form-inline">
+                <span><input type="text" class="form-control" placeholder="yyyy-MM-dd HH:mm:ss" style="width:250px" id="src_bj_datetime"></span>
+                <span class="bttn">
+                    <button type="button" onclick="bjToUnix();" class="btn label-warning">
+                        <span class="glyphicon glyphicon-forward"></span>
+                    </button>
+                </span>
+                <span><input type="text" class="form-control" placeholder="Unix timestamp" style="width:250px;" id="target_unix_stamp" ></span>
             </p>
         </div>
         <?php include('footer.php');?> 
@@ -80,16 +90,15 @@ font-size:14px;
       return fmt;   
     }  
 
-
-    function unixtobj() {
-        var unixStamp = $("#input_1").val();
+    function unixToBj() {
+        var unixStamp = $("#src_unix_stamp").val();
         var newDate = new Date();
         if(unixStamp.length == 13) {
             newDate.setTime(parseInt(unixStamp));
-            $('#result_1').val(newDate.Format("yyyy-MM-dd hh:mm:ss,SSS"));
+            $('#target_bj_datetime').val(newDate.Format("yyyy-MM-dd hh:mm:ss"));
         } else if(unixStamp.length == 10) {
             newDate.setTime(parseInt(unixStamp) * 1000);
-            $('#result_1').val(newDate.Format("yyyy-MM-dd hh:mm:ss,SSS"));
+            $('#target_bj_datetime').val(newDate.Format("yyyy-MM-dd hh:mm:ss"));
         } else {
             alert("时间戳格式不正确,时间戳长度不为 10(秒) 或 13(毫秒)");
             return;
@@ -97,7 +106,7 @@ font-size:14px;
     }
     
     function bjToUnix() {
-        var bjDateTime = $("#input_2").val();
+        var bjDateTime = $("#src_bj_datetime").val();
         if (!bjDateTime) {
             return false;
         }
@@ -106,8 +115,17 @@ font-size:14px;
             alert("不能识别北京时间格式");
             return;
         } else {
-            $('#result_2').val(unixStamp)
+            $('#target_unix_stamp').val(unixStamp.toString().substring(0, unixStamp.toString().length - 3));
         }
+    }
+
+    setInterval(function(){setCurTime();},1000);
+    function setCurTime() {
+        var unixStamp = new Date().getTime();
+        console.log(unixStamp);
+        $("#cur_unix_stamp").val(unixStamp.toString().substring(0, unixStamp.toString().length - 3));
+        var bjDatetime = new Date().Format("yyyy-MM-dd hh:mm:ss");
+        $("#cur_bj_datetime").val(bjDatetime);
     }
 
     </script>
