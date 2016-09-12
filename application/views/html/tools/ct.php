@@ -4,12 +4,11 @@
     <meta charset="gb2312" />
     <meta name="robots" content="all" />
     <meta name="author" content="www.123itools.com" />
-    <meta name="author" content="www.123itools.com" />
-    <meta name="keywords" content="json格式化,json压缩,it工具箱,时间戳转换,www.123itools.com,json在线解析,json格式化工具" />
+    <?php include('meta.php');?>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/bootstrap.min.css" />
     <script src="<?php echo base_url();?>style/js/jquery-3.1.0.min.js"></script>
-    <title>开发者工具箱</title>
+    <title>开发者工具箱-json格式化,json压缩,json在线解析,json格式化工具,正则表达式测试,时间戳转换</title>
 </head>
 <style>
 .containter{
@@ -45,8 +44,8 @@ font-size:14px;
             </p>
             <p class="text-center form-inline">
                 <span class="text">北京时间(yyyy-MM-dd HH:mm:ss)</span>
-                <span><input type="text" class="form-control" placeholder="北京时间" id="input_2" value="<?php date_default_timezone_set('UTC'); echo date("Y-m-d H:i:s"); ?></span>
-                <span class="bttn"> <button type="button" onclick="bjToUnix();" class="btn label-warning" ?>">转换成Unix时间戳</button></span>
+                <span><input type="text" class="form-control" placeholder="北京时间" id="input_2" value="<?php date_default_timezone_set('UTC'); echo date("Y-m-d H:i:s"); ?>"></span>
+                <span class="bttn"> <button type="button" onclick="bjToUnix();" class="btn label-warning">转换成Unix时间戳</button></span>
                 <span><input type="text" class="form-control" placeholder="" width="wt200" id="result_2" disabled="disabled"></span>
             </p>
         </div>

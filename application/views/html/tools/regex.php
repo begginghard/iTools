@@ -4,12 +4,11 @@
         <meta charset="gb2312" />
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
-        <meta name="author" content="www.123itools.com" />
-        <meta name="keywords" content="json格式化,json压缩,it工具箱,时间戳转换,www.123itools.com,json在线解析,json格式化工具" />
+        <?php include('meta.php');?>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/bootstrap.min.css" />
         <script src="<?php echo base_url();?>style/js/jquery-3.1.0.min.js"></script>
-        <title>开发者工具箱</title>
+        <title>json格式化,json压缩,json在线解析,json格式化工具,正则表达式测试,时间戳转换</title>
     </head>
     <style>
         .containter{
@@ -87,21 +86,27 @@
         </div>
 
         <script>
+        $("#src_txt").keyup(function() {
+            parseRegex();
+        });
+
+        $("#pattern").keyup(function() {
+            parseRegex();
+        });
+
         function parseRegex() {
             var srcText = $("#src_txt").val();
             var pattern = $("#pattern").val();
-            if(!srcText) {
-                return false;
-            }
 
-            if(!pattern) {
-                alert("请添加正则表达式");
-            } else {
+            if(srcText && pattern) {
                 var regexExp = new RegExp(pattern, "g");
                 var targetText = srcText.match(regexExp);
-                console.log(targetText);
                 $("#target_txt").val(targetText);
+            } else {
+                $("#target_text").val("");
             }
+
+
         }
 
         function setRegExp(type) {
@@ -121,6 +126,7 @@
             typeToPattern["double"] = "-?[1-9]\\d*.\\d*|0.\\d*[1-9]\\d*";
             $("#pattern").val(typeToPattern[type]);
             $("#target_txt").val("");
+            parseRegex();
         }
         </script>
     </body>
