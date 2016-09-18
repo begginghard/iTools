@@ -18,11 +18,6 @@ class Ajax extends CI_Controller {
 		    $to = "utf-8";
 		}
 
-		log_message("debug", "val = " . $val);
-		log_message("debug", "type = " . $type);
-		log_message("debug", "code = " . $code);
-		log_message("debug", "to=" . $to);
-
 		if($type == 1){
 		    if($to == "utf-8") {
 		        echo urlencode($val);
@@ -33,10 +28,7 @@ class Ajax extends CI_Controller {
 		    if($to == "utf-8") {
 		        echo urldecode($val);
 		    } else {
-		        log_message("debug", mb_convert_encoding($val, "utf-8", "gb2312"));
-		        echo mb_convert_encoding($val, "gb2312", "gb2312");
-//		        echo urldecode(mb_convert_encoding($val, "utf-8", "gb2312"));
-//                echo urldecode($val);
+		        echo mb_convert_encoding(urldecode($val), "utf-8", "gb2312");
 		    }
 		}
 	}
