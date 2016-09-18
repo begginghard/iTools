@@ -45,7 +45,6 @@
             <form class="form-inline" role="form">
                 <select class="form-control" id="select_input">
                   <option value=1>utf-8</option>
-                  <option value=2>gb2312</option>
                 </select>
                 <button type="button" class="btn btn-warning" onclick="urlCode(1);">urlEncode</button>
                 <button type="button" class="btn btn-warning" onclick="urlCode(2);">urlDecode</button>
