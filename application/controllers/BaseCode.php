@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class base64 extends CI_Controller {
+class BaseCode extends CI_Controller {
     public function encode() {
         $val = $_POST['val'];
         if($val) {

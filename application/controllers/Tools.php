@@ -40,6 +40,6 @@ class Tools extends CI_Controller {
 
     public function base64() {
         $this->load->helper('url');
-        $this->load->view('html/tools/base64');
+        $this->load->view('html/tools/basecode');
     }
 }

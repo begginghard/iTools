@@ -77,11 +77,11 @@
 
             function encode() {
                 console.log("encode");
-                sendRequest("/base64/encode");
+                sendRequest("/BaseCode/encode");
             }
 
             function decode() {
-                sendRequest("/base64/decode");
+                sendRequest("/BaseCode/decode");
             }
 
 
