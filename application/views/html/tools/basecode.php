@@ -58,8 +58,6 @@
 
             function sendRequest(url) {
                 var srcText = $('#src_txt').val();
-                console.log(url);
-                console.log(srcText);
                 if(srcText) {
                     postData = {"val": srcText};
                     $.ajax({
@@ -67,7 +65,6 @@
                         data: postData,
                         url: url,
                         success:function(data){
-                           console.log(data);
                            $('#src_txt').val('');
                            $('#src_txt').val(data);
                         }
@@ -76,7 +73,6 @@
             }
 
             function encode() {
-                console.log("encode");
                 sendRequest("/BaseCode/encode");
             }
 
