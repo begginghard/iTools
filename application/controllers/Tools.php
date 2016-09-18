@@ -32,8 +32,14 @@ class Tools extends CI_Controller {
         $this->load->helper('url');
         $this->load->view('html/tools/regex');
     }
+
     public function urlcode(){
          $this->load->helper('url');
          $this->load->view('html/tools/urlcode');
+    }
+
+    public function base64() {
+        $this->load->helper('url');
+        $this->load->view('html/tools/base64');
     }
 }
