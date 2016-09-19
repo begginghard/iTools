@@ -43,12 +43,22 @@
             </form>
 
             <form class="form-inline" role="form">
-                <select class="form-control" id="select_input">
-                    <option value=1>utf-8</option>
-                    <option value=2>gb2312</option>
-                </select>
-                <button type="button" class="btn btn-warning" onclick="encode();">urlEncode</button>
-                <button type="button" class="btn btn-warning" onclick="decode();">urlDecode</button>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="utf8" value="1" checked>
+                        UTF-8
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="gb2312" value="2">
+                        GB2312
+                    </label>
+                </div>
+            </form>
+            <form class="form-inline" role="form" style="margin-top:10px">
+                <button type="button" class="btn btn-warning" onclick="encode();">Encode</button>
+                <button type="button" class="btn btn-warning" onclick="decode();">Decode</button>
                 <button type="button" class="btn btn-default" onclick="clearInput();">清空结果</button>
             </form>
         </div>
@@ -69,17 +79,15 @@
         }
 
         function sendRequest(url){
-            var code = $('#select_input').val();
+            var code = $('input[name="optionsRadios"]:checked').val()
             var src = $('#src_txt').val();
             postData = {"code":code, "val": src};
-            console.log(postData);
             $.ajax({
                  type:'post',
                  data: postData,
                  url: url,
                  cache:false,
                  success:function(data){
-                    console.log(data);
                     if (data) {
                         $('#src_txt').val(data);
                     } else {

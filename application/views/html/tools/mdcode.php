@@ -48,11 +48,21 @@
             </form>
 
             <form class="form-inline" role="form">
-                <select class="form-control" id="select_input">
-                  <option value=1>32位</option>
-                  <option value=2>16位</option>
-                </select>
-                <button type="button" class="btn btn-warning" onclick="encode();">encode</button>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="32" value="1" checked>
+                        32位
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="16" value="2">
+                        16位
+                    </label>
+                </div>
+            </form>
+            <form class="form-inline" role="form" style="margin-top:10px">
+                <button type="button" class="btn btn-warning" onclick="encode();">Encode</button>
                 <button type="button" class="btn btn-default" onclick="clearInput();">清空输入</button>
             </form>
         </div>
@@ -66,7 +76,7 @@
         }
 
         function encode(){
-            var encryption = $('#select_input').val();
+            var encryption = $('input[name="optionsRadios"]:checked').val();
             var src = $('#src_txt').val();
             postData = {"encryption": encryption, "val": src};
             console.log(postData);
