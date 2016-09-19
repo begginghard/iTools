@@ -44,11 +44,11 @@
 
             <form class="form-inline" role="form">
                 <select class="form-control" id="select_input">
-                  <option value=1>utf-8</option>
-                  <option value=2>gb2312</option>
+                    <option value=1>utf-8</option>
+                    <option value=2>gb2312</option>
                 </select>
-                <button type="button" class="btn btn-warning" onclick="urlCode(1);">urlEncode</button>
-                <button type="button" class="btn btn-warning" onclick="urlCode(2);">urlDecode</button>
+                <button type="button" class="btn btn-warning" onclick="encode();">urlEncode</button>
+                <button type="button" class="btn btn-warning" onclick="decode();">urlDecode</button>
                 <button type="button" class="btn btn-default" onclick="clearInput();">清空结果</button>
             </form>
         </div>
@@ -60,24 +60,33 @@
             $('#src_txt').val('');
         }
 
+        function encode() {
+            sendRequest("/UrlCode/encode");
+        }
 
-        function urlCode(type){
+        function decode() {
+            sendRequest("/UrlCode/decode");
+        }
+
+        function sendRequest(url){
             var code = $('#select_input').val();
             var src = $('#src_txt').val();
-            postData = {"code":code, "type":type, "val": src};
+            postData = {"code":code, "val": src};
             console.log(postData);
-
             $.ajax({
-                     type:'post',
-                     data: postData,
-                     url:'/ajax/urlCode',
-                     cache:false,
-                     success:function(data){
-                        console.log(data);
-                        $('#src_txt').val('');
+                 type:'post',
+                 data: postData,
+                 url: url,
+                 cache:false,
+                 success:function(data){
+                    console.log(data);
+                    if (data) {
                         $('#src_txt').val(data);
-                     }
-                 });
+                    } else {
+                        $('#src_txt').val('');
+                    }
+                 }
+            });
         }
 
 
