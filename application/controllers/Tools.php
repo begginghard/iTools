@@ -38,8 +38,13 @@ class Tools extends CI_Controller {
          $this->load->view('html/tools/urlcode');
     }
 
-    public function base64() {
+    public function basecode() {
         $this->load->helper('url');
         $this->load->view('html/tools/basecode');
+    }
+
+    public function mdcode() {
+        $this->load->helper('url');
+        $this->load->view('html/tools/mdcode');
     }
 }

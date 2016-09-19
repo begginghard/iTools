@@ -97,11 +97,18 @@
         function parseRegex() {
             var srcText = $("#src_txt").val();
             var pattern = $("#pattern").val();
-
             if(srcText && pattern) {
-                var regexExp = new RegExp(pattern, "g");
-                var targetText = srcText.match(regexExp);
-                $("#target_txt").val(targetText);
+                try {
+                    var regexExp = new RegExp(pattern, "g");
+                    var targetText = srcText.match(regexExp);
+                    if (targetText.length != 0) {
+                        $("#target_txt").val(targetText.join(";\n") + ";");
+                    } else {
+                        $("#target_txt").val("");
+                    }
+                } catch(err) {
+                    $("#targe_text").val("");
+                }
             } else {
                 $("#target_text").val("");
             }
