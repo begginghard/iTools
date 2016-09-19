@@ -45,7 +45,7 @@
             <form class="form-inline" role="form">
                 <button type="button" class="btn btn-warning" onclick="encode();">Encode</button>
                 <button type="button" class="btn btn-warning" onclick="decode();">Decode</button>
-                <button type="button" class="btn btn-default" onclick="clearInput();">清空结果</button>
+                <button type="button" class="btn btn-default" onclick="clearInput();">清空</button>
             </form>
         </div>
             <?php include('footer.php');?>

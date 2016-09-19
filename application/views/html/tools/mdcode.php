@@ -63,7 +63,7 @@
             </form>
             <form class="form-inline" role="form" style="margin-top:10px">
                 <button type="button" class="btn btn-warning" onclick="encode();">Encode</button>
-                <button type="button" class="btn btn-default" onclick="clearInput();">清空输入</button>
+                <button type="button" class="btn btn-default" onclick="clearInput();">清空</button>
             </form>
         </div>
             <?php include('footer.php');?>
