@@ -37,7 +37,7 @@
             <div class="containter">
             <form role="form">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">请输入内容</label>
+                    <label for="exampleInputEmail1">请输入原文</label>
                     <textarea class="form-control" rows="5" id="src_txt"></textarea>
                 </div>
             </form>
