@@ -68,7 +68,7 @@
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox"> 忽略大小写
+                        <input type="checkbox" name="condition" value="1" onclick="parseRegex();"> 忽略大小写
                     </label>
                 </div>
                 <button type="button" class="btn btn-warning" onclick="parseRegex();">测试匹配</button>
@@ -95,11 +95,21 @@
         });
 
         function parseRegex() {
+            var chk_value =[];
+            $('input[name="condition"]:checked').each(function() {
+                chk_value.push($(this).val());
+            });
             var srcText = $("#src_txt").val();
             var pattern = $("#pattern").val();
             if(srcText && pattern) {
                 try {
-                    var regexExp = new RegExp(pattern, "g");
+                    var attributes = "g";
+                    for(var i = 0; i < chk_value.length; i++) {
+                        if(chk_value[i] == 1) {
+                            attributes = attributes + "i";
+                        }
+                    }
+                    var regexExp = new RegExp(pattern, attributes);
                     var targetText = srcText.match(regexExp);
                     if (targetText.length != 0) {
                         $("#target_txt").val(targetText.join(";\n") + ";");
