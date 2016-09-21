@@ -84,7 +84,7 @@
             $.ajax({
                      type:'post',
                      data: postData,
-                     url:'/mdcode/encode',
+                     url:'/MdCode/encode',
                      cache:false,
                      success:function(data){
                         console.log(data);
