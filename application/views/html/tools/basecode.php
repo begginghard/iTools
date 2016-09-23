@@ -5,10 +5,12 @@
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
         <?php include('meta.php');?>
+        <meta name="keywords" content="Base64加密,Base64解密,Base64加密解密"/>
+        <meta name="description" content="Base64在线加密解密"/>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/bootstrap.min.css" />
         <script src="<?php echo base_url();?>style/js/jquery-3.1.0.min.js"></script>
-        <title>json格式化,json压缩,json在线解析,json格式化工具,正则表达式测试,时间戳转换</title>
+        <title>php js Base64编码/解码工具</title>
     </head>
     <style>
         .containter{
