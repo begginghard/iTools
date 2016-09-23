@@ -4,7 +4,6 @@
         <meta charset="gb2312" />
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
-        <?php include('meta.php');?>
         <meta name="keywords" content="php 在线,在线工具,js,在线正则表达式测试工具,正则表达式在线测试,正则表达式测试工具" />
         <meta name="description" content="php 正则表达式测试学习工具,123itoos是我工作中经常使用的一个非常强大的正则表达式构建、测试以及代码生成工具。它能够对你构建的正则表达式进行解析、验证，并输出解析结果，他提供了一个非常方便强大的正则表达式语法构建面板" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />

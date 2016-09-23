@@ -4,7 +4,6 @@
         <meta charset="utf-8"/>
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
-        <?php include('meta.php');?>
         <meta name="keywords" content="Base64加密,Base64解密,Base64加密解密"/>
         <meta name="description" content="Base64在线加密解密"/>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />

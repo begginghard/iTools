@@ -4,7 +4,6 @@
         <meta charset="utf-8"/>
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
-        <?php include('meta.php');?>
         <meta name="keywords" content="MD5在线加密,MD5加密,MD5加密工具" />
         <meta name="description" content="MD5在线加密,MD5加密工具,MD5加密" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
