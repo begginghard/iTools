@@ -4,11 +4,13 @@
         <meta charset="utf-8"/>
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
+        <meta name="keywords" content="js php URL编码解码,UrlEncode编码,UrlDecode解码,URL解码,解码的URL字符串,URL解码器,URL编码,在线URL解码"/>
+        <meta name="description" content="js php URL解码。在线工具URL编码字符串。文本转换成使用这个免费的在线URL解码器程序的URL字符串解码,您可以使用本工具对中文进行UrlEncode编码,UrlDecode解码,URL解码,解码的URL字符串,URL解码器,URL编码,在线URL解码,转换成字符串URL"/>
         <?php include('meta.php');?>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/bootstrap.min.css" />
         <script src="<?php echo base_url();?>style/js/jquery-3.1.0.min.js"></script>
-        <title>json格式化,json压缩,json在线解析,json格式化工具,正则表达式测试,时间戳转换</title>
+        <title>js php URL编码解码,UrlEncode编码,UrlDecode解码,URL解码,解码的URL字符串,URL解码器,URL编码,在线URL解码</title>
     </head>
     <style>
         .containter{

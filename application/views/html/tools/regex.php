@@ -5,10 +5,12 @@
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
         <?php include('meta.php');?>
+        <meta name="keywords" content="php 在线,在线工具,js,在线正则表达式测试工具,正则表达式在线测试,正则表达式测试工具" />
+        <meta name="description" content="php 正则表达式测试学习工具,123itoos是我工作中经常使用的一个非常强大的正则表达式构建、测试以及代码生成工具。它能够对你构建的正则表达式进行解析、验证，并输出解析结果，他提供了一个非常方便强大的正则表达式语法构建面板" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/bootstrap.min.css" />
         <script src="<?php echo base_url();?>style/js/jquery-3.1.0.min.js"></script>
-        <title>json格式化,json压缩,json在线解析,json格式化工具,正则表达式测试,时间戳转换</title>
+        <title>php 在线,在线工具,js,在线正则表达式测试工具,正则表达式在线测试,正则表达式测试工具</title>
     </head>
     <style>
         .containter{

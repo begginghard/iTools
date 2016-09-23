@@ -5,10 +5,12 @@
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
         <?php include('meta.php');?>
+        <meta name="keywords" content="MD5在线加密,MD5加密,MD5加密工具" />
+        <meta name="description" content="MD5在线加密,MD5加密工具,MD5加密" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/bootstrap.min.css" />
         <script src="<?php echo base_url();?>style/js/jquery-3.1.0.min.js"></script>
-        <title>json格式化,json压缩,json在线解析,json格式化工具,正则表达式测试,时间戳转换</title>
+        <title>MD5在线加密 - MD5加密 - MD5加密工具 - MD5在线转换</title>
     </head>
     <style>
         .containter{
