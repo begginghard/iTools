@@ -14,32 +14,26 @@
         div{
             width:100%;
         }
+        .btn{
+            width: 80px;
+            background-color: yellowgreen;
+            margin-top:10px;
+        }
     </style>
 </head>
 <body>
-<div>
+<div style="margin: 0 auto;">
     <h1>完整demo</h1>
    <form action="/Admin/submitEditor"  method="post">
-   <input type="hidden" name="test" value="test">
-    <script id="editor" name="content" type="text/plain" style="width:1024px;height:500px;">
+   命令名字:<input type="text" name="name" value="" height="50"><br>
+
+    内容:<script id="editor" name="content" type="text/plain" style="width:1024px;height:500px;">
     </script>
-   <input type="submit" value="提交">
+   <input type="submit" value="提交" class="btn">
     </form>
 </div>
-<div id="btns">
-    <div>
-
-        <button onclick="getContent()">获得内容</button>
-
-    </div>
-    <div>
-        <button onclick="getLocalData()" >获取草稿箱内容</button>
-        <button onclick="clearLocalData()" >清空草稿箱</button>
-    </div>
-
-</div>
+<div style="height:100px;"></div>
 <script type="text/javascript">
-
     //实例化编辑器
     //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
     var ue = UE.getEditor('editor');
