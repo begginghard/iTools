@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/bootstrap.min.css" />
         <script src="<?php echo base_url();?>style/js/jquery-3.1.0.min.js"></script>
+        <script src="<?php echo base_url();?>style/js/jquery.zclip.min.js"></script>
         <title>php 在线,在线工具,js,在线正则表达式测试工具,正则表达式在线测试,正则表达式测试工具</title>
     </head>
     <style>
@@ -29,6 +30,11 @@
         }
         #pattern {
             width:%50;
+        }
+
+        #ZeroClipboardMovie_1{
+            position: relative;
+            top: 0px;
         }
     </style>
 
@@ -73,6 +79,7 @@
                     </label>
                 </div>
                 <button type="button" class="btn btn-warning" onclick="parseRegex();">测试匹配</button>
+                <button type="button" class="btn btn-warning" id="copy">复制</button>
             </form>
 
             <form role="form" style="margin-top:20px">
@@ -87,6 +94,15 @@
         </div>
 
         <script>
+        $(function () {
+            $('#copy').zclip({
+                path:'<?php echo base_url();?>style/js/ZeroClipboard.swf',
+                copy: function() {
+                    return $("#pattern").val();
+                }
+            });
+        });
+
         $("#src_txt").keyup(function() {
             parseRegex();
         });

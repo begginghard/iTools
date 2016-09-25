@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/bootstrap.min.css" />
         <script src="<?php echo base_url();?>style/js/jquery-3.1.0.min.js"></script>
+        <script src="<?php echo base_url();?>style/js/jquery.zclip.min.js"></script>
         <title>MD5在线加密 - MD5加密 - MD5加密工具 - MD5在线转换</title>
     </head>
     <style>
@@ -30,6 +31,10 @@
         #pattern {
             width:%50;
         }
+        #ZeroClipboardMovie_1{
+            position: relative;
+            top: 0px;
+        } 
     </style>
 
     <body id="editor">
@@ -51,13 +56,13 @@
             <form class="form-inline" role="form">
                 <div class="radio">
                     <label>
-                        <input type="radio" name="optionsRadios" id="32" value="1" checked>
+                        <input type="radio" name="optionsRadios" id="32" value="1" onclick="encode();" checked>
                         32位
                     </label>
                 </div>
                 <div class="radio">
                     <label>
-                        <input type="radio" name="optionsRadios" id="16" value="2">
+                        <input type="radio" name="optionsRadios" id="16" value="2" onclick="encode();">
                         16位
                     </label>
                 </div>
@@ -65,12 +70,26 @@
             <form class="form-inline" role="form" style="margin-top:10px">
                 <button type="button" class="btn btn-warning" onclick="encode();">Encode</button>
                 <button type="button" class="btn btn-default" onclick="clearInput();">清空</button>
+                <button type="button" class="btn btn-default" id="copy">复制</button>
             </form>
         </div>
             <?php include('footer.php');?>
         </div>
 
         <script>
+        $(function () {
+            $('#copy').zclip({
+                path:'<?php echo base_url();?>style/js/ZeroClipboard.swf',
+                copy: function() {
+                    return $("#target_txt").val();
+                }
+            });
+        });
+
+        $('#src_txt').keyup(function(){
+            encode();
+        });
+
         function clearInput(){
             $('#src_txt').val('');
             $('#target_txt').val('');
@@ -97,8 +116,6 @@
                      }
                  });
         }
-
-
         </script>
     </body>
 </html>

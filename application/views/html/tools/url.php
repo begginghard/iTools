@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/bootstrap.min.css" />
         <script src="<?php echo base_url();?>style/js/jquery-3.1.0.min.js"></script>
+        <script src="<?php echo base_url();?>style/js/jquery.zclip.min.js"></script>
         <title>js php URL编码解码,UrlEncode编码,UrlDecode解码,URL解码,解码的URL字符串,URL解码器,URL编码,在线URL解码</title>
     </head>
     <style>
@@ -29,6 +30,11 @@
         }
         #pattern {
             width:%50;
+        }
+
+        #ZeroClipboardMovie_1{
+            position: relative;
+            top: 0px;
         }
     </style>
 
@@ -61,12 +67,22 @@
                 <button type="button" class="btn btn-warning" onclick="encode();">Encode</button>
                 <button type="button" class="btn btn-warning" onclick="decode();">Decode</button>
                 <button type="button" class="btn btn-default" onclick="clearInput();">清空</button>
+                <button type="button" class="btn btn-default" id="copy">复制</button>
             </form>
         </div>
             <?php include('footer.php');?>
         </div>
 
         <script>
+        $(function () {
+            $('#copy').zclip({
+                path:'<?php echo base_url();?>style/js/ZeroClipboard.swf',
+                copy: function() {
+                    return $("#src_txt").val();
+                }
+            });
+        });
+
         function clearInput(){
             $('#src_txt').val('');
         }

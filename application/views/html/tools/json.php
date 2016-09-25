@@ -30,7 +30,7 @@
         <div  class="jiantou" style="float:left;">
             <div class="botton-div">
                 <div class="bt zip">压缩结果</div>
-                <div class="bt hover" style="cursor:pointer"  id="copy">复制结果</div>
+                <div class="bt hover" style="cursor:pointer" id="copy">复制结果</div>
             </div>
         </div>
 
@@ -44,8 +44,13 @@
 </div>
 <script>
  $(function () {
-       $('#copy').zclip({path:'<?php echo base_url();?>style/js/ZeroClipboard.swf', copy: function () { return $("#json-target").text(); } });
+    $('#copy').zclip({
+        path:'<?php echo base_url();?>style/js/ZeroClipboard.swf',
+        copy: function() {
+            return $("#json-target").text();
+        }
     });
+ });
 </script>
 <script type="text/javascript">
     $('textarea').numberedtextarea();
