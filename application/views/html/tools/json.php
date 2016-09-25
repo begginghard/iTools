@@ -33,14 +33,14 @@
                 <div class="bt hover" style="cursor:pointer"  id="copy">复制结果</div>
             </div>
         </div>
-	
+
 	<div id="right-box"  style="height:510px;border-left:solid 1px #ddd;box-shadow: 1px 1px 50px #ECECEC;border-right:solid 1px #ddd;border-bottom:solid 1px #ddd;border-radius:0;resize: none;overflow-y:scroll;position:relative;">
             <div id="json-target" class="ro" style="padding:0px 5px;over">
             </div>
         </div>
     </div>
 
-   <?php include('footer.php');?> 
+   <?php include('footer.php');?>
 </div>
 <script>
  $(function () {
@@ -62,7 +62,7 @@
 
     }
     $('#json-src').keyup(function(){
-     keyup(); 
+     keyup();
     });
 function keyup(){
 	init();
@@ -103,7 +103,7 @@ $('.zip').click(function(){
         zip_flag = true;
     }
 });
-  
+
 </script>
 
 </body>

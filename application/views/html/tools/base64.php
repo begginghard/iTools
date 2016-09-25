@@ -74,11 +74,11 @@
             }
 
             function encode() {
-                sendRequest("/BaseCode/encode");
+                sendRequest("/base64/encode");
             }
 
             function decode() {
-                sendRequest("/BaseCode/decode");
+                sendRequest("/base64/decode");
             }
 
 

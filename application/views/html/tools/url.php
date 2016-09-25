@@ -72,11 +72,11 @@
         }
 
         function encode() {
-            sendRequest("/UrlCode/encode");
+            sendRequest("/url/encode");
         }
 
         function decode() {
-            sendRequest("/UrlCode/decode");
+            sendRequest("/url/decode");
         }
 
         function sendRequest(url){

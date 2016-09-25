@@ -59,23 +59,23 @@ font-size:14px;
                 <span><input type="text" class="form-control" placeholder="Unix timestamp" style="width:250px;" id="target_unix_stamp" ></span>
             </p>
         </div>
-        <?php include('footer.php');?> 
+        <?php include('footer.php');?>
     </div>
-    
+
     <script>
-    Date.prototype.Format = function(fmt)   
-    { //author: meizz   
-      var o = {   
-        "M+" : this.getMonth()+1,                 //月份   
-        "d+" : this.getDate(),                    //日   
-        "h+" : this.getHours(),                   //小时   
-        "m+" : this.getMinutes(),                 //分   
-        "s+" : this.getSeconds(),                 //秒   
-        "q+" : Math.floor((this.getMonth()+3)/3), //季度   
-        "S"  : this.getMilliseconds()             //毫秒   
-      };   
-      if(/(y+)/.test(fmt)) {   
-        fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));   
+    Date.prototype.Format = function(fmt)
+    { //author: meizz
+      var o = {
+        "M+" : this.getMonth()+1,                 //月份
+        "d+" : this.getDate(),                    //日
+        "h+" : this.getHours(),                   //小时
+        "m+" : this.getMinutes(),                 //分
+        "s+" : this.getSeconds(),                 //秒
+        "q+" : Math.floor((this.getMonth()+3)/3), //季度
+        "S"  : this.getMilliseconds()             //毫秒
+      };
+      if(/(y+)/.test(fmt)) {
+        fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
       }
       if(/(S+)/.test(fmt)) {
         var replaceStr = "";
@@ -84,11 +84,11 @@ font-size:14px;
         }
         fmt=fmt.replace(RegExp.$1, replaceStr + this.getMilliseconds());
       }
-      for(var k in o)   
-        if(new RegExp("("+ k +")").test(fmt))   
-      fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));   
-      return fmt;   
-    }  
+      for(var k in o)
+        if(new RegExp("("+ k +")").test(fmt))
+      fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
+      return fmt;
+    }
 
     function unixToBj() {
         var unixStamp = $("#src_unix_stamp").val();
@@ -104,7 +104,7 @@ font-size:14px;
             return;
         }
     }
-    
+
     function bjToUnix() {
         var bjDateTime = $("#src_bj_datetime").val();
         if (!bjDateTime) {

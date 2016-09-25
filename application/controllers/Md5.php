@@ -1,7 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class MdCode extends CI_Controller {
+class Md5 extends CI_Controller {
+    public function index() {
+        $this->load->helper('url');
+        $this->load->view('html/tools/md5');
+    }
+
     public function encode() {
         $encryption = $_POST['encryption'];
         $val = $_POST['val'];

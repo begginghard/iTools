@@ -1,9 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class UrlCode extends CI_Controller {
+class Url extends CI_Controller {
 
     private $_convertType = array('2'=>'utf-8','1'=>'gb2312');
+
+    public function index(){
+         $this->load->helper('url');
+         $this->load->view('html/tools/url');
+    }
 
 	public function encode()
 	{
