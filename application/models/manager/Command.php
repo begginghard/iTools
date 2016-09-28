@@ -15,7 +15,7 @@ class Command extends  CI_Model{
     }
 
     /**
-     * 添加命令
+     * 添加命令 插入数据库
      */
     public function addCommand($arr = array()){
         if(empty($arr)){
@@ -38,6 +38,12 @@ class Command extends  CI_Model{
 
     }
 
+    /**
+     * 生成静态
+     * @param $name 生成的文件名称
+     * @param $content 内容
+     * @return bool
+     */
     public function makeHtml($name,$content){
         ob_start();
         echo $content;
@@ -46,7 +52,6 @@ class Command extends  CI_Model{
         $fp = fopen("/private/var/www/iTools/linux/{$name}.html", "w");
         if (!$fp) {
             return false;
-            exit();
         } else {
             fwrite($fp, $out1);
             fclose($fp);
@@ -54,7 +59,13 @@ class Command extends  CI_Model{
            
         }
     }
-
+    
+    public function blurredSearch($name){
+        if(empty($name)){
+            return arrray();
+        }
+        return $this->CommandDb->blurredSearch($name);
+    }
     
 
 }

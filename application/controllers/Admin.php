@@ -18,30 +18,46 @@ class Admin extends CI_Controller {
 		$this->load->view('html/tools/index');
 	}
 
+	/**
+	 * 命令添加页面
+	 */
 	public function editor() {
 		$this->checkAuth();
-		$this->load->helper('url');
-		#加载分类配置
-		$this->config->load('config', true);
-		$commandType = $this->config->item('command_type');
-		$classify    = $this->config->item('classify');
-		#传入后台
-		$data['classify']     = json_encode($classify);
-		$data['command_type'] = $commandType;
+		if($this->input->get('id')){
+			
+			#编辑命令
+		}else {
+			#添加命令
+			$this->load->helper('url');
+			#加载分类配置
+			$this->config->load('config', true);
+			$commandType = $this->config->item('command_type');#1一级命令分类
+			$classify    = $this->config->item('classify');#二级分类
+			#全部一起传入后台 做select切换效果
+			$data['classify']     = json_encode($classify);
+			$data['command_type'] = $commandType;
+		}
 		#加载模板
 		$this->load->view('html/admin/editor', $data);
 	}
+	
+	public function modifyCommand(){
+		$this->load->helper('url');
+		#加载模板
+		$this->load->view('html/admin/modifyCommand');
+	}
 
 	/**
-	 * 命令添加
+	 * 命令添加逻辑处理
 	 */
 	public function submitEditor() {
 		$this->load->helper('url');
-		#查入数据库
+		#插入数据库
 		$this->load->model('manager/Command');
 		$arr = $this->input->post();
 		$re = $this->Command->addCommand($arr);
 		if($re['errno'] == 0) {
+			#生成静态
 			$name = isset($arr['name']) ? htmlspecialchars(trim($arr['name'])) : '';
 			$content = isset($arr['content']) ? addslashes($arr['content']) : '';
 			$ret = $this->Command->makeHtml($name,$content);
@@ -55,6 +71,13 @@ class Admin extends CI_Controller {
 		}else{
 			echo $re['errno'];exit;
 		}
+	}
+
+	public function searchCommand(){
+		$name = $this->input->get('name');
+		$this->load->model('manager/Command');
+		$re = $this->Command->blurredSearch($name);
+		echo json_encode($re);
 	}
 
 }

@@ -15,10 +15,8 @@ class CommandDb extends  CI_Model{
 
     }
     public function addCommand($name,$content,$type,$classify,$display_sort){
-        #$this->db->
         $re = false;
         $t = time();
-       # var_dump($name,$content,$type,$classify,$display_sort);exit;
         try {
             $sql = "INSERT INTO {$this->_db_name} (`name`,`content`,`type`,`classify`,`display_sort`,`ctime`) VALUES('{$name}','{$content}',$type,$classify,$display_sort,$t)";
             $re = $this->db->query($sql);
@@ -28,6 +26,19 @@ class CommandDb extends  CI_Model{
             exit();
         }
         return $re;
+    }
+    public function blurredSearch($name){
+        $arr = array();;
+        $t = time();
+        try {
+            $sql = "SELECT `id`,`name` FROM {$this->_db_name} where name like '%{$name}%'";
+            $query = $this->db->query($sql);
+            $arr = $query->result_array();
+        } catch (Exception $e) {
+            print $e->getMessage();
+            exit();
+        }
+        return $arr;
     }
 
 }
