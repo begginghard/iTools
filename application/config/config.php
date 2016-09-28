@@ -512,3 +512,22 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+
+$config['command_type'] = array(
+    1=>'linux',
+    2=>'redis',
+    3=>'git',
+    4=>'mysql',
+);
+$config['classify']=array(
+    1=>array(
+        1=>'文件管理',
+        2=>'文档编辑',
+        3=>'文件传输',
+        4=>'磁盘管理',
+        5=>'系统设置',
+        6=>'系统管理',
+        7=>'备份压缩',
+    ),
+);
