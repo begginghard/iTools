@@ -72,9 +72,8 @@ li {
     list-style: none outside none;
 }
 .sidebar .widget li a{
-
-        text-decoration:none;
-        cursor: pointer;
+    text-decoration:none;
+    cursor: pointer;
 }
 .sidebar_search_box {
     margin-bottom: 30px;
@@ -87,7 +86,15 @@ form{
 display:block;
 }
 
-
+.dropdown-menu{
+    filter:alpha(opacity=95); /*IE滤镜，透明度50%*/
+    -moz-opacity:0.95; /*Firefox私有，透明度50%*/
+    opacity:0.95;/*其他，透明度50%*/
+    width:100%;
+}
+.dropdown-menu a{
+     text-decoration:none;
+}
 
     </style>
 
@@ -99,36 +106,39 @@ display:block;
                 <iframe name="right" src="<?php echo base_url();?>linux/<?php echo isset($GET['m']) ? trim($GET['m']) : 'cd';?>.html" width="100%" height="100%"></iframe>
             </div>
             <div class="sidebar">
+
+
+            <div class="dropdown">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="name" onkeyup="searchLinux();" value="命令搜索" onfocus="if (value =='命令搜索'){value =''}" onblur="if (value ==''){value='命令搜索'}">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" onclick="searchLinux();">Go</button>
+                    </span>
+                </div>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="searchList">
+
+                </ul>
+            </div>
+                <br>
                 <div class="widget related">
+
                     <div class="hd">
                             <span>常用命令</span>
                     </div>
+
                     <div class="bd">
                         <ul>
-                            <li><a href="<?php echo base_url();?>LinuxCommand?m=cd" title="cd">cd</a></li>
-                            <li><a href="<?php echo base_url();?>LinuxCommand?m=pwd" title="pwd">pwd</a></li>
-                            <li><a href="http://man.linuxde.net/mv" title="mv">mv</a></li>
-                            <li><a href="http://man.linuxde.net/tree" title="tree">tree</a></li>
-                            <li><a href="http://man.linuxde.net/mkdir" title="mkdir">mkdir</a></li>
-                            <li><a href="http://man.linuxde.net/popd" title="popd">popd</a></li>
-                            <li><a href="http://man.linuxde.net/cp" title="cp">cp</a></li>
-                            <li><a href="http://man.linuxde.net/pushd" title="pushd">pushd</a></li>
-                            <li><a href="http://man.linuxde.net/ls" title="ls">ls</a></li>
-                            <li><a href="http://man.linuxde.net/install" title="install">install</a></li>
-                            <li><a href="http://man.linuxde.net/rmdir" title="rmdir">rmdir</a></li>
-                            <li><a href="http://man.linuxde.net/rm" title="rm">rm</a></li>
-                            <li><a href="http://man.linuxde.net/dirs" title="dirs">dirs</a></li>
+                            <?php
+
+                                if(!empty($data)){
+                                    foreach($data as $key=>$val){
+                            ?>
+                            <li><a href="<?php echo base_url();?>LinuxCommand/index?m=<?php echo $val['name'];?>" title="cd"><?php echo $val['name'];?></a></li>
+                            <?php }}?>
                          </ul>
                     </div>
                 </div>
-                <div id="fixedBox">
-                   <div class="input-group">
-                       <input type="text" class="form-control" value="命令搜索" onfocus="if (value =='命令搜索'){value =''}" onblur="if (value ==''){value='命令搜索'}">
-                            <span class="input-group-btn">
-                              <button class="btn btn-default" type="button" onclick="searchLinux();">Go</button>
-                            </span>
-                    </div>
-                </div>
+
             </div>
             </div>
             <script>
@@ -138,7 +148,39 @@ display:block;
             </script>
         <?php include('footer.php');?>
         </div>
+
+        <script>
+            function searchLinux(){
+             window.event.returnValue = false;
+                            var name = $('input[name="name"]').val();
+                            $.ajax({
+                                type:'get',
+                                url: '/admin/searchCommand?name='+name,
+                                cache:false,
+                                success:function(data){
+
+                                    if(data){
+                                        var dataObj = eval('(' + data + ')');
+                                        var html = '';
+                                        for( var i in dataObj){
+                                            html = html+'<li role="presentation"><a role="menuitem" tabindex="-1" href="/LinuxCommand/index?m='+dataObj[i].name+'">'+dataObj[i].name+'</a></li>';
+                                        }
+
+                                        if(html){
+                                            $('#searchList').html('');
+
+                                            $('#searchList').html(html);
+                                            $('#searchList').show();
+                                        }else{
+                                            $('#searchList').hide();
+                                        }
+                                    }else{
+                                    }
+                                }
+                            });
+                        }
+
+        </script>
     </body>
 </html>
-
 

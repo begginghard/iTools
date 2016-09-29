@@ -23,20 +23,24 @@ class Admin extends CI_Controller {
 	 */
 	public function editor() {
 		$this->checkAuth();
+		$this->load->helper('url');
 		if($this->input->get('id')){
-			
-			#编辑命令
-		}else {
-			#添加命令
-			$this->load->helper('url');
-			#加载分类配置
-			$this->config->load('config', true);
-			$commandType = $this->config->item('command_type');#1一级命令分类
-			$classify    = $this->config->item('classify');#二级分类
-			#全部一起传入后台 做select切换效果
-			$data['classify']     = json_encode($classify);
-			$data['command_type'] = $commandType;
+            #编辑命令
+            $id = intval($this->input->get('id',true));
+            $this->load->model('manager/Command');
+            $re  = $this->Command->getCommandById($id);
+            $data = $re;
+            $data['id'] = $id;
+
 		}
+        #加载分类配置
+        $this->config->load('config', true);
+        $commandType = $this->config->item('command_type');#1一级命令分类
+        $classify    = $this->config->item('classify');#二级分类
+        #全部一起传入后台 做select切换效果
+        $data['classify_type']     = json_encode($classify);
+        $data['command_type'] = $commandType;
+
 		#加载模板
 		$this->load->view('html/admin/editor', $data);
 	}

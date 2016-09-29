@@ -29,12 +29,37 @@ class CommandDb extends  CI_Model{
     }
     public function blurredSearch($name){
         $arr = array();;
-        $t = time();
-        try {
+        try{
             $sql = "SELECT `id`,`name` FROM {$this->_db_name} where name like '%{$name}%'";
             $query = $this->db->query($sql);
-            $arr = $query->result_array();
-        } catch (Exception $e) {
+            $arr = $query->result_array();#多条
+        }catch (Exception $e) {
+            print $e->getMessage();
+            exit();
+        }
+        return $arr;
+    }
+
+    public function getCommandById($id){
+        $arr = array();;
+        try{
+            $sql = "SELECT * FROM {$this->_db_name} where id={$id}";
+            $query = $this->db->query($sql);
+            $arr = $query->row_array();#单条
+        }catch (Exception $e) {
+            print $e->getMessage();
+            exit();
+        }
+        return $arr;
+    }
+
+    public function getCommandByDisplaySort($num,$type=1){
+        $arr = array();
+        try{
+            $sql = "SELECT id,name FROM {$this->_db_name} where type={$type} order by display_sort desc limit {$num}";
+            $query = $this->db->query($sql);
+            $arr = $query->result_array();#多条
+        }catch (Exception $e) {
             print $e->getMessage();
             exit();
         }

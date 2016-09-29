@@ -59,13 +59,28 @@ class Command extends  CI_Model{
            
         }
     }
-    
+
+    /**
+    * 模糊查询
+    */
     public function blurredSearch($name){
         if(empty($name)){
             return arrray();
         }
         return $this->CommandDb->blurredSearch($name);
     }
-    
+
+    public function getCommandById($id){
+        if(empty($id)){
+            return array();
+        }
+        $re = $this->CommandDb->getCommandById($id);
+        return empty($re) ? array() : $re;
+    }
+
+    public function getCommandByDisplaySort($num = 20){
+         $re = $this->CommandDb->getCommandByDisplaySort($num);
+         return empty($re) ? array() : $re;
+    }
 
 }
