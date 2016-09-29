@@ -69,14 +69,14 @@
                     url: '/admin/searchCommand?name='+name,
                     cache:false,
                     success:function(data){
-                        alert(data);
+
                         if(data){
                             var dataObj = eval('(' + data + ')');
                             var html = '';
                             for( var i in dataObj){
                                html = html+'<li class="list-group-item"><a href="/admin/editor?flag=zgh1988&id='+dataObj[i].id+'">'+dataObj[i].name+'</a></li>';
                             }
-                            alert(html);
+
                             if(html){
                                 $('#searchList').html('');
 
