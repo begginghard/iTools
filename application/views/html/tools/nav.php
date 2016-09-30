@@ -49,6 +49,7 @@
                       <li><a role="menuitem" tabindex="-1" href="<?php echo base_url();?>Md5/index?p=6">md5加密</a></li>
                     </ul>
                 </li>
+                <li class='li_list <?php if (isset($_GET["p"]) && $_GET["p"] == 7) {echo "now";}?>'><a href="<?php echo base_url();?>linuxCommand/index?p=7">Linux命令大全</a></li>
 
             </ul>
         </div>
