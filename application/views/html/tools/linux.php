@@ -110,7 +110,7 @@ display:block;
 
             <div class="dropdown">
                 <div class="input-group">
-                    <input type="text" class="form-control" name="name" onkeyup="searchLinux();" value="命令搜索" onfocus="if (value =='命令搜索'){value =''}" onblur="if (value ==''){value='命令搜索'}">
+                    <input type="text" class="form-control" autocomplete="off" name="name" onkeyup="searchLinux();" value="命令搜索" onfocus="if (value =='命令搜索'){value =''}" onblur="if (value ==''){value='命令搜索'}">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button" onclick="searchLinux();">Go</button>
                     </span>
@@ -175,6 +175,7 @@ display:block;
                                             $('#searchList').hide();
                                         }
                                     }else{
+                                       $('#searchList').hide();
                                     }
                                 }
                             });

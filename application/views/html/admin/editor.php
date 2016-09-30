@@ -46,12 +46,12 @@
         <div id="wrapper">
             <?php include('nav.php');?>
             <div class="containter">
-                 <h1><?php if(empty($id)){echo "添加命令";}else{echo "修改命令";}?>添加命令</h1>
+                 <h1><?php if(empty($id)){echo "添加命令";}else{echo "修改命令";}?></h1>
                    <form action="/Admin/submitEditor"  method="post">
                    <div class="row">
                       <label for="inputEmail3" class="col-sm-2 control-label">命令名称</label>
                       <div class="col-xs-2">
-                        <input type="text" name="name" value="<?php if(isset($id)){echo $name;}?>" class="form-control"  placeholder="命令名称">
+                        <input type="text" name="name"  autocomplete="off" value="<?php if(isset($id)){echo $name;}?>" class="form-control"  placeholder="命令名称">
                       </div>
                     </div>
                     <br>
