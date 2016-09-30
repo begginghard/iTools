@@ -44,11 +44,35 @@ class Admin extends CI_Controller {
 		#加载模板
 		$this->load->view('html/admin/editor', $data);
 	}
-	
+
+	//命令修改搜索页面
 	public function modifyCommand(){
 		$this->load->helper('url');
 		#加载模板
 		$this->load->view('html/admin/modifyCommand');
+	}
+
+    //命令修改处理逻辑
+	public function submitEdit(){
+		$this->load->helper('url');
+	    $this->load->model('manager/Command');
+        $arr = $this->input->post();
+        $re = $this->Command->editCommand($arr);
+        if($re['errno'] == 0) {
+            #生成静态
+            $name = isset($arr['name']) ? htmlspecialchars(trim($arr['name'])) : '';
+            $content = isset($arr['content']) ? addslashes($arr['content']) : '';
+            $ret = $this->Command->makeHtml($name,$content);
+            if($ret){
+                $url = base_url();
+                $url .= "linux/" . $name . ".html";
+                header("Location: {$url}");
+                exit();
+            }
+
+        }else{
+            echo $re['errno'];exit;
+        }
 	}
 
 	/**

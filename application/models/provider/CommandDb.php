@@ -27,6 +27,20 @@ class CommandDb extends  CI_Model{
         }
         return $re;
     }
+
+    public function editCommand($id,$name,$content,$type,$classify,$display_sort){
+        $re = false;
+        $t = time();
+        try {
+            $sql = "UPDATE  {$this->_db_name} SET `name`='{$name}', `content`='{$content}',`type`={$type},`classify`={$classify},`display_sort`={$display_sort},`ctime`={$t} WHERE id={$id}";
+            $re = $this->db->query($sql);
+
+        } catch (Exception $e) {
+            print $e->getMessage();
+            exit();
+        }
+        return $re;
+    }
     public function blurredSearch($name){
         $arr = array();;
         try{

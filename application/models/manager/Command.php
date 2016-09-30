@@ -39,6 +39,31 @@ class Command extends  CI_Model{
     }
 
     /**
+     * 修改命令 插入数据库
+     */
+    public function editCommand($arr = array()){
+        if(empty($arr)){
+            $this->errno = 400;
+        }
+        $name = isset($arr['name']) ? htmlspecialchars(trim($arr['name'])) : '';
+        $content = isset($arr['content']) ? addslashes($arr['content']) : '';
+        $type = isset($arr['type']) ? intval($arr['type']) : 0;
+        $id = isset($arr['id']) ? intval($arr['id']) : 0;
+        #必填数据检测
+        if(empty($name) || empty($content) || empty($type) || empty($id)){
+            $this->errno = 400;
+        }
+        $classify = isset($arr['classify']) ? addslashes($arr['classify']) : 0;
+        $display_sort = isset($arr['display_sort']) ? addslashes($arr['display_sort']) : 0;
+        $re = $this->CommandDb->editCommand($id,$name,$content,$type,$classify,$display_sort);
+        if(!$re){
+            $this->errno = 401;
+        }
+        return array('errno'=>$this->errno);
+
+    }
+
+    /**
      * 生成静态
      * @param $name 生成的文件名称
      * @param $content 内容

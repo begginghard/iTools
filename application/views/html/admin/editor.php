@@ -47,7 +47,8 @@
             <?php include('nav.php');?>
             <div class="containter">
                  <h1><?php if(empty($id)){echo "添加命令";}else{echo "修改命令";}?></h1>
-                   <form action="/Admin/submitEditor"  method="post">
+                   <form action="<?php if(!empty($id)){echo "/Admin/submitEdit";}else{echo "/Admin/submitEditor";}?>"  method="post">
+                   <input type="hidden" name="id" value="<?php if(!empty($id)){echo $id;}?>">
                    <div class="row">
                       <label for="inputEmail3" class="col-sm-2 control-label">命令名称</label>
                       <div class="col-xs-2">
