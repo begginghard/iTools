@@ -4,13 +4,13 @@
         <meta charset="utf-8"/>
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
-        <meta name="keywords" content="Base64加密,Base64解密,Base64加密解密"/>
-        <meta name="description" content="Base64在线加密解密"/>
+        <title>Linux 命令大全</title>
+        <meta name="keywords" content="Linux 命令大全, Linux 命令"/>
+        <meta name="description" content="Linux 命令大全, Linux 命令"/>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/bootstrap.min.css" />
         <script src="<?php echo base_url();?>style/js/jquery-3.1.0.min.js"></script>
         <script src="<?php echo base_url();?>style/js/jquery.zclip.min.js"></script>
-        <title>php js Base64编码/解码工具</title>
     </head>
     <style>
         .containter{
