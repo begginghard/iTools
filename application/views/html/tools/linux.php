@@ -103,7 +103,7 @@ display:block;
         <?php include('nav.php');?>
             <div class="containter">
             <div class="main">
-                <iframe name="right" src="<?php echo base_url();?>linux/<?php echo isset($GET['m']) ? trim($GET['m']) : 'cd';?>.html" width="100%" height="100%"></iframe>
+                <iframe name="right" title="<?php echo $_GET['m']?>命令" src="<?php echo base_url();?>linux/<?php echo isset($_GET['m']) ? trim($_GET['m']) : 'cd';?>.htm" width="100%" height="100%"></iframe>
             </div>
             <div class="sidebar">
 
