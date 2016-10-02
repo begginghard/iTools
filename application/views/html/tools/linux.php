@@ -133,7 +133,7 @@ display:block;
                                 if(!empty($data)){
                                     foreach($data as $key=>$val){
                             ?>
-                            <li><a href="<?php echo base_url();?>LinuxCommand/index?m=<?php echo $val['name'];?>" title="cd"><?php echo $val['name'];?></a></li>
+                            <li><a href="<?php echo base_url();?>LinuxCommand/index.html?m=<?php echo $val['name'];?>" title="cd"><?php echo $val['name'];?></a></li>
                             <?php }}?>
                          </ul>
                     </div>
