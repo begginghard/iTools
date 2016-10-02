@@ -4,13 +4,13 @@
         <meta charset="utf-8"/>
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
+        <title>MD5在线加密 - MD5加密 - MD5加密工具 - MD5在线转换</title>
         <meta name="keywords" content="MD5在线加密,MD5加密,MD5加密工具" />
         <meta name="description" content="MD5在线加密,MD5加密工具,MD5加密" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/bootstrap.min.css" />
         <script src="<?php echo base_url();?>style/js/jquery-3.1.0.min.js"></script>
         <script src="<?php echo base_url();?>style/js/jquery.zclip.min.js"></script>
-        <title>MD5在线加密 - MD5加密 - MD5加密工具 - MD5在线转换</title>
     </head>
     <style>
         .containter{

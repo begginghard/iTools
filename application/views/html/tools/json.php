@@ -4,6 +4,8 @@
     <meta charset="gb2312" />
     <meta name="robots" content="all" />
     <meta name="author" content="www.123itools.com" />
+    <meta name="360-site-verification" content="4d7c97467fc2d215cd2bae44e63ec76e" />
+    <title>json格式化,json压缩,json在线解析,json格式化工具,正则表达式测试,时间戳转换</title>
     <?php include('meta.php');?>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/bootstrap.min.css" />
@@ -16,7 +18,6 @@
     <script src="<?php echo base_url();?>style/js/jsoninit.js"></script>
     <script src="<?php echo base_url();?>style/js/jquery.zclip.min.js"></script>
     <script src="<?php echo base_url();?>style/js/jsoninit.js"></script>
-    <title>json格式化,json压缩,json在线解析,json格式化工具,正则表达式测试,时间戳转换</title>
 </head>
 
 <body id="editor">
