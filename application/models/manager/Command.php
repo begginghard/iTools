@@ -74,11 +74,7 @@ class Command extends  CI_Model{
         echo $content;
         $out1 = ob_get_contents();
         ob_end_clean();
-<<<<<<< HEAD
-        $fp = fopen("/private/var/www/iTools/linux/{$name}.htm", "w");
-=======
-        $fp = fopen("/var/www/iTools/linux/{$name}.html", "w");
->>>>>>> 628f892faf5275d869c729e1859337f5fd00f038
+        $fp = fopen("/var/www/iTools/linux/{$name}.htm", "w");
         if (!$fp) {
             return false;
         } else {

@@ -103,11 +103,7 @@ display:block;
         <?php include('nav.php');?>
             <div class="containter">
             <div class="main">
-<<<<<<< HEAD
                 <iframe name="right" title="<?php echo $_GET['m']?>命令" src="<?php echo base_url();?>linux/<?php echo isset($_GET['m']) ? trim($_GET['m']) : 'cd';?>.htm" width="100%" height="100%"></iframe>
-=======
-                <iframe name="right" src="<?php echo base_url();?>linux/<?php echo isset($_GET['m']) ? trim($_GET['m']) : 'ls';?>.html" width="100%" height="100%"></iframe>
->>>>>>> 628f892faf5275d869c729e1859337f5fd00f038
             </div>
             <div class="sidebar">
 
