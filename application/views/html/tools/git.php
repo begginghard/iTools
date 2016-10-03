@@ -153,9 +153,10 @@ display:block;
             function searchLinux(){
              window.event.returnValue = false;
                             var name = $('input[name="name"]').val();
+                            var type = 3;
                             $.ajax({
                                 type:'get',
-                                url: '/admin/searchCommand?name='+name,
+                                url: '/admin/searchCommand?name='+name+'&type='+type,
                                 cache:false,
                                 success:function(data){
 

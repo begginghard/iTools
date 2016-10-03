@@ -111,9 +111,11 @@ class Admin extends CI_Controller {
 	}
 
 	public function searchCommand(){
-		$name = $this->input->get('name');
+		$name = trim($this->input->get('name'));
+		$type = intval($this->input->get('type'));
+		$type = !empty($type) ? $type : 1;
 		$this->load->model('manager/Command');
-		$re = $this->Command->blurredSearch($name);
+		$re = $this->Command->blurredSearch($name, $type);
 		echo json_encode($re);
 	}
 

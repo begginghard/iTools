@@ -88,11 +88,11 @@ class Command extends  CI_Model{
     /**
     * 模糊查询
     */
-    public function blurredSearch($name){
+    public function blurredSearch($name,$type=1){
         if(empty($name)){
-            return arrray();
+            return array();
         }
-        return $this->CommandDb->blurredSearch($name);
+        return $this->CommandDb->blurredSearch($name,$type);
     }
 
     public function getCommandById($id){
