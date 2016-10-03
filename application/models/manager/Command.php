@@ -69,12 +69,12 @@ class Command extends  CI_Model{
      * @param $content 内容
      * @return bool
      */
-    public function makeHtml($name,$content){
+    public function makeHtml($name,$content,$dirName){
         ob_start();
         echo $content;
         $out1 = ob_get_contents();
         ob_end_clean();
-        $fp = fopen("/var/www/iTools/linux/{$name}.htm", "w");
+        $fp = fopen("/var/www/iTools/{$dirName}/{$name}.htm", "w");
         if (!$fp) {
             return false;
         } else {
@@ -103,8 +103,8 @@ class Command extends  CI_Model{
         return empty($re) ? array() : $re;
     }
 
-    public function getCommandByDisplaySort($num = 20){
-         $re = $this->CommandDb->getCommandByDisplaySort($num);
+    public function getCommandByDisplaySort($num = 20,$type=1){
+         $re = $this->CommandDb->getCommandByDisplaySort($num,$type);
          return empty($re) ? array() : $re;
     }
 

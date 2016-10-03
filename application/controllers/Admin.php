@@ -62,10 +62,12 @@ class Admin extends CI_Controller {
             #生成静态
             $name = isset($arr['name']) ? htmlspecialchars(trim($arr['name'])) : '';
             $content = isset($arr['content']) ? addslashes($arr['content']) : '';
-            $ret = $this->Command->makeHtml($name,$content);
+            $type = isset($arr['type']) ? intval($arr['type']) : 0;
+            $dirName = $this->getDirName($type);
+            $ret = $this->Command->makeHtml($name,$content,$dirName);
             if($ret){
                 $url = base_url();
-                $url .= "linux/" . $name . ".html";
+                $url .= "{$dirName}/" . $name . ".htm";
                 header("Location: {$url}");
                 exit();
             }
@@ -74,7 +76,12 @@ class Admin extends CI_Controller {
             echo $re['errno'];exit;
         }
 	}
-
+    private function getDirName($type){
+        $this->config->load('config', true);
+        $commandType = $this->config->item('command_type');#1一级命令分类
+        $dirName = isset($commandType[$type]) ? $commandType[$type] : 'linux';
+        return $dirName;
+    }
 	/**
 	 * 命令添加逻辑处理
 	 */
@@ -88,10 +95,12 @@ class Admin extends CI_Controller {
 			#生成静态
 			$name = isset($arr['name']) ? htmlspecialchars(trim($arr['name'])) : '';
 			$content = isset($arr['content']) ? addslashes($arr['content']) : '';
-			$ret = $this->Command->makeHtml($name,$content);
+			$type = isset($arr['type']) ? intval($arr['type']) : 0;
+		    $dirName = $this->getDirName($type);
+			$ret = $this->Command->makeHtml($name,$content,$dirName);
 			if($ret){
 				$url = base_url();
-				$url .= "linux/" . $name . ".html";
+				$url .= "{$dirName}/" . $name . ".htm";
 				header("Location: {$url}");
 				exit();
 			}

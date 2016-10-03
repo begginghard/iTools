@@ -1,13 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class LinuxCommand extends CI_Controller {
+class GitCommand extends CI_Controller {
     public function index(){
         $this->load->helper('url');
         $this->load->model('manager/Command');
-    	$re = $this->Command->getCommandByDisplaySort(30,$type=1);
+    	$re = $this->Command->getCommandByDisplaySort($num = 30,$type = 3);
     	$data['data'] = $re;
-    	$this->load->view('html/tools/linux',$data);
+    	$this->load->view('html/tools/git',$data);
     }
 }
 ?>
