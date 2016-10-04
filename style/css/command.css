@@ -1,0 +1,87 @@
+
+.containter{
+	margin:0 auto;
+	margin-top: 50px;
+	margin-bottom: 350px;
+	width:75%;
+	color:#2D374B;
+
+
+}
+.main {
+	width: 80%;
+	float: right;
+	border: 1px solid #eae6e6;
+	border-bottom:none;
+	height:1000px;
+	background-color: #f5f5f5;
+}
+.sidebar {
+	width: 17%;
+	float: left;
+	margin-right: 3%;
+
+}
+.sidebar .related {
+	background-color: #E6E9ED;
+}
+
+.sidebar .widget {
+	margin-bottom: 30px;
+}
+
+#fixedBox {
+	position: relative;
+}
+
+.sidebar .widget .hd {
+	background: #f0ad4e;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 15px;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+
+.sidebar .widget .bd {
+	padding: 10px 20px;
+}
+
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+.sidebar .widget li {
+	padding-bottom: 10px;
+	font-size: 14px;
+	list-style: none outside none;
+}
+.sidebar .widget li a{
+	text-decoration:none;
+	cursor: pointer;
+}
+.sidebar_search_box {
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+.sidebar .widget {
+	margin-bottom: 30px;
+}
+form{
+	display:block;
+}
+
+.dropdown-menu{
+	filter:alpha(opacity=95); /*IE滤镜，透明度50%*/
+	-moz-opacity:0.95; /*Firefox私有，透明度50%*/
+	opacity:0.95;/*其他，透明度50%*/
+	width:100%;
+}
+.dropdown-menu a{
+	text-decoration:none;
+}
+#footer{
+	top:0px;
+}

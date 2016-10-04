@@ -50,7 +50,7 @@
                     </ul>
                 </li>
                 <li class='li_list <?php if (isset($_GET["p"]) && $_GET["p"] == 7) {echo "now";}?>'><a href="<?php echo base_url();?>linuxCommand/index.html?p=7">Linux命令大全</a></li>
-                <li class='li_list <?php if (isset($_GET["p"]) && $_GET["p"] == 8) {echo "now";}?>'><a href="<?php echo base_url();?>gitCommand/index.html?p=7">Git命令大全</a></li>
+                <li class='li_list <?php if (isset($_GET["p"]) && $_GET["p"] == 8) {echo "now";}?>'><a href="<?php echo base_url();?>gitCommand/index.html?p=8">Git命令大全</a></li>
 
             </ul>
         </div>
