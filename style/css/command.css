@@ -3,21 +3,23 @@
 	margin:0 auto;
 	margin-top: 50px;
 	margin-bottom: 350px;
-	width:75%;
+	width:80%;
 	color:#2D374B;
 
 
 }
 .main {
-	width: 80%;
+	width: 77%;
 	float: right;
 	border: 1px solid #eae6e6;
 	border-bottom:none;
 	height:1000px;
 	background-color: #f5f5f5;
+	border-radius:5px;
+
 }
 .sidebar {
-	width: 17%;
+	width: 20%;
 	float: left;
 	margin-right: 3%;
 
@@ -41,11 +43,14 @@
 	padding: 0 15px;
 	font-size: 16px;
 	font-weight: 300;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	color:white;
 }
 
 
 .sidebar .widget .bd {
-	padding: 10px 20px;
+
 }
 
 
@@ -57,6 +62,10 @@ li {
 	padding-bottom: 10px;
 	font-size: 14px;
 	list-style: none outside none;
+	padding-left: 20px;
+	border-bottom:  solid 1px white;
+	height: 28px;
+	line-height: 28px;
 }
 .sidebar .widget li a{
 	text-decoration:none;
@@ -68,6 +77,8 @@ li {
 }
 .sidebar .widget {
 	margin-bottom: 30px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 form{
 	display:block;
