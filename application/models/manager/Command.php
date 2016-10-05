@@ -103,8 +103,8 @@ class Command extends  CI_Model{
         return empty($re) ? array() : $re;
     }
 
-    public function getCommandByDisplaySort($num = 20,$type=1){
-         $re = $this->CommandDb->getCommandByDisplaySort($num,$type);
+    public function getCommandByDisplaySort($type=1){
+         $re = $this->CommandDb->getCommandByDisplaySort($type);
          return empty($re) ? array() : $re;
     }
 

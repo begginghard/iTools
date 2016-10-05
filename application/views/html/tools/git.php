@@ -12,6 +12,8 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/command.css" />
         <script src="<?php echo base_url();?>style/js/jquery-3.1.0.min.js"></script>
         <script src="<?php echo base_url();?>style/js/jquery.zclip.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/command2.css" />
+        <script src="<?php echo base_url();?>style/js/index.js"></script>
     </head>
     <body id="editor">
         <div id="wrapper">
@@ -42,15 +44,28 @@
                     </div>
 
                     <div class="bd">
-                        <ul>
+                        <ul id="accordion" class="accordion">
+                        <?php
+
+                            if(!empty($data)){
+                                foreach($data as $key=>$val){
+                        ?>
+                        <li>
+                            <div class="link"><i class="fa fa-paint-brush"></i><?php echo isset($classify[$key]) ? $classify[$key] : 'default'?><i class="fa fa-chevron-down"></i></div>
+                            <ul class="submenu">
                             <?php
 
-                                if(!empty($data)){
-                                    foreach($data as $key=>$val){
+                                if(!empty($val)){
+                                    foreach($val as $k=>$v){
                             ?>
-                            <li><a href="<?php echo base_url();?>GitCommand/index.html?m=<?php echo $val['name'];?>" title="cd"><?php echo $val['name'];?></a></li>
+                                <li><a href="<?php echo base_url();?>GitCommand/index.html?m=<?php echo $v['name'];?>" title="cd"><?php echo $v['name'];?></a></li>
+
                             <?php }}?>
-                         </ul>
+                            </ul>
+                        </li>
+                         <?php }}?>
+
+                        </ul>
                     </div>
                 </div>
 

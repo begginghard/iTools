@@ -62,10 +62,8 @@ li {
 	padding-bottom: 10px;
 	font-size: 14px;
 	list-style: none outside none;
-	padding-left: 20px;
-	border-bottom:  solid 1px white;
-	height: 28px;
-	line-height: 28px;
+	border-bottom: 1px solid #CCC;
+
 }
 .sidebar .widget li a{
 	text-decoration:none;
