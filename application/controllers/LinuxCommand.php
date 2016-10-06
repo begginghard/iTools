@@ -10,7 +10,7 @@ class LinuxCommand extends CI_Controller {
     	$arr = array();
     	if(!empty($re)){
     	    foreach($re as $key=>$val){
-    	        $arr[$val['classify']][] = $val;
+    	        $arr[$val['classify']][$val['name']] = $val;
     	    }
     	}
         #加载分类配置
