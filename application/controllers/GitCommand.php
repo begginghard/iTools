@@ -13,6 +13,7 @@ class GitCommand extends CI_Controller {
                 $arr[$val['classify']][] = $val;
             }
         }
+        ksort($arr,1);
         #加载分类配置
         $this->config->load('config', true);
         $classify    = $this->config->item('classify');#二级分类
