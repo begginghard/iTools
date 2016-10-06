@@ -70,7 +70,7 @@ class CommandDb extends  CI_Model{
     public function getCommandByDisplaySort($type=1){
         $arr = array();
         try{
-            $sql = "SELECT id,name,classify FROM {$this->_db_name} where type={$type} order by display_sort desc";
+            $sql = "SELECT id,name,classify FROM {$this->_db_name} where type={$type} order by display_sort asc";
             $query = $this->db->query($sql);
             $arr = $query->result_array();#多条
         }catch (Exception $e) {
