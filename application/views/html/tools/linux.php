@@ -47,18 +47,23 @@
                         <ul id="accordion" class="accordion">
                             <?php
 
+                                $m = isset($_GET['m']) ? trim($_GET['m']): 'cd';
+
                                 if(!empty($data)){
+
                                     foreach($data as $key=>$val){
+                                    $type = isset($val[$m]['classify']) ? $val[$m]['classify'] : null;
+
                             ?>
-                            <li>
+                            <li class="<?php if($type!==null && $key == $type ){echo "open";}else{echo "";}?>">
                                 <div class="link"><i class="fa fa-paint-brush"></i><?php echo isset($classify[$key]) ? $classify[$key] : 'default'?><i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu">
+                                <ul class="submenu" style="display:<?php if($type!==null && $key == $type ){echo "block";}else{echo "none";}?>">
                                 <?php
 
                                     if(!empty($val)){
                                         foreach($val as $k=>$v){
                                 ?>
-                                    <li><a href="<?php echo base_url();?>LinuxCommand/index.html?m=<?php echo $v['name'];?>" title="cd"><?php echo $v['name'];?></a></li>
+                                    <li class="<?php if($v['name']== $m ){echo "now_command";}else{echo "";}?>"><a href="<?php echo base_url();?>LinuxCommand/index.html?m=<?php echo $v['name'];?>" title="cd"><?php echo $v['name'];?></a></li>
 
                                 <?php }}?>
                                 </ul>
