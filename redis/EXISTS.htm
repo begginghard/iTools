@@ -1,0 +1,11 @@
+<h3>1. 命令</h3><blockquote><p>EXISTS --&nbsp;检查给定 key 是否存在</p></blockquote><h3>2. 使用说明</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>EXISTS key</h4></li><li><h4>时间复杂度：O(1)</h4></li><li><h4>返回值：若 key 存在，返回 1, 否则返回 0。<br/></h4></li></ul><h3>3. 使用样例</h3><pre class=\"brush:bash;toolbar:false\">redis&gt;&nbsp;SET&nbsp;db&nbsp;&quot;redis&quot;
+OK
+
+redis&gt;&nbsp;EXISTS&nbsp;db
+(integer)&nbsp;1
+
+redis&gt;&nbsp;DEL&nbsp;db
+(integer)&nbsp;1
+
+redis&gt;&nbsp;EXISTS&nbsp;db
+(integer)&nbsp;0</pre><p><br/></p>
