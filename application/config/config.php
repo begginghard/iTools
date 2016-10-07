@@ -528,4 +528,17 @@ $config['classify']=array(
         4=>'网络管理',
         5=>'系统管理',
     ),
+    2=>array(
+        1=>'Key(键)',
+        2=>'String(字符串)',
+        3=>'Hash(哈希)',
+        4=>'List(列表)',
+        5=>'Set(集合)',
+        6=>'SortedSet(有序集合)',
+        7=>'Pub/Sub(发布/订阅)',
+        8=>'Transaction(事务)',
+    ),
+    3=>array(
+        1=>'初始化',
+    )
 );
