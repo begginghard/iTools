@@ -66,7 +66,7 @@
                 var name = $('input[name="name"]').val();
                 $.ajax({
                     type:'get',
-                    url: '/admin/searchCommand?name='+name,
+                    url: '/admin/searchCommand2?name='+name,
                     cache:false,
                     success:function(data){
 
