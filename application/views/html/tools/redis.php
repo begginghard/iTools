@@ -20,7 +20,7 @@
         <?php include('nav.php');?>
             <div class="containter">
             <div class="main">
-                <iframe name="right" style="text-align:center;padding:20px;" title="<?php echo isset($_GET['m']) ? trim($_GET['m']):'' ;?>命令" src="<?php echo base_url();?>redis/<?php echo isset($_GET['m']) ? trim($_GET['m']) : 'get';?>.htm" width="100%" height="100%"></iframe>
+                <iframe name="right" style="text-align:center;padding:20px;" title="<?php echo isset($_GET['m']) ? trim($_GET['m']):'' ;?>命令" src="<?php echo base_url();?>redis/<?php echo isset($_GET['m']) ? trim($_GET['m']) : 'SET';?>.htm" width="100%" height="100%"></iframe>
             </div>
             <div class="sidebar">
 
