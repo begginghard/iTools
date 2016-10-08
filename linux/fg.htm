@@ -1,0 +1,15 @@
+<h3>1. 命令</h3><blockquote><p>fg -- 将后台中的程序调到前台继续执行</p></blockquote><h3>2. 使用样例</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>默认将后台中的带 &quot;+&quot; 的进行调至到前台继续执行<br/></h4></li></ul><pre class=\"brush:bash;toolbar:false\">[root@shengqian&nbsp;tmp]#&nbsp;jobs
+[1]-&nbsp;&nbsp;已停止&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim&nbsp;a
+[2]+&nbsp;&nbsp;已停止&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim&nbsp;b
+[root@shengqian&nbsp;tmp]#&nbsp;fg
+vim&nbsp;b</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>选择后台中的某个进程调至到前台运行</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[root@shengqian&nbsp;tmp]#&nbsp;jobs
+[1]-&nbsp;&nbsp;已停止&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim&nbsp;a
+[2]+&nbsp;&nbsp;已停止&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim&nbsp;b
+[root@shengqian&nbsp;tmp]#&nbsp;fg&nbsp;%1
+vim&nbsp;a
+
+[root@shengqian&nbsp;tmp]#&nbsp;jobs
+[1]+&nbsp;&nbsp;已停止&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim&nbsp;a
+[2]-&nbsp;&nbsp;已停止&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim&nbsp;b
+[root@shengqian&nbsp;tmp]#&nbsp;fg&nbsp;%2
+vim&nbsp;b</pre><h3>3. 使用方法</h3><blockquote><p>fg [%number]</p></blockquote><h3>4. 参数说明</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>%number</h4></li></ul><blockquote><p>当后台有多个进程时，通过指定 number 来唤醒某一个进程</p></blockquote>
