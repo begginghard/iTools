@@ -118,5 +118,12 @@ class Admin extends CI_Controller {
 		$re = $this->Command->blurredSearch($name, $type);
 		echo json_encode($re);
 	}
+	//编辑页面的搜索
+	public function searchCommand2(){
+        $name = trim($this->input->get('name'));
+        $this->load->model('manager/Command');
+        $re = $this->Command->blurredSearch2($name);
+        echo json_encode($re);
+    }
 
 }

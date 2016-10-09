@@ -53,6 +53,18 @@ class CommandDb extends  CI_Model{
         }
         return $arr;
     }
+    public function blurredSearch2($name){
+        $arr = array();;
+        try{
+            $sql = "SELECT `id`,`name` FROM {$this->_db_name} where name like '%{$name}%'";
+            $query = $this->db->query($sql);
+            $arr = $query->result_array();#多条
+        }catch (Exception $e) {
+            print $e->getMessage();
+            exit();
+        }
+        return $arr;
+    }
 
     public function getCommandById($id){
         $arr = array();;

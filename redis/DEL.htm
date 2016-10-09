@@ -1,0 +1,20 @@
+<p>1. 命令</p><p><br/></p><p>DEL -- 删除给定的一个或多个 key ,不存在的 key 会被忽略</p><p><br/></p><p>2. 使用说明</p><p><br/></p><p>DEL key [key ...]</p><p><br/></p><p>时间复杂度：</p><p><br/></p><p>O(N)， N 为被删除的 key 的数量。</p><p>删除单个字符串类型的 key ，时间复杂度为O(1)。</p><p>删除单个列表、集合、有序集合或哈希表类型的 key ，时间复杂度为O(M)， M 为以上数据结构内的元素数量。</p><p>返回值：被删除 key 的数量</p><p><br/></p><pre class=\"code\">3.&nbsp;使用样例
+#&nbsp;&nbsp;删除单个&nbsp;key
+redis&gt;&nbsp;SET&nbsp;name&nbsp;huangz
+OK
+redis&gt;&nbsp;DEL&nbsp;name
+(integer)&nbsp;1
+#&nbsp;删除一个不存在的&nbsp;key
+redis&gt;&nbsp;EXISTS&nbsp;phone
+(integer)&nbsp;0
+redis&gt;&nbsp;DEL&nbsp;phone&nbsp;#&nbsp;失败，没有&nbsp;key&nbsp;被删除
+(integer)&nbsp;0
+#&nbsp;同时删除多个&nbsp;key
+redis&gt;&nbsp;SET&nbsp;name&nbsp;&quot;redis&quot;
+OK
+redis&gt;&nbsp;SET&nbsp;type&nbsp;&quot;key-value&nbsp;store&quot;
+OK
+redis&gt;&nbsp;SET&nbsp;website&nbsp;&quot;redis.com&quot;
+OK
+redis&gt;&nbsp;DEL&nbsp;name&nbsp;type&nbsp;website
+(integer)&nbsp;3</pre><p><br/></p>

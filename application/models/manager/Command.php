@@ -94,6 +94,15 @@ class Command extends  CI_Model{
         }
         return $this->CommandDb->blurredSearch($name,$type);
     }
+    /**
+    * 模糊查询
+    */
+    public function blurredSearch2($name){
+        if(empty($name)){
+            return array();
+        }
+        return $this->CommandDb->blurredSearch2($name);
+    }
 
     public function getCommandById($id){
         if(empty($id)){

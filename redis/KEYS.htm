@@ -1,0 +1,15 @@
+<p><strong>1. 命令</strong></p><p><br/></p><p>KEYS -- 查找所有符合给定模式 pattern 的 key&nbsp;</p><p><br/></p><p><strong>2. 使用说明</strong></p><p><br/></p><p>KEYS pattern</p><p>KEYS * 匹配数据库中所有 key 。</p><p>KEYS h?llo 匹配 hello ， hallo 和 hxllo 等。</p><p>KEYS h*llo 匹配 hllo 和 heeeeello 等。</p><p>KEYS h[ae]llo 匹配 hello 和 hallo ，但不匹配 hillo 。</p><p>特殊符号用 \\ 隔开</p><p><br/></p><p>3.<strong>注意点</strong></p><p><br/></p><p>KEYS 的速度非常快，但在一个大的数据库中使用它仍然可能造成性能问题，如果你需要从一个数据集中查找特定的 key ，你最好还是用 Redis 的集合结构(set)来代替。</p><p><br/></p><p>4.<strong>时间复杂度</strong></p><p><strong><br/></strong></p><p>O(N)， N 为数据库中 key 的数量</p><p><br/></p><p>5. <strong>使用样例</strong></p><p><br/></p><hr/><pre class=\"brush:html;toolbar:false\">redis&gt;&nbsp;MSET&nbsp;one&nbsp;1&nbsp;two&nbsp;2&nbsp;three&nbsp;3&nbsp;four&nbsp;4&nbsp;&nbsp;#&nbsp;一次设置&nbsp;4&nbsp;个&nbsp;key
+OK
+redis&gt;&nbsp;KEYS&nbsp;*o*
+1)&nbsp;&quot;four&quot;
+2)&nbsp;&quot;two&quot;
+3)&nbsp;&quot;one&quot;
+redis&gt;&nbsp;KEYS&nbsp;t??
+1)&nbsp;&quot;two&quot;
+redis&gt;&nbsp;KEYS&nbsp;t[w]*
+1)&nbsp;&quot;two&quot;
+redis&gt;&nbsp;KEYS&nbsp;*&nbsp;&nbsp;#&nbsp;匹配数据库内所有&nbsp;key
+1)&nbsp;&quot;four&quot;
+2)&nbsp;&quot;three&quot;
+3)&nbsp;&quot;two&quot;
+4)&nbsp;&quot;one&quot;</pre><hr/><p><br/></p>

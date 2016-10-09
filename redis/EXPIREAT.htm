@@ -1,0 +1,6 @@
+<p>1. 命令</p><p><br/></p><p>EXPIREAT -- EXPIREAT 的作用和 EXPIRE 类似，都用于为 key 设置生存时间。不同在于 EXPIREAT 命令接受的时间参数是 UNIX 时间戳(unix timestamp)。</p><p><br/></p><p>2. 使用说明</p><p><br/></p><p>EXPIREAT key timestamp</p><p><br/></p><p>3.时间复杂度：O(1)</p><p><br/></p><p>返回值：如果生存时间设置成功，返回 1 。当 key 不存在或没办法设置生存时间，返回 0 。</p><p><br/></p><p>4. 使用样例</p><p><br/></p><pre class=\"brush:js;toolbar:false\">redis&gt;&nbsp;SET&nbsp;cache&nbsp;www.google.com
+OK
+redis&gt;&nbsp;EXPIREAT&nbsp;cache&nbsp;1355292000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;这个&nbsp;key&nbsp;将在&nbsp;2012.12.12&nbsp;过期
+(integer)&nbsp;1
+redis&gt;&nbsp;TTL&nbsp;cache
+(integer)&nbsp;45081860</pre><p><br/></p><p><br/></p>

@@ -5,7 +5,8 @@
     <meta name="robots" content="all" />
     <meta name="author" content="www.123itools.com" />
     <title>时间戳转换</title>
-    <?php include('meta.php');?>
+    <meta name="keywords" content="时间戳转换"/>
+    <meta name="description" content="Base时间戳转换"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/bootstrap.min.css" />
     <script src="<?php echo base_url();?>style/js/jquery-3.1.0.min.js"></script>
