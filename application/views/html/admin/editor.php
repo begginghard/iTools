@@ -164,7 +164,7 @@
             //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
             var ue = UE.getEditor('editor');
             //编辑时内容默认填入
-            var content = '<?php if(!empty($content)){echo stripslashes($content);}?>';
+            var content = '<?php if(!empty($content)){ $content = json_encode(stripslashes($content));$content = trim($content);$content = trim($content,"\"");echo $content;}?>';
             if(content){
                 ue.addListener("ready", function () {
                 // editor准备好之后才可以使用

@@ -90,6 +90,7 @@
             </form>
 
         </div>
+            <?php include('bottom_map.php');?>
             <?php include('footer.php');?>
         </div>
 

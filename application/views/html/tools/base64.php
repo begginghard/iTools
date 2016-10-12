@@ -55,6 +55,7 @@
                 <button type="button" class="btn btn-default" id="copy">复制</button>
             </form>
         </div>
+            <?php include('bottom_map.php');?>
             <?php include('footer.php');?>
         </div>
 

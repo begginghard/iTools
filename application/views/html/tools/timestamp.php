@@ -60,6 +60,7 @@ font-size:14px;
                 <span><input type="text" class="form-control" placeholder="Unix timestamp" style="width:250px;" id="target_unix_stamp" ></span>
             </p>
         </div>
+        <?php include('bottom_map.php');?>
         <?php include('footer.php');?>
     </div>
 

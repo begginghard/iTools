@@ -20,7 +20,8 @@
         <?php include('nav.php');?>
             <div class="containter">
             <div class="main">
-                <iframe name="right" style="text-align:center;padding:20px;" title="<?php echo isset($_GET['m']) ? trim($_GET['m']):'' ;?>命令" src="<?php echo base_url();?>redis/<?php echo isset($_GET['m']) ? trim($_GET['m']) : 'SET';?>.htm" width="100%" height="100%"></iframe>
+                <?php include('position.php');?>
+                <?php echo $content;?>
             </div>
             <div class="sidebar">
 
@@ -77,6 +78,7 @@
                     
                 }
             </script>
+        <?php include('bottom_map.php');?>
         <?php include('footer.php');?>
         </div>
 

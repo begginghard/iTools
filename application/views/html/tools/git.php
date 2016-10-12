@@ -20,11 +20,10 @@
         <?php include('nav.php');?>
             <div class="containter">
             <div class="main">
-                <iframe name="right" style="text-align:center;padding:20px;" title="<?php echo isset($_GET['m']) ? trim($_GET['m']):'' ;?>命令" src="<?php echo base_url();?>git/<?php echo isset($_GET['m']) ? trim($_GET['m']) : 'init';?>.htm" width="100%" height="100%"></iframe>
+                <?php include('position.php');?>
+                <?php echo $content;?>
             </div>
             <div class="sidebar">
-
-
             <div class="dropdown">
                 <div class="input-group">
                     <input type="text" class="form-control" autocomplete="off" name="name" onkeyup="searchLinux();" value="命令搜索" onfocus="if (value =='命令搜索'){value =''}" onblur="if (value ==''){value='命令搜索'}">
@@ -38,11 +37,9 @@
             </div>
                 <br>
                 <div class="widget related">
-
                     <div class="hd">
                             <span>常用命令</span>
                     </div>
-
                     <div class="bd">
                         <ul id="accordion" class="accordion">
                         <?php
@@ -77,6 +74,7 @@
                     
                 }
             </script>
+        <?php include('bottom_map.php');?>
         <?php include('footer.php');?>
         </div>
 

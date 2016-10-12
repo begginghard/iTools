@@ -94,6 +94,13 @@ class Command extends  CI_Model{
         }
         return $this->CommandDb->blurredSearch($name,$type);
     }
+
+    public function searchCommand($name,$type=1){
+        if(empty($name)){
+            return array();
+        }
+        return $this->CommandDb->searchCommand($name,$type);
+    }
     /**
     * 模糊查询
     */
@@ -115,6 +122,11 @@ class Command extends  CI_Model{
     public function getCommandByDisplaySort($type=1){
          $re = $this->CommandDb->getCommandByDisplaySort($type);
          return empty($re) ? array() : $re;
+    }
+
+    public function position($typeName,$classityName,$name){
+        $html = '<div class="position"><span>当前位置></span><span><a href="'.base_url().'LinuxCommand/index.html?m='.$name.'">'.$typeName.'</a>><a href="'.base_url().'LinuxCommand/index.html?m='.$name.'">'.$classityName.'</a>><a href="'.base_url().'LinuxCommand/index.html?m='.$name.'">'.$name.'</a></span></div>';
+        return $html;
     }
 
 }

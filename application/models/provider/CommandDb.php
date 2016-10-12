@@ -42,7 +42,7 @@ class CommandDb extends  CI_Model{
         return $re;
     }
     public function blurredSearch($name,$type=1){
-        $arr = array();;
+        $arr = array();
         try{
             $sql = "SELECT `id`,`name` FROM {$this->_db_name} where type={$type} and name like '%{$name}%'";
             $query = $this->db->query($sql);
@@ -54,11 +54,23 @@ class CommandDb extends  CI_Model{
         return $arr;
     }
     public function blurredSearch2($name){
-        $arr = array();;
+        $arr = array();
         try{
             $sql = "SELECT `id`,`name` FROM {$this->_db_name} where name like '%{$name}%'";
             $query = $this->db->query($sql);
             $arr = $query->result_array();#多条
+        }catch (Exception $e) {
+            print $e->getMessage();
+            exit();
+        }
+        return $arr;
+    }
+    public function searchCommand($name,$type){
+        $arr = array();
+        try{
+            $sql = "SELECT * FROM {$this->_db_name} where name='{$name}'";
+            $query = $this->db->query($sql);
+            $arr = $query->row_array();#多条
         }catch (Exception $e) {
             print $e->getMessage();
             exit();

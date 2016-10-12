@@ -40,7 +40,7 @@
             </div>
         </div>
     </div>
-
+<?php include('bottom_map.php');?>
    <?php include('footer.php');?>
 </div>
 <script>
