@@ -1,0 +1,17 @@
+<h3>1. 命令</h3><blockquote><p>bg -- 唤醒在后台暂停运行的进程，在后台运行</p></blockquote><h3>2. 使用样例</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>使用 ctrl+z&nbsp;将一个正在执行的命令放到后台并暂停运行，然后使用 fg 让该进程在后台执行。&nbsp;<br/></h4></li></ul><pre class=\"brush:bash;toolbar:false\">[root@shengqian&nbsp;tmp]#&nbsp;sh&nbsp;test.sh
+Hello&nbsp;World0
+Hello&nbsp;World1
+Hello&nbsp;World2
+Hello&nbsp;World3
+^Z
+[1]+&nbsp;&nbsp;已停止&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sh&nbsp;test.sh
+[root@shengqian&nbsp;tmp]#&nbsp;bg
+[1]+&nbsp;sh&nbsp;test.sh&nbsp;&amp;
+[root@shengqian&nbsp;tmp]#&nbsp;Hello&nbsp;World4
+Hello&nbsp;World5
+Hello&nbsp;World6
+Hello&nbsp;World7
+Hello&nbsp;World8
+Hello&nbsp;World9
+
+[1]+&nbsp;&nbsp;完成&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sh&nbsp;test.sh</pre><p><br/></p>
