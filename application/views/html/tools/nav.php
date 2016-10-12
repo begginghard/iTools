@@ -18,15 +18,6 @@
 }
 </style>
 <div id="header">
-    <div class="top_nav">
-        <div></div>
-        <div class="top_right">
-            <span>收藏我们<span>
-            <span>网站地图<span>
-            <span>TAG标签<span>
-            <span>RSS地图<span>
-        </div>
-    </div>
     <div class="nav">
         <div class="logo">开发者工具箱logo
         </div>
