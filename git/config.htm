@@ -1,0 +1,13 @@
+<h3>1. 命令</h3><blockquote><p>config -- 配置 Git 相关属性，例如：用户信息，配色，编辑器等信息。</p></blockquote><h3>2. 使用样例</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>配置全局用户名和邮箱</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[123itools@shengqian&nbsp;~]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;user.name&nbsp;begginghard
+[123itools@shengqian&nbsp;~]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;user.email&nbsp;begginghard@126.com
+[123itools@shengqian&nbsp;~]$&nbsp;git&nbsp;config&nbsp;--list
+user.name=begginghard
+user.email=begginghard@126.com</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>配置 git 输出结果加上颜色</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[123itools@shengqian&nbsp;gitdemo]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;color.ui&nbsp;true
+[123itools@shengqian&nbsp;gitdemo]$&nbsp;git&nbsp;config&nbsp;--list
+user.name=begginghard
+user.email=begginghard@126.com
+color.ui=true
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true</pre><h3>3. 使用方法</h3><blockquote><p>git config [选项]<br/></p></blockquote><blockquote><p>git config 命令会将配置项写到配置文件中。系统级别的配置项写到 /etc/gitconfig，用户级别的配置项写到 ~/.gitconfig，项目级别的配置项写到 project/.gitconfig</p></blockquote><h3>4. 参数说明</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>--global&nbsp;<br/></h4></li></ul><blockquote><p>设置用户级别的配置</p></blockquote><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>--system</h4></li></ul><blockquote><p>设置系统级别的配置</p></blockquote><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>--local</h4></li></ul><blockquote><p>设置库级别的配置</p></blockquote><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>--list</h4></li></ul><blockquote><p>显示当前配置了哪些属性</p></blockquote><p><br/></p>

@@ -540,6 +540,7 @@ $config['classify']=array(
         8=>'Transaction(事务)',
     ),
     3=>array(
-        1=>'初始化',
+        1=>'Git配置',
+	2=>'初始化',
     )
 );
