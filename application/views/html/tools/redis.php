@@ -19,8 +19,9 @@
         <div id="wrapper">
         <?php include('nav.php');?>
             <div class="containter">
+             <?php include('position.php');?>
             <div class="main">
-                <?php include('position.php');?>
+
                 <?php echo $content;?>
             </div>
             <div class="sidebar">

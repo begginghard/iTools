@@ -125,7 +125,7 @@ class Command extends  CI_Model{
     }
 
     public function position($typeName,$classityName,$name){
-        $html = '<div class="position"><span>当前位置></span><span><a href="'.base_url().'LinuxCommand/index.html?m='.$name.'">'.$typeName.'</a>><a href="'.base_url().'LinuxCommand/index.html?m='.$name.'">'.$classityName.'</a>><a href="'.base_url().'LinuxCommand/index.html?m='.$name.'">'.$name.'</a></span></div>';
+        $html = '<div id="position"><span>当前位置></span><span><a href="'.base_url().'LinuxCommand/index.html?m='.$name.'">'.$typeName.'</a>><a href="'.base_url().'LinuxCommand/index.html?m='.$name.'">'.$classityName.'</a>><a href="'.base_url().'LinuxCommand/index.html?m='.$name.'">'.$name.'</a></span></div>';
         return $html;
     }
 

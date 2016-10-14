@@ -19,13 +19,11 @@
         <div id="wrapper">
         <?php include('nav.php');?>
             <div class="containter">
+             <?php include('position.php');?>
             <div class="main" id="main">
-            <?php include('position.php');?>
                 <?php echo $content;?>
             </div>
             <div class="sidebar">
-
-
             <div class="dropdown">
                 <div class="input-group">
                     <input type="text" class="form-control" autocomplete="off" name="name" onkeyup="searchLinux();" value="命令搜索" onfocus="if (value =='命令搜索'){value =''}" onblur="if (value ==''){value='命令搜索'}">

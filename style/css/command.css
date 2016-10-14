@@ -52,10 +52,11 @@
 	margin-bottom: 350px;
 	width:80%;
 	color:#2D374B;
+	position: relative;
 
 
 }
-.main {
+.main:not(.position){
 	width: 77%;
 	float: right;
 	border: 1px solid #eae6e6;
@@ -75,16 +76,15 @@
 
 }
 
-.position {
-	width: 103%;
+#position {
+	width: 77%;
 	height: 40px;
 	background-color: white;
-	position: relative;
-	top: -50px;
-	border-top:2px solid #0474c8;
+	position: absolute;
+	/* top: -50px; */
+	border-top: 2px solid #0474c8;
 	padding: 10px;
-	left: -25px;
-
+	left: 23%;
 }
 .sidebar .related {
 	background-color: #E6E9ED;
