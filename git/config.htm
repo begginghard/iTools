@@ -10,4 +10,19 @@ color.ui=true
 core.repositoryformatversion=0
 core.filemode=true
 core.bare=false
+core.logallrefupdates=true</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>配置 git 常用操作的别名</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[123itools@shengqian&nbsp;gitdemo]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;alias.ci&nbsp;commit
+[123itools@shengqian&nbsp;gitdemo]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;alias.st&nbsp;status
+[123itools@shengqian&nbsp;gitdemo]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;alias.co&nbsp;checkout
+[123itools@shengqian&nbsp;gitdemo]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;alias.br&nbsp;branch
+[123itools@shengqian&nbsp;gitdemo]$&nbsp;git&nbsp;config&nbsp;--list
+user.name=begginghard
+user.email=begginghard@126.com
+color.ui=true
+alias.ci=commit
+alias.st=status
+alias.co=checkout
+alias.br=branch
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
 core.logallrefupdates=true</pre><h3>3. 使用方法</h3><blockquote><p>git config [选项]<br/></p></blockquote><blockquote><p>git config 命令会将配置项写到配置文件中。系统级别的配置项写到 /etc/gitconfig，用户级别的配置项写到 ~/.gitconfig，项目级别的配置项写到 project/.gitconfig</p></blockquote><h3>4. 参数说明</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>--global&nbsp;<br/></h4></li></ul><blockquote><p>设置用户级别的配置</p></blockquote><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>--system</h4></li></ul><blockquote><p>设置系统级别的配置</p></blockquote><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>--local</h4></li></ul><blockquote><p>设置库级别的配置</p></blockquote><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>--list</h4></li></ul><blockquote><p>显示当前配置了哪些属性</p></blockquote><p><br/></p>
