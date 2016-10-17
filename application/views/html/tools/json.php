@@ -21,97 +21,107 @@
 </head>
 
 <body id="editor">
-<div id="wrapper">
-<?php include('nav.php');?>
-     <div>
-        <div id="CodeArea" >
-            <textarea id="json-src" style="line-height:15px"></textarea>
-        </div>
+    <div id="wrapper">
+        <?php include('nav.php');?>
+        <div>
+            <div id="CodeArea" >
+                <textarea id="json-src" style="line-height:15px"></textarea>
+            </div>
 
-        <div  class="jiantou" style="float:left;">
-            <div class="botton-div">
-                <div class="bt zip">压缩结果</div>
-                <div class="bt hover" style="cursor:pointer" id="copy">复制结果</div>
+            <div class="jiantou" style="float:left;">
+                <div class="botton-div">
+                    <div class="bt zip">压缩结果</div>
+                    <div class="bt hover" style="cursor:pointer" id="copy">复制结果</div>
+                </div>
+            </div>
+
+            <div id="right-box"  style="height:510px;border-left:solid 1px #ddd;box-shadow: 1px 1px 50px #ECECEC;border-right:solid 1px #ddd;border-bottom:solid 1px #ddd;border-radius:0;resize: none;overflow-y:scroll;position:relative;">
+                <div id="json-target" class="ro" style="padding:0px 5px;over">
+                </div>
             </div>
         </div>
-
-	<div id="right-box"  style="height:510px;border-left:solid 1px #ddd;box-shadow: 1px 1px 50px #ECECEC;border-right:solid 1px #ddd;border-bottom:solid 1px #ddd;border-radius:0;resize: none;overflow-y:scroll;position:relative;">
-            <div id="json-target" class="ro" style="padding:0px 5px;over">
-            </div>
-        </div>
+        <?php include('bottom_map.php');?>
+        <?php include('footer.php');?>
     </div>
-<?php include('bottom_map.php');?>
-   <?php include('footer.php');?>
-</div>
-<script>
- $(function () {
-    $('#copy').zclip({
-        path:'<?php echo base_url();?>style/js/ZeroClipboard.swf',
-        copy: function() {
-            return $("#json-target").text();
-        }
-    });
- });
-</script>
-<script type="text/javascript">
-    $('textarea').numberedtextarea();
-    var current_json = '';
-    var current_json_str = '';
-    var xml_flag = false;
-    var zip_flag = false;
-    var shown_flag = false;
-    function init(){
-        xml_flag = false;
-        zip_flag = false;
-        shown_flag = false;
-        renderLine();
 
-    }
-    $('#json-src').keyup(function(){
-     keyup();
-    });
-function keyup(){
-	init();
-        var content = $.trim($('#json-src').val());
-        var result = '';
-        if (content!='') {
-            try{
-                current_json = jsonlint.parse(content);
-                current_json_str = JSON.stringify(current_json);
-                //current_json = JSON.parse(content);
-                result = new JSONFormat(content,4).toString();
-            }catch(e){
-                result = '<span style="color: #f1592a;font-weight:bold;">' + e + '</span>';
-                current_json_str = result;
+    <script>
+        $(function () {
+            $('#copy').zclip({
+                path:'<?php echo base_url();?>style/js/ZeroClipboard.swf',
+                copy: function() {
+                    if(!zip_flag) {
+                        return current_zip_json_str;
+                    } else {
+                        return $("#json-target").text();
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $('textarea').numberedtextarea();
+        var current_json = '';
+        var current_json_str = '';
+        var current_zip_json_str = '';
+        var xml_flag = false;
+        var zip_flag = false;
+        var shown_flag = false;
+        function init(){
+            xml_flag = false;
+            zip_flag = false;
+            shown_flag = false;
+            renderLine();
+
+        }
+        $('#json-src').keyup(function(){
+            keyup();
+        });
+
+        function keyup(){
+            init();
+            var content = $.trim($('#json-src').val());
+            var result = '';
+            if (content!='') {
+                try{
+                    current_json = jsonlint.parse(content);
+                    current_json_str = JSON.stringify(current_json);
+                    current_zip_json_str = JSON.stringify(current_json, null, 4);
+                    result = new JSONFormat(content,4).toString();
+                }catch(e){
+                    result = '<span style="color: #f1592a;font-weight:bold;">' + e + '</span>';
+                    current_json_str = result;
+                    current_zip_json_str = result;
+                }
+
+                $('#json-target').html(result);
+//                alert(current_zip_json_str);
+//                $('#json-target').html(current_zip_json_str);
+            }else{
+                $('#json-target').html('');
             }
-            $('#json-target').html(result);
-        }else{
-            $('#json-target').html('');
         }
 
-}
-keyup();
-    function renderLine(){
+        keyup();
+        function renderLine(){
+            $('#json-src').attr("style","height:510px;padding:0 10px 10px 40px;border:0;border-right:solid 1px #ddd;border-bottom:solid 1px #ddd;border-radius:0;resize: none; outline:none; line-height:15px");
+                $('#json-target').attr("style","padding:0px 5px;");
+                $('.numberedtextarea-line-numbers').show();
+        }
 
-	$('#json-src').attr("style","height:510px;padding:0 10px 10px 40px;border:0;border-right:solid 1px #ddd;border-bottom:solid 1px #ddd;border-radius:0;resize: none; outline:none; line-height:15px");
-            $('#json-target').attr("style","padding:0px 5px;");
-            $('.numberedtextarea-line-numbers').show();
-    }
-$('.zip').click(function(){
-    if (zip_flag) {
-        $('#json-src').keyup();
-	 $(this).html('');
-        $(this).html('压缩结果');
-    }else{
-        $('#json-target').html(current_json_str);
-	$(this).html('');
-	$(this).html('解压结果');
-        zip_flag = true;
-    }
-});
-
-</script>
-
+        $('.zip').click(function(){
+            if (zip_flag) {
+                $('#json-src').keyup();
+                $(this).html('');
+                $(this).html('压缩结果');
+            }else{
+                $('#json-target').html(current_json_str);
+                $(this).html('');
+                $(this).html('解压结果');
+                zip_flag = true;
+            }
+        });
+    </script>
 </body>
 </html>
 
