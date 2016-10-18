@@ -90,7 +90,7 @@ $('.has_son *').hover(
 </script>
 
             <div class="containter">
-             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/LinuxCommand/index.html?m=EXPIRE">Redis命令大全</a>><a href="http://www.123itools.com/LinuxCommand/index.html?m=EXPIRE">Key(键)</a>><a href="http://www.123itools.com/LinuxCommand/index.html?m=EXPIRE">EXPIRE</a></span></div>            <div class="main" id="main">
+             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/redis/EXPIRE.htm">Redis命令大全</a>><a href="http://www.123itools.com/redis/EXPIRE.htm">Key(键)</a>><a href="http://www.123itools.com/redis/EXPIRE.htm">EXPIRE</a></span></div>            <div class="main" id="main">
                 <h3 style="font-family: STHeiti; font-size: medium;"><p>1. 命令&nbsp;</p></h3><h3 style="white-space: normal; font-family: STHeiti; font-size: medium;"><p>&nbsp; &nbsp; &nbsp; &nbsp; EXPIRE</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;<span style="color: rgb(62, 67, 73); background-color: rgb(255, 255, 255);">为给定&nbsp;</span><tt><span class="pre">key</span></tt><span style="color: rgb(62, 67, 73); background-color: rgb(255, 255, 255);">&nbsp;设置生存时间，当&nbsp;</span><tt><span class="pre">key</span></tt><span style="color: rgb(62, 67, 73); background-color: rgb(255, 255, 255);">&nbsp;过期时(生存时间为&nbsp;</span><tt><span class="pre">0</span></tt><span style="color: rgb(62, 67, 73); background-color: rgb(255, 255, 255);">&nbsp;)，它会被自动删除</span></p></h3><h3 style="white-space: normal; font-family: STHeiti; font-size: medium;"></h3><h3 style="white-space: normal; font-family: STHeiti; font-size: medium;"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;<strong style="color: rgb(62, 67, 73); background-color: rgb(255, 255, 255);">更新生存时间</strong>,<span style="color: rgb(62, 67, 73); background-color: rgb(255, 255, 255);">对一个已经带有生存时间的&nbsp;</span><tt><span class="pre">key</span></tt><span style="color: rgb(62, 67, 73); background-color: rgb(255, 255, 255);">&nbsp;执行</span><span style="color: rgb(62, 67, 73); background-color: rgb(255, 255, 255);">&nbsp;命令，<span style="font-family: STHeiti; font-size: medium; font-weight: bold;">EXPIRE</span>新指定的生存时间会取代旧的生存时间</span></p><p><br/></p></h3><h3 class="\&quot;&quot;" style="white-space: normal; font-family: STHeiti; font-size: medium;"><strong style="color: rgb(62, 67, 73); background-color: rgb(255, 255, 255);">2.使用说明</strong></h3><h3 class="\&quot;&quot;" style="white-space: normal; font-family: STHeiti; font-size: medium;"><strong style="color: rgb(62, 67, 73); background-color: rgb(255, 255, 255);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;EXPIRE key seconds</strong></h3><h4>3.时间复杂度：<span style="color: rgb(62, 67, 73); background-color: rgb(255, 255, 255);">O(1)</span></h4><h4>4.返回值：<span class="\&quot;s1\&quot;">&nbsp;</span>设置成功返回<span class="s1"> 1 </span>。当<span class="s1"> key </span>不存在或者不能为<span class="s1"> key </span>设置生存时间时，返回0</h4><h4><span class="\&quot;s1\&quot;">&nbsp;</span><span style="font-family: STHeiti;">3. 使用样例</span></h4><p style="font-size: medium; white-space: normal; font-family: STHeiti;"><br/></p><p class="p1">redis&gt; SET cache_page &quot;www.google.com&quot;</p><p class="p1">OK</p><p class="p2"><br/></p><p class="p1">redis&gt; EXPIRE cache_page 30&nbsp; # <span class="s1">设置过期时间为</span> 30 <span class="s1">秒</span></p><p class="p1">(integer) 1</p><p class="p2"><br/></p><p class="p1">redis&gt; TTL cache_page&nbsp; &nbsp; # <span class="s1">查看剩余生存时间</span></p><p class="p1">(integer) 23</p><p class="p2"><br/></p><p class="p1">redis&gt; EXPIRE cache_page 30000 &nbsp; # <span class="s1">更新过期时间</span></p><p class="p1">(integer) 1</p><p class="p2"><br/></p><p class="p1">redis&gt; TTL cache_page</p><p class="p1">(integer) 29996</p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><h3 style="font-family: STHeiti; font-size: medium; white-space: normal;"></h3>            </div>
             <div class="sidebar">
             <div class="dropdown">
@@ -168,11 +168,11 @@ $('.has_son *').hover(
         <dl>
           <dt>命令大全</dt>
           <dd>·
-            <a href="http://www.123itools.com/linuxCommand/index.html?p=7" title="Linux命令大全">Linux命令大全</a></dd>
+            <a href="http://www.123itools.com/linux/cd.htm?p=7" title="Linux命令大全">Linux命令大全</a></dd>
           <dd>·
-            <a href="http://www.123itools.com/gitCommand/index.html?p=8" title="Git命令大全">Git命令大全</a></dd>
+            <a href="http://www.123itools.com/git/init.htm?p=8" title="Git命令大全">Git命令大全</a></dd>
           <dd>·
-            <a href="http://www.123itools.com/redisCommand/index.html?p=9" title="Redis命令大全">Redis命令大全</a></dd>
+            <a href="http://www.123itools.com/redis/DEL.htm?p=9" title="Redis命令大全">Redis命令大全</a></dd>
         </dl>
         <dl>
           <dt>站点信息</dt>
@@ -190,7 +190,7 @@ $('.has_son *').hover(
           <dd>·
             <a target="_blank" href="#" rel="external nofollow">收藏我们</a></dd>
           <dd>·
-            <a href="/disclaimer">网站地图</a></dd>
+            <a href="http://www.123itools.com/sitemap.xml">网站地图</a></dd>
           <dd>·
             <a href="/aboutus">TAG标签</a></dd>
           <dd>·
