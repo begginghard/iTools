@@ -2,7 +2,7 @@
 /**
  * Created by PhpStorm.
  * User: MOMO
- * Date: 16/9/28
+ * Date: 16/10.18
  * Time: 下午4:27
  */
 class Command extends  CI_Model{
