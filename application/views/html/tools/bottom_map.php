@@ -23,11 +23,11 @@
         <dl>
           <dt>命令大全</dt>
           <dd>·
-            <a href="<?php echo base_url()?>linuxCommand/index.html?p=7" title="Linux命令大全">Linux命令大全</a></dd>
+            <a href="<?php echo base_url()?>linux/cd.htm?p=7" title="Linux命令大全">Linux命令大全</a></dd>
           <dd>·
-            <a href="<?php echo base_url()?>gitCommand/index.html?p=8" title="Git命令大全">Git命令大全</a></dd>
+            <a href="<?php echo base_url()?>git/init.htm?p=8" title="Git命令大全">Git命令大全</a></dd>
           <dd>·
-            <a href="<?php echo base_url()?>redisCommand/index.html?p=9" title="Redis命令大全">Redis命令大全</a></dd>
+            <a href="<?php echo base_url()?>redis/DEL.htm?p=9" title="Redis命令大全">Redis命令大全</a></dd>
         </dl>
         <dl>
           <dt>站点信息</dt>
@@ -45,7 +45,7 @@
           <dd>·
             <a target="_blank" href="#" rel="external nofollow">收藏我们</a></dd>
           <dd>·
-            <a href="/disclaimer">网站地图</a></dd>
+            <a href="<?php echo base_url();?>sitemap.xml">网站地图</a></dd>
           <dd>·
             <a href="/aboutus">TAG标签</a></dd>
           <dd>·

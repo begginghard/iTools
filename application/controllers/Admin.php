@@ -100,9 +100,9 @@ class Admin extends CI_Controller {
             #当前位置部分处理
             $nowClassify = isset($classify[$intClassify]) ? $classify[$intClassify] : 'default';
             $typeName = $this->Command->getPositionName($type);
-            $data['position'] = $this->Command->position($typeName,$nowClassify,$name);
             #url前缀
             $data['command_url_pre'] = $this->Command->getCommandUrl($dirName);
+            $data['position'] = $this->Command->position($data['command_url_pre'],$typeName,$nowClassify,$name);
             #title keywords description
             $data['key_words'] = $this->Command->getKeyWords($type,$name,$nowClassify);
             $data['content_words'] = $this->Command->getContentWords($type,$name,$nowClassify);
@@ -167,9 +167,9 @@ class Admin extends CI_Controller {
             #当前位置部分处理
             $nowClassify = isset($classify[$intClassify]) ? $classify[$intClassify] : 'default';
             $typeName = $this->Command->getPositionName($type);
-            $data['position'] = $this->Command->position($typeName,$nowClassify,$name);
             #url前缀
             $data['command_url_pre'] = $this->Command->getCommandUrl($dirName);
+            $data['position'] = $this->Command->position($data['command_url_pre'],$typeName,$nowClassify,$name);
             #title keywords description
             $data['key_words'] = $this->Command->getKeyWords($type,$name,$nowClassify);
             $data['content_words'] = $this->Command->getContentWords($type,$name,$nowClassify);
@@ -258,9 +258,9 @@ class Admin extends CI_Controller {
                 #当前位置部分处理
                 $nowClassify = isset($classify[$intClassify]) ? $classify[$intClassify] : 'default';
                 $typeName = $this->Command->getPositionName($type);
-                $data['position'] = $this->Command->position($typeName,$nowClassify,$name);
                 #url前缀
                 $data['command_url_pre'] = $this->Command->getCommandUrl($dirName);
+                $data['position'] = $this->Command->position($data['command_url_pre'],$typeName,$nowClassify,$name);
                 #title keywords description
                 $data['key_words'] = $this->Command->getKeyWords($type,$name,$nowClassify);
                 $data['content_words'] = $this->Command->getContentWords($type,$name,$nowClassify);
@@ -273,7 +273,6 @@ class Admin extends CI_Controller {
                 if(!empty($allContent)){
                     ob_end_clean();
                 }
-
                 $ret = $this->Command->makeHtml($name,$allContent,$dirName);
                 if(!$ret){
                     echo "更新失败{$name}\n";
