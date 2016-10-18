@@ -188,7 +188,7 @@
     <lastmod>2016-10-18T08:44:09+00:00</lastmod>
   </url>
   <url>
-    <loc>http://www.123itools.com/linux/&.htm</loc>
+    <loc>http://www.123itools.com/linux/&amp;.htm</loc>
     <lastmod>2016-10-18T08:44:09+00:00</lastmod>
   </url>
   <url>
@@ -198,6 +198,9 @@
   <url>
     <loc>http://www.123itools.com/linux/bg.htm</loc>
     <lastmod>2016-10-18T08:44:09+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www.123itools.com/LinuxCommand/index.html?m=init</loc>
   </url>
   <url>
     <loc>http://www.123itools.com/git/help.htm</loc>
@@ -210,6 +213,15 @@
   <url>
     <loc>http://www.123itools.com/git/init.htm</loc>
     <lastmod>2016-10-18T06:53:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www.123itools.com/linuxCommand/index.html?p=7</loc>
+  </url>
+  <url>
+    <loc>http://www.123itools.com/gitCommand/index.html?p=8</loc>
+  </url>
+  <url>
+    <loc>http://www.123itools.com/redisCommand/index.html?p=9</loc>
   </url>
   <url>
     <loc>http://www.123itools.com/redis/DEL.htm</loc>
@@ -235,4 +247,5 @@
     <loc>http://www.123itools.com/redis/SET.htm</loc>
     <lastmod>2016-10-18T08:44:27+00:00</lastmod>
   </url>
+  
 </urlset>
