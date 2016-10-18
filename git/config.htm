@@ -1,8 +1,101 @@
-<h3>1. 命令</h3><blockquote><p>config -- 配置 Git 相关属性，例如：用户信息，配色，编辑器等信息。</p></blockquote><h3>2. 使用样例</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>配置全局用户名和邮箱</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[123itools@shengqian&nbsp;~]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;user.name&nbsp;begginghard
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="robots" content="all" />
+        <meta name="author" content="www.123itools.com" />
+        <title>Git命令大全 Git配置 config</title>
+        <meta name="keywords" content="Git命令大全 常用 命令 大全 git使用教程 教程 参数 用法 git Git配置 config config命令 config语法"/>
+        <meta name="description" content="Git命令大全 常用 命令 大全 git使用教程 教程 参数 用法 git Git配置 config config命令 config语法"/>
+        <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/index.css" />
+        <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command.css" />
+        <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command2.css" />
+        <script src="http://www.123itools.com/style/js/jquery-3.1.0.min.js"></script>
+        <script src="http://www.123itools.com/style/js/index.js"></script>
+    </head>
+
+    <body id="editor">
+        <div id="wrapper">
+        <style>
+.has_son {
+    position: relative;
+}
+.son{
+    position: absolute;
+    top: 40px;
+    display:none;
+    z-index:999;
+}
+.son li {
+    width: 100%;
+    background-color: #373D41;
+}
+
+.son li:hover{
+    background-color:#3f474c;
+}
+</style>
+<div id="header">
+    <div class="nav">
+        <div class="logo">开发者工具箱logo
+        </div>
+        <div class="nav_list">
+            <ul class="ul_div">
+                <li class='li_list now'><a href="http://www.123itools.com/json/index.html">json格式转换</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/timestamp/index.html?p=2">时间格式转换</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/regex/index.html?p=3">正则表达式</a></li>
+                <li class='li_list  has_son '><a href="#">
+                    编解码
+                </a>
+                    <ul class="son">
+                      <li ><a role="menuitem" tabindex="-1" href="http://www.123itools.com/Url/index.html?p=4">URL编码</a></li>
+                      <li><a role="menuitem" tabindex="-1" href="http://www.123itools.com/base64/index.html?p=5">Base64编码</a></li>
+                      <li><a role="menuitem" tabindex="-1" href="http://www.123itools.com/Md5/index.html?p=6">md5加密</a></li>
+                    </ul>
+                </li>
+                <li class='li_list '><a href="http://www.123itools.com/linux/mv.htm?p=7">Linux命令大全</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/git/init.htm?p=8">Git命令大全</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/redis/DEL.htm?p=9">Redis命令大全</a></li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+$('.has_son *').hover(
+    function(){
+        $('.son').show();
+    },
+    function(){
+        $('.son').hide();
+
+    }
+);
+
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+            <div class="containter">
+             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/LinuxCommand/index.html?m=config">Git命令大全</a>><a href="http://www.123itools.com/LinuxCommand/index.html?m=config">Git配置</a>><a href="http://www.123itools.com/LinuxCommand/index.html?m=config">config</a></span></div>            <div class="main" id="main">
+                <h3>1. 命令</h3><blockquote><p>config -- 配置 Git 相关属性，例如：用户信息，配色，编辑器等信息。</p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>配置全局用户名和邮箱</h4></li></ul><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;~]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;user.name&nbsp;begginghard
 [123itools@shengqian&nbsp;~]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;user.email&nbsp;begginghard@126.com
 [123itools@shengqian&nbsp;~]$&nbsp;git&nbsp;config&nbsp;--list
 user.name=begginghard
-user.email=begginghard@126.com</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>配置 git 输出结果加上颜色</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[123itools@shengqian&nbsp;gitdemo]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;color.ui&nbsp;true
+user.email=begginghard@126.com</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>配置 git 输出结果加上颜色</h4></li></ul><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;gitdemo]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;color.ui&nbsp;true
 [123itools@shengqian&nbsp;gitdemo]$&nbsp;git&nbsp;config&nbsp;--list
 user.name=begginghard
 user.email=begginghard@126.com
@@ -10,7 +103,7 @@ color.ui=true
 core.repositoryformatversion=0
 core.filemode=true
 core.bare=false
-core.logallrefupdates=true</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>配置 git 常用操作的别名</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[123itools@shengqian&nbsp;gitdemo]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;alias.ci&nbsp;commit
+core.logallrefupdates=true</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>配置 git 常用操作的别名</h4></li></ul><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;gitdemo]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;alias.ci&nbsp;commit
 [123itools@shengqian&nbsp;gitdemo]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;alias.st&nbsp;status
 [123itools@shengqian&nbsp;gitdemo]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;alias.co&nbsp;checkout
 [123itools@shengqian&nbsp;gitdemo]$&nbsp;git&nbsp;config&nbsp;--global&nbsp;alias.br&nbsp;branch
@@ -25,4 +118,155 @@ alias.br=branch
 core.repositoryformatversion=0
 core.filemode=true
 core.bare=false
-core.logallrefupdates=true</pre><h3>3. 使用方法</h3><blockquote><p>git config [选项]<br/></p></blockquote><blockquote><p>git config 命令会将配置项写到配置文件中。系统级别的配置项写到 /etc/gitconfig，用户级别的配置项写到 ~/.gitconfig，项目级别的配置项写到 project/.gitconfig</p></blockquote><h3>4. 参数说明</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>--global&nbsp;<br/></h4></li></ul><blockquote><p>设置用户级别的配置</p></blockquote><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>--system</h4></li></ul><blockquote><p>设置系统级别的配置</p></blockquote><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>--local</h4></li></ul><blockquote><p>设置库级别的配置</p></blockquote><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>--list</h4></li></ul><blockquote><p>显示当前配置了哪些属性</p></blockquote><p><br/></p>
+core.logallrefupdates=true</pre><h3>3. 使用方法</h3><blockquote><p>git config [选项]<br/></p></blockquote><blockquote><p>git config 命令会将配置项写到配置文件中。系统级别的配置项写到 /etc/gitconfig，用户级别的配置项写到 ~/.gitconfig，项目级别的配置项写到 project/.gitconfig</p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>--global&nbsp;<br/></h4></li></ul><blockquote><p>设置用户级别的配置</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>--system</h4></li></ul><blockquote><p>设置系统级别的配置</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>--local</h4></li></ul><blockquote><p>设置库级别的配置</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>--list</h4></li></ul><blockquote><p>显示当前配置了哪些属性</p></blockquote><p><br/></p>            </div>
+            <div class="sidebar">
+            <div class="dropdown">
+                <div class="input-group">
+                    <input type="text" class="form-control" autocomplete="off" name="name" onkeyup="searchLinux();" value="命令搜索" onfocus="if (value =='命令搜索'){value =''}" onblur="if (value ==''){value='命令搜索'}">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" onclick="searchLinux();">Go</button>
+                    </span>
+                </div>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="searchList">
+
+                </ul>
+            </div>
+                <br>
+                <div class="widget related">
+
+                    <div class="hd">
+                            <span>常用命令</span>
+                    </div>
+
+                    <div class="bd">
+                        <ul id="accordion" class="accordion">
+                                                        <li class="open">
+                                <div class="link"><i class="fa fa-paint-brush"></i>Git配置<i class="fa fa-chevron-down"></i></div>
+                                <ul class="submenu" style="display:block">
+                                                                    <li class=""><a href="http://www.123itools.com/git/help.htm" title="cd">help</a></li>
+
+                                                                    <li class="now_command"><a href="http://www.123itools.com/git/config.htm" title="cd">config</a></li>
+
+                                                                </ul>
+                            </li>
+                                                         <li class="">
+                                <div class="link"><i class="fa fa-paint-brush"></i>初始化<i class="fa fa-chevron-down"></i></div>
+                                <ul class="submenu" style="display:none">
+                                                                    <li class=""><a href="http://www.123itools.com/git/init.htm" title="cd">init</a></li>
+
+                                                                </ul>
+                            </li>
+                             
+                        	</ul>
+
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        <div class="bottom_map">
+  <div class="bottom_map_main">
+    <div class="bottom_map_nav">
+      <a href="javascript:" class="ToCurt" ref="tools1">站长工具</a></div>
+    <div class="bottom_map_content">
+      <div id="tools1" style="display:block">
+        <dl>
+          <dt>格式转换</dt>
+          <dd>·
+            <a href="http://www.123itools.com/json/index.html">json格式转换</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/timestamp/index.html?p=2">时间格式转换</a></dd>
+        </dl>
+        <dl>
+          <dt>编码工具</dt>
+          <dd>·
+            <a href="http://www.123itools.com/Url/index.html?p=4">URL编码</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/base64/index.html?p=5">Base64编码</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/Md5/index.html?p=6">md5编码</a></dd>
+        </dl>
+        <dl>
+          <dt>命令大全</dt>
+          <dd>·
+            <a href="http://www.123itools.com/linuxCommand/index.html?p=7" title="Linux命令大全">Linux命令大全</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/gitCommand/index.html?p=8" title="Git命令大全">Git命令大全</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/redisCommand/index.html?p=9" title="Redis命令大全">Redis命令大全</a></dd>
+        </dl>
+        <dl>
+          <dt>站点信息</dt>
+          <dd>·
+            <a target="_blank" href="#" rel="external nofollow">意见反馈</a></dd>
+          <dd>·
+            <a href="#">免责声明</a></dd>
+          <dd>·
+            <a href="#">关于我们</a></dd>
+          <dd>·
+            <a href="#">文章归档</a></dd>
+        </dl>
+        <dl>
+          <dt>其他</dt>
+          <dd>·
+            <a target="_blank" href="#" rel="external nofollow">收藏我们</a></dd>
+          <dd>·
+            <a href="/disclaimer">网站地图</a></dd>
+          <dd>·
+            <a href="/aboutus">TAG标签</a></dd>
+          <dd>·
+            <a href="/archives">RSS地图</a></dd>
+        </dl>
+      </div>
+      <div class="search-share">
+        <div class="app-download">
+          <div>
+            <strong>交流微信</strong></div>
+        </div>
+        <div class="share">
+          <img width="150" height="150" src="http://www.123itools.com/style/img/wx.jpeg"></div>
+      </div>
+    </div>
+  </div>
+</div>         <div id="footer">
+
+ </div>
+        </div>
+
+        <script>
+            function searchLinux(){
+             window.event.returnValue = false;
+                            var name = $('input[name="name"]').val();
+                            var type = 1;
+                            $.ajax({
+                                type:'get',
+                                url: '/admin/searchCommand?name='+name+'&type'+type,
+                                cache:false,
+                                success:function(data){
+
+                                    if(data){
+                                        var dataObj = eval('(' + data + ')');
+                                        var html = '';
+                                        for( var i in dataObj){
+                                            html = html+'<li role="presentation"><a role="menuitem" tabindex="-1" href="/LinuxCommand/index?m='+dataObj[i].name+'">'+dataObj[i].name+'</a></li>';
+                                        }
+
+                                        if(html){
+                                            $('#searchList').html('');
+
+                                            $('#searchList').html(html);
+                                            $('#searchList').show();
+                                        }else{
+                                            $('#searchList').hide();
+                                        }
+                                    }else{
+                                       $('#searchList').hide();
+                                    }
+                                }
+                            });
+                        }
+
+        </script>
+    </body>
+</html>
+

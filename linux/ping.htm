@@ -1,1 +1,337 @@
-<h3>1. 命令</h3><blockquote><p>ping -- 验证与某台服务器连通情况<br/></p></blockquote><h3>2. 使用样例</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>验证本机与&nbsp;43.241.208.129 网络的联通状态</h4></li></ul><blockquote><p>ping&nbsp;43.241.208.129</p></blockquote><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>验证本机与 <a href=\"http://www.123itools.com\">www.123itools.com</a>&nbsp;的网络联通状态</h4></li></ul><blockquote><p>ping <a href=\"http://www.123itools.com\">www.123itools.com</a> </p></blockquote><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>验证本机与&nbsp;43.241.208.129 网络联通状态，仅发送 100 个包，且每次间隔 5s</h4></li></ul><blockquote><p>ping -c 100 -i 5&nbsp;43.241.208.129</p></blockquote><h3>3. 使用方法</h3><blockquote><p>ping [属性]... [目的地]<br/></p></blockquote><h3>4. 参数说明</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>-c count</h4></li></ul><blockquote><p>发送 count 个包之后，停止发送<br/></p></blockquote><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>-i interval<br/></h4></li></ul><blockquote><p>每隔 interval 秒之后再次发送一个包</p></blockquote><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p>
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="robots" content="all" />
+        <meta name="author" content="www.123itools.com" />
+        <title>Linux命令大全 网络管理 ping</title>
+        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 网络管理 ping ping命令 ping语法"/>
+        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 网络管理 ping ping命令 ping语法"/>
+        <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/index.css" />
+        <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command.css" />
+        <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command2.css" />
+        <script src="http://www.123itools.com/style/js/jquery-3.1.0.min.js"></script>
+        <script src="http://www.123itools.com/style/js/index.js"></script>
+    </head>
+
+    <body id="editor">
+        <div id="wrapper">
+        <style>
+.has_son {
+    position: relative;
+}
+.son{
+    position: absolute;
+    top: 40px;
+    display:none;
+    z-index:999;
+}
+.son li {
+    width: 100%;
+    background-color: #373D41;
+}
+
+.son li:hover{
+    background-color:#3f474c;
+}
+</style>
+<div id="header">
+    <div class="nav">
+        <div class="logo">开发者工具箱logo
+        </div>
+        <div class="nav_list">
+            <ul class="ul_div">
+                <li class='li_list now'><a href="http://www.123itools.com/json/index.html">json格式转换</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/timestamp/index.html?p=2">时间格式转换</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/regex/index.html?p=3">正则表达式</a></li>
+                <li class='li_list  has_son '><a href="#">
+                    编解码
+                </a>
+                    <ul class="son">
+                      <li ><a role="menuitem" tabindex="-1" href="http://www.123itools.com/Url/index.html?p=4">URL编码</a></li>
+                      <li><a role="menuitem" tabindex="-1" href="http://www.123itools.com/base64/index.html?p=5">Base64编码</a></li>
+                      <li><a role="menuitem" tabindex="-1" href="http://www.123itools.com/Md5/index.html?p=6">md5加密</a></li>
+                    </ul>
+                </li>
+                <li class='li_list '><a href="http://www.123itools.com/linux/mv.htm?p=7">Linux命令大全</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/git/init.htm?p=8">Git命令大全</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/redis/DEL.htm?p=9">Redis命令大全</a></li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+$('.has_son *').hover(
+    function(){
+        $('.son').show();
+    },
+    function(){
+        $('.son').hide();
+
+    }
+);
+
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+            <div class="containter">
+             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/LinuxCommand/index.html?m=ping">Linux命令大全</a>><a href="http://www.123itools.com/LinuxCommand/index.html?m=ping">网络管理</a>><a href="http://www.123itools.com/LinuxCommand/index.html?m=ping">ping</a></span></div>            <div class="main" id="main">
+                <h3>1. 命令</h3><blockquote><p>ping -- 验证与某台服务器连通情况<br/></p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>验证本机与&nbsp;43.241.208.129 网络的联通状态</h4></li></ul><blockquote><p>ping&nbsp;43.241.208.129</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>验证本机与 <a href="http://www.123itools.com">www.123itools.com</a>&nbsp;的网络联通状态</h4></li></ul><blockquote><p>ping <a href="http://www.123itools.com">www.123itools.com</a> </p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>验证本机与&nbsp;43.241.208.129 网络联通状态，仅发送 100 个包，且每次间隔 5s</h4></li></ul><blockquote><p>ping -c 100 -i 5&nbsp;43.241.208.129</p></blockquote><h3>3. 使用方法</h3><blockquote><p>ping [属性]... [目的地]<br/></p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-c count</h4></li></ul><blockquote><p>发送 count 个包之后，停止发送<br/></p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-i interval<br/></h4></li></ul><blockquote><p>每隔 interval 秒之后再次发送一个包</p></blockquote><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p>            </div>
+            <div class="sidebar">
+            <div class="dropdown">
+                <div class="input-group">
+                    <input type="text" class="form-control" autocomplete="off" name="name" onkeyup="searchLinux();" value="命令搜索" onfocus="if (value =='命令搜索'){value =''}" onblur="if (value ==''){value='命令搜索'}">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" onclick="searchLinux();">Go</button>
+                    </span>
+                </div>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="searchList">
+
+                </ul>
+            </div>
+                <br>
+                <div class="widget related">
+
+                    <div class="hd">
+                            <span>常用命令</span>
+                    </div>
+
+                    <div class="bd">
+                        <ul id="accordion" class="accordion">
+                                                        <li class="">
+                                <div class="link"><i class="fa fa-paint-brush"></i>文件目录管理<i class="fa fa-chevron-down"></i></div>
+                                <ul class="submenu" style="display:none">
+                                                                    <li class=""><a href="http://www.123itools.com/linux/touch.htm" title="cd">touch</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/mkdir.htm" title="cd">mkdir</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/pwd.htm" title="cd">pwd</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/cd.htm" title="cd">cd</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/ls.htm" title="cd">ls</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/rm.htm" title="cd">rm</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/mv.htm" title="cd">mv</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/rmdir.htm" title="cd">rmdir</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/cp.htm" title="cd">cp</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/ln.htm" title="cd">ln</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/find.htm" title="cd">find</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/which.htm" title="cd">which</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/tar.htm" title="cd">tar</a></li>
+
+                                                                </ul>
+                            </li>
+                                                         <li class="">
+                                <div class="link"><i class="fa fa-paint-brush"></i>文件内容查看<i class="fa fa-chevron-down"></i></div>
+                                <ul class="submenu" style="display:none">
+                                                                    <li class=""><a href="http://www.123itools.com/linux/uniq.htm" title="cd">uniq</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/tail.htm" title="cd">tail</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/wc.htm" title="cd">wc</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/head.htm" title="cd">head</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/cat.htm" title="cd">cat</a></li>
+
+                                                                </ul>
+                            </li>
+                                                         <li class="">
+                                <div class="link"><i class="fa fa-paint-brush"></i>文件状态管理<i class="fa fa-chevron-down"></i></div>
+                                <ul class="submenu" style="display:none">
+                                                                    <li class=""><a href="http://www.123itools.com/linux/chmod.htm" title="cd">chmod</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/chown.htm" title="cd">chown</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/df.htm" title="cd">df</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/du.htm" title="cd">du</a></li>
+
+                                                                </ul>
+                            </li>
+                                                         <li class="open">
+                                <div class="link"><i class="fa fa-paint-brush"></i>网络管理<i class="fa fa-chevron-down"></i></div>
+                                <ul class="submenu" style="display:block">
+                                                                    <li class=""><a href="http://www.123itools.com/linux/ssh.htm" title="cd">ssh</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/scp.htm" title="cd">scp</a></li>
+
+                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/ping.htm" title="cd">ping</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/ifconfig.htm" title="cd">ifconfig</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/netstat.htm" title="cd">netstat</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/telnet.htm" title="cd">telnet</a></li>
+
+                                                                </ul>
+                            </li>
+                                                         <li class="">
+                                <div class="link"><i class="fa fa-paint-brush"></i>系统管理<i class="fa fa-chevron-down"></i></div>
+                                <ul class="submenu" style="display:none">
+                                                                    <li class=""><a href="http://www.123itools.com/linux/top.htm" title="cd">top</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/iostat.htm" title="cd">iostat</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/free.htm" title="cd">free</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/vmstat.htm" title="cd">vmstat</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/jobs.htm" title="cd">jobs</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/fg.htm" title="cd">fg</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/ps.htm" title="cd">ps</a></li>
+
+                                                                </ul>
+                            </li>
+                                                         <li class="">
+                                <div class="link"><i class="fa fa-paint-brush"></i>进程管理<i class="fa fa-chevron-down"></i></div>
+                                <ul class="submenu" style="display:none">
+                                                                    <li class=""><a href="http://www.123itools.com/linux/kill.htm" title="cd">kill</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/&.htm" title="cd">&</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/ctrl+z.htm" title="cd">ctrl+z</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/bg.htm" title="cd">bg</a></li>
+
+                                                                </ul>
+                            </li>
+                             
+                        	</ul>
+
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        <div class="bottom_map">
+  <div class="bottom_map_main">
+    <div class="bottom_map_nav">
+      <a href="javascript:" class="ToCurt" ref="tools1">站长工具</a></div>
+    <div class="bottom_map_content">
+      <div id="tools1" style="display:block">
+        <dl>
+          <dt>格式转换</dt>
+          <dd>·
+            <a href="http://www.123itools.com/json/index.html">json格式转换</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/timestamp/index.html?p=2">时间格式转换</a></dd>
+        </dl>
+        <dl>
+          <dt>编码工具</dt>
+          <dd>·
+            <a href="http://www.123itools.com/Url/index.html?p=4">URL编码</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/base64/index.html?p=5">Base64编码</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/Md5/index.html?p=6">md5编码</a></dd>
+        </dl>
+        <dl>
+          <dt>命令大全</dt>
+          <dd>·
+            <a href="http://www.123itools.com/linuxCommand/index.html?p=7" title="Linux命令大全">Linux命令大全</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/gitCommand/index.html?p=8" title="Git命令大全">Git命令大全</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/redisCommand/index.html?p=9" title="Redis命令大全">Redis命令大全</a></dd>
+        </dl>
+        <dl>
+          <dt>站点信息</dt>
+          <dd>·
+            <a target="_blank" href="#" rel="external nofollow">意见反馈</a></dd>
+          <dd>·
+            <a href="#">免责声明</a></dd>
+          <dd>·
+            <a href="#">关于我们</a></dd>
+          <dd>·
+            <a href="#">文章归档</a></dd>
+        </dl>
+        <dl>
+          <dt>其他</dt>
+          <dd>·
+            <a target="_blank" href="#" rel="external nofollow">收藏我们</a></dd>
+          <dd>·
+            <a href="/disclaimer">网站地图</a></dd>
+          <dd>·
+            <a href="/aboutus">TAG标签</a></dd>
+          <dd>·
+            <a href="/archives">RSS地图</a></dd>
+        </dl>
+      </div>
+      <div class="search-share">
+        <div class="app-download">
+          <div>
+            <strong>交流微信</strong></div>
+        </div>
+        <div class="share">
+          <img width="150" height="150" src="http://www.123itools.com/style/img/wx.jpeg"></div>
+      </div>
+    </div>
+  </div>
+</div>         <div id="footer">
+
+ </div>
+        </div>
+
+        <script>
+            function searchLinux(){
+             window.event.returnValue = false;
+                            var name = $('input[name="name"]').val();
+                            var type = 1;
+                            $.ajax({
+                                type:'get',
+                                url: '/admin/searchCommand?name='+name+'&type'+type,
+                                cache:false,
+                                success:function(data){
+
+                                    if(data){
+                                        var dataObj = eval('(' + data + ')');
+                                        var html = '';
+                                        for( var i in dataObj){
+                                            html = html+'<li role="presentation"><a role="menuitem" tabindex="-1" href="/LinuxCommand/index?m='+dataObj[i].name+'">'+dataObj[i].name+'</a></li>';
+                                        }
+
+                                        if(html){
+                                            $('#searchList').html('');
+
+                                            $('#searchList').html(html);
+                                            $('#searchList').show();
+                                        }else{
+                                            $('#searchList').hide();
+                                        }
+                                    }else{
+                                       $('#searchList').hide();
+                                    }
+                                }
+                            });
+                        }
+
+        </script>
+    </body>
+</html>
+

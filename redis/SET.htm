@@ -1,4 +1,97 @@
-<h3>1. 命令</h3><p>SET -- 将字符串 Value 关联到 Key</p><h3>2. 使用说明</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>SET key value [EX seconds] [PX milliseconds] [NX|XX]</h4></li></ul><blockquote><p>将字符串值 value 关联到 key 。</p><p>如果 key 已经持有其他值， SET 就覆写旧值，无视类型。</p><p>对于某个原本带有生存时间（TTL）的键来说， 当 SET 命令成功在这个键上执行时， 这个键原有的 TTL 将被清除。</p></blockquote><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>可选参数</h4></li></ul><blockquote><p>从 Redis 2.6.12 版本开始， SET 命令的行为可以通过一系列参数来修改：</p><p>EX second ：设置键的过期时间为 second 秒。 SET key value EX second 效果等同于 SETEX key second value 。</p><p>PX millisecond ：设置键的过期时间为 millisecond 毫秒。 SET key value PX millisecond 效果等同于 PSETEX key millisecond value 。</p><p>NX ：只在键不存在时，才对键进行设置操作。 SET key value NX 效果等同于 SETNX key value 。</p><p>XX ：只在键已经存在时，才对键进行设置操作。</p><p>因为 SET 命令可以通过参数来实现和 SETNX 、 SETEX 和 PSETEX 三个命令的效果，所以将来的 Redis 版本可能会废弃并最终移除 SETNX 、 SETEX 和 PSETEX 这三个命令。</p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>可用版本</h4></li></ul></blockquote><blockquote><p>&nbsp;&gt;= 1.0.0</p></blockquote><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>时间复杂度</h4></li></ul><blockquote><p>&nbsp;O(1)</p></blockquote><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>返回值</h4></li></ul><blockquote><p>在 Redis 2.6.12 版本以前， SET 命令总是返回 OK 。</p><p>从 Redis 2.6.12 版本开始， SET 在设置操作成功完成时，才返回 OK 。</p><p>如果设置了 NX 或者 XX ，但因为条件没达到而造成设置操作未执行，那么命令返回空批量回复（NULL Bulk Reply）。</p></blockquote><h3>3. 使用样例</h3><pre class=\"brush:bash;toolbar:false\">#&nbsp;对不存在的键进行设置
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="robots" content="all" />
+        <meta name="author" content="www.123itools.com" />
+        <title>Redis命令大全 String(字符串) SET</title>
+        <meta name="keywords" content="Redis命令大全 php 常用 命令 大全 redis教程 使用教程 redis学习 参数 选项 String(字符串) SET SET命令 SET语法"/>
+        <meta name="description" content="Redis命令大全 php 常用 命令 大全 redis教程 使用教程 redis学习 参数 选项 String(字符串) SET SET命令 SET语法"/>
+        <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/index.css" />
+        <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command.css" />
+        <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command2.css" />
+        <script src="http://www.123itools.com/style/js/jquery-3.1.0.min.js"></script>
+        <script src="http://www.123itools.com/style/js/index.js"></script>
+    </head>
+
+    <body id="editor">
+        <div id="wrapper">
+        <style>
+.has_son {
+    position: relative;
+}
+.son{
+    position: absolute;
+    top: 40px;
+    display:none;
+    z-index:999;
+}
+.son li {
+    width: 100%;
+    background-color: #373D41;
+}
+
+.son li:hover{
+    background-color:#3f474c;
+}
+</style>
+<div id="header">
+    <div class="nav">
+        <div class="logo">开发者工具箱logo
+        </div>
+        <div class="nav_list">
+            <ul class="ul_div">
+                <li class='li_list now'><a href="http://www.123itools.com/json/index.html">json格式转换</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/timestamp/index.html?p=2">时间格式转换</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/regex/index.html?p=3">正则表达式</a></li>
+                <li class='li_list  has_son '><a href="#">
+                    编解码
+                </a>
+                    <ul class="son">
+                      <li ><a role="menuitem" tabindex="-1" href="http://www.123itools.com/Url/index.html?p=4">URL编码</a></li>
+                      <li><a role="menuitem" tabindex="-1" href="http://www.123itools.com/base64/index.html?p=5">Base64编码</a></li>
+                      <li><a role="menuitem" tabindex="-1" href="http://www.123itools.com/Md5/index.html?p=6">md5加密</a></li>
+                    </ul>
+                </li>
+                <li class='li_list '><a href="http://www.123itools.com/linux/mv.htm?p=7">Linux命令大全</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/git/init.htm?p=8">Git命令大全</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/redis/DEL.htm?p=9">Redis命令大全</a></li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+$('.has_son *').hover(
+    function(){
+        $('.son').show();
+    },
+    function(){
+        $('.son').hide();
+
+    }
+);
+
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+            <div class="containter">
+             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/LinuxCommand/index.html?m=SET">Redis命令大全</a>><a href="http://www.123itools.com/LinuxCommand/index.html?m=SET">String(字符串)</a>><a href="http://www.123itools.com/LinuxCommand/index.html?m=SET">SET</a></span></div>            <div class="main" id="main">
+                <p>&quot;</p><h3>1. 命令</h3><p>SET -- 将字符串 Value 关联到 Key</p><h3>2. 使用说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>SET key value [EX seconds] [PX milliseconds] [NX|XX]</h4></li></ul><blockquote><p>将字符串值 value 关联到 key 。</p><p>如果 key 已经持有其他值， SET 就覆写旧值，无视类型。</p><p>对于某个原本带有生存时间（TTL）的键来说， 当 SET 命令成功在这个键上执行时， 这个键原有的 TTL 将被清除。</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>可选参数</h4></li></ul><blockquote><p>从 Redis 2.6.12 版本开始， SET 命令的行为可以通过一系列参数来修改：</p><p>EX second ：设置键的过期时间为 second 秒。 SET key value EX second 效果等同于 SETEX key second value 。</p><p>PX millisecond ：设置键的过期时间为 millisecond 毫秒。 SET key value PX millisecond 效果等同于 PSETEX key millisecond value 。</p><p>NX ：只在键不存在时，才对键进行设置操作。 SET key value NX 效果等同于 SETNX key value 。</p><p>XX ：只在键已经存在时，才对键进行设置操作。</p><p>因为 SET 命令可以通过参数来实现和 SETNX 、 SETEX 和 PSETEX 三个命令的效果，所以将来的 Redis 版本可能会废弃并最终移除 SETNX 、 SETEX 和 PSETEX 这三个命令。</p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>可用版本</h4></li></ul></blockquote><blockquote><p>&nbsp;&gt;= 1.0.0</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>时间复杂度</h4></li></ul><blockquote><p>&nbsp;O(1)</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>返回值</h4></li></ul><blockquote><p>在 Redis 2.6.12 版本以前， SET 命令总是返回 OK 。</p><p>从 Redis 2.6.12 版本开始， SET 在设置操作成功完成时，才返回 OK 。</p><p>如果设置了 NX 或者 XX ，但因为条件没达到而造成设置操作未执行，那么命令返回空批量回复（NULL Bulk Reply）。</p></blockquote><h3>3. 使用样例</h3><pre class="brush:bash;toolbar:false">#&nbsp;对不存在的键进行设置
 
 redis&nbsp;127.0.0.1:6379&gt;&nbsp;SET&nbsp;key&nbsp;&quot;value&quot;
 OK
@@ -109,4 +202,161 @@ redis&nbsp;127.0.0.1:6379&gt;&nbsp;SET&nbsp;another-key&nbsp;&quot;value&quot;&n
 OK
 
 redis&nbsp;127.0.0.1:6379&gt;&nbsp;TTL&nbsp;another-key
-(integer)&nbsp;997&nbsp;&nbsp;&nbsp;#&nbsp;这是&nbsp;EX&nbsp;参数设置的值</pre><p><br/></p>
+(integer)&nbsp;997&nbsp;&nbsp;&nbsp;#&nbsp;这是&nbsp;EX&nbsp;参数设置的值</pre><p><br/></p><p>&quot;</p>            </div>
+            <div class="sidebar">
+            <div class="dropdown">
+                <div class="input-group">
+                    <input type="text" class="form-control" autocomplete="off" name="name" onkeyup="searchLinux();" value="命令搜索" onfocus="if (value =='命令搜索'){value =''}" onblur="if (value ==''){value='命令搜索'}">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" onclick="searchLinux();">Go</button>
+                    </span>
+                </div>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="searchList">
+
+                </ul>
+            </div>
+                <br>
+                <div class="widget related">
+
+                    <div class="hd">
+                            <span>常用命令</span>
+                    </div>
+
+                    <div class="bd">
+                        <ul id="accordion" class="accordion">
+                                                        <li class="">
+                                <div class="link"><i class="fa fa-paint-brush"></i>Key(键)<i class="fa fa-chevron-down"></i></div>
+                                <ul class="submenu" style="display:none">
+                                                                    <li class=""><a href="http://www.123itools.com/redis/DEL.htm" title="cd">DEL</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/redis/EXISTS.htm" title="cd">EXISTS</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/redis/EXPIRE.htm" title="cd">EXPIRE</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/redis/EXPIREAT.htm" title="cd">EXPIREAT</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/redis/KEYS.htm" title="cd">KEYS</a></li>
+
+                                                                </ul>
+                            </li>
+                                                         <li class="open">
+                                <div class="link"><i class="fa fa-paint-brush"></i>String(字符串)<i class="fa fa-chevron-down"></i></div>
+                                <ul class="submenu" style="display:block">
+                                                                    <li class="now_command"><a href="http://www.123itools.com/redis/SET.htm" title="cd">SET</a></li>
+
+                                                                </ul>
+                            </li>
+                             
+                        	</ul>
+
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        <div class="bottom_map">
+  <div class="bottom_map_main">
+    <div class="bottom_map_nav">
+      <a href="javascript:" class="ToCurt" ref="tools1">站长工具</a></div>
+    <div class="bottom_map_content">
+      <div id="tools1" style="display:block">
+        <dl>
+          <dt>格式转换</dt>
+          <dd>·
+            <a href="http://www.123itools.com/json/index.html">json格式转换</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/timestamp/index.html?p=2">时间格式转换</a></dd>
+        </dl>
+        <dl>
+          <dt>编码工具</dt>
+          <dd>·
+            <a href="http://www.123itools.com/Url/index.html?p=4">URL编码</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/base64/index.html?p=5">Base64编码</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/Md5/index.html?p=6">md5编码</a></dd>
+        </dl>
+        <dl>
+          <dt>命令大全</dt>
+          <dd>·
+            <a href="http://www.123itools.com/linuxCommand/index.html?p=7" title="Linux命令大全">Linux命令大全</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/gitCommand/index.html?p=8" title="Git命令大全">Git命令大全</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/redisCommand/index.html?p=9" title="Redis命令大全">Redis命令大全</a></dd>
+        </dl>
+        <dl>
+          <dt>站点信息</dt>
+          <dd>·
+            <a target="_blank" href="#" rel="external nofollow">意见反馈</a></dd>
+          <dd>·
+            <a href="#">免责声明</a></dd>
+          <dd>·
+            <a href="#">关于我们</a></dd>
+          <dd>·
+            <a href="#">文章归档</a></dd>
+        </dl>
+        <dl>
+          <dt>其他</dt>
+          <dd>·
+            <a target="_blank" href="#" rel="external nofollow">收藏我们</a></dd>
+          <dd>·
+            <a href="/disclaimer">网站地图</a></dd>
+          <dd>·
+            <a href="/aboutus">TAG标签</a></dd>
+          <dd>·
+            <a href="/archives">RSS地图</a></dd>
+        </dl>
+      </div>
+      <div class="search-share">
+        <div class="app-download">
+          <div>
+            <strong>交流微信</strong></div>
+        </div>
+        <div class="share">
+          <img width="150" height="150" src="http://www.123itools.com/style/img/wx.jpeg"></div>
+      </div>
+    </div>
+  </div>
+</div>         <div id="footer">
+
+ </div>
+        </div>
+
+        <script>
+            function searchLinux(){
+             window.event.returnValue = false;
+                            var name = $('input[name="name"]').val();
+                            var type = 1;
+                            $.ajax({
+                                type:'get',
+                                url: '/admin/searchCommand?name='+name+'&type'+type,
+                                cache:false,
+                                success:function(data){
+
+                                    if(data){
+                                        var dataObj = eval('(' + data + ')');
+                                        var html = '';
+                                        for( var i in dataObj){
+                                            html = html+'<li role="presentation"><a role="menuitem" tabindex="-1" href="/LinuxCommand/index?m='+dataObj[i].name+'">'+dataObj[i].name+'</a></li>';
+                                        }
+
+                                        if(html){
+                                            $('#searchList').html('');
+
+                                            $('#searchList').html(html);
+                                            $('#searchList').show();
+                                        }else{
+                                            $('#searchList').hide();
+                                        }
+                                    }else{
+                                       $('#searchList').hide();
+                                    }
+                                }
+                            });
+                        }
+
+        </script>
+    </body>
+</html>
+

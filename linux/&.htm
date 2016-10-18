@@ -4,9 +4,9 @@
         <meta charset="utf-8"/>
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
-        <title>Linux命令大全 文件目录管理 touch</title>
-        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件目录管理 touch touch命令 touch语法"/>
-        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件目录管理 touch touch命令 touch语法"/>
+        <title>Linux命令大全 进程管理 &</title>
+        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 进程管理 & &命令 &语法"/>
+        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 进程管理 & &命令 &语法"/>
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command.css" />
@@ -90,8 +90,17 @@ $('.has_son *').hover(
 </script>
 
             <div class="containter">
-             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/LinuxCommand/index.html?m=touch">Linux命令大全</a>><a href="http://www.123itools.com/LinuxCommand/index.html?m=touch">文件目录管理</a>><a href="http://www.123itools.com/LinuxCommand/index.html?m=touch">touch</a></span></div>            <div class="main" id="main">
-                <h3>1. 命令</h3><blockquote><p>touch -- 创建文件，改变文件的访问时间 和 修改时间。</p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>创建文件，名为 test</h4></li></ul><blockquote><p>touch test</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4 style="white-space: normal;">如何查看文件的访问时间，修改时间，例如查看文件 test 的状态</h4></li></ul><blockquote><p style="white-space: normal;">stat test</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>改变 test 文件的访问时间为当前时间</h4></li></ul><blockquote><p>touch -a test</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>改变 test 文件的修改时间为当前时间<br/></h4></li></ul><blockquote><p>touch -m test</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>改变 test 文件的修改时间为 2016-09-30 00:01:20</h4></li></ul><blockquote><p>touch -m -d &quot;2016-09-30 00:01:20&quot; test</p></blockquote><h3>3. 使用方法</h3><blockquote><p>touch [属性]... 文件...</p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-a&nbsp;</h4></li></ul><blockquote><p>修改文件的访问时间</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-m</h4></li></ul><blockquote><p>修改文件的修改时间</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-d</h4></li></ul><blockquote><p>指定要修改成的时间</p></blockquote>            </div>
+             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/LinuxCommand/index.html?m=&">Linux命令大全</a>><a href="http://www.123itools.com/LinuxCommand/index.html?m=&">进程管理</a>><a href="http://www.123itools.com/LinuxCommand/index.html?m=&">&</a></span></div>            <div class="main" id="main">
+                <h3>1. 命令</h3><blockquote><p>&amp; -- 加在一个命令后面，可以让该命令在后台执行</p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将 ls -al 命令放到后台去执行</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;tmp]#&nbsp;ls&nbsp;-al&nbsp;&amp;
+[1]&nbsp;7410
+[root@shengqian&nbsp;tmp]#&nbsp;总用量&nbsp;16
+drwxr-xr-x&nbsp;&nbsp;&nbsp;2&nbsp;root&nbsp;root&nbsp;&nbsp;&nbsp;36&nbsp;10月&nbsp;&nbsp;8&nbsp;22:13&nbsp;.
+dr-xr-x---.&nbsp;10&nbsp;root&nbsp;root&nbsp;4096&nbsp;10月&nbsp;&nbsp;8&nbsp;22:13&nbsp;..
+-rw-r--r--&nbsp;&nbsp;&nbsp;1&nbsp;root&nbsp;root&nbsp;&nbsp;&nbsp;14&nbsp;10月&nbsp;&nbsp;8&nbsp;21:52&nbsp;a
+-rw-r--r--&nbsp;&nbsp;&nbsp;1&nbsp;root&nbsp;root&nbsp;&nbsp;&nbsp;20&nbsp;10月&nbsp;&nbsp;8&nbsp;21:52&nbsp;b
+-rw-r--r--&nbsp;&nbsp;&nbsp;1&nbsp;root&nbsp;root&nbsp;&nbsp;&nbsp;19&nbsp;10月&nbsp;&nbsp;8&nbsp;22:12&nbsp;test.sh
+
+[1]+&nbsp;&nbsp;完成&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ls&nbsp;--color=auto&nbsp;-al</pre><p><br/></p>            </div>
             <div class="sidebar">
             <div class="dropdown">
                 <div class="input-group">
@@ -113,10 +122,10 @@ $('.has_son *').hover(
 
                     <div class="bd">
                         <ul id="accordion" class="accordion">
-                                                        <li class="open">
+                                                        <li class="">
                                 <div class="link"><i class="fa fa-paint-brush"></i>文件目录管理<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:block">
-                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/touch.htm" title="cd">touch</a></li>
+                                <ul class="submenu" style="display:none">
+                                                                    <li class=""><a href="http://www.123itools.com/linux/touch.htm" title="cd">touch</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/mkdir.htm" title="cd">mkdir</a></li>
 
@@ -208,12 +217,12 @@ $('.has_son *').hover(
 
                                                                 </ul>
                             </li>
-                                                         <li class="">
+                                                         <li class="open">
                                 <div class="link"><i class="fa fa-paint-brush"></i>进程管理<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:none">
+                                <ul class="submenu" style="display:block">
                                                                     <li class=""><a href="http://www.123itools.com/linux/kill.htm" title="cd">kill</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/&.htm" title="cd">&</a></li>
+                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/&.htm" title="cd">&</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/ctrl+z.htm" title="cd">ctrl+z</a></li>
 
