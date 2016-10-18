@@ -104,4 +104,29 @@ class CommandDb extends  CI_Model{
         return $arr;
     }
 
+    #条件查询
+    public function getSeachCommand($type = 0,$intClassify = 0,$name = ''){
+        $arr = array();
+        $where = ' where 1=1';
+        if(!empty($type)){
+            $where.=" and type={$type}";
+        }
+        if(!empty($intClassify)){
+            $where.=" and classify={$intClassify}";
+        }
+        if(!empty($name)){
+            $where.=" and name={$name}";
+        }
+        try{
+            $sql = "SELECT * FROM {$this->_db_name} {$where}";
+            $query = $this->db->query($sql);
+            $arr = $query->result_array();#多条
+        }catch (Exception $e) {
+            print $e->getMessage();
+            exit();
+        }
+        return $arr;
+
+    }
+
 }

@@ -6,6 +6,7 @@
  * Time: 下午4:27
  */
 class Command extends  CI_Model{
+
     public function __construct()
     {
         parent::__construct();
@@ -35,6 +36,48 @@ class Command extends  CI_Model{
             $this->errno = 401;
         }
         return array('errno'=>$this->errno);
+
+    }
+
+    public function getPositionName($type){
+        $arr = array(
+            1=>'Linux命令大全',
+            2=>'Redis命令大全',
+            3=>'Git命令大全',
+        );
+        return $arr[$type];
+    }
+
+    public function getCommandUrl($dirName){
+       
+            return base_url()."{$dirName}/";
+        
+    }
+
+    public function getKeyWords($type,$name,$nowClassify){
+        $arr = array(
+            1=>"Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 {$nowClassify} {$name} {$name}命令 {$name}语法",
+            3=>"Git命令大全 常用 命令 大全 git使用教程 教程 参数 用法 git {$nowClassify} {$name} {$name}命令 {$name}语法",
+            2=>"Redis命令大全 php 常用 命令 大全 redis教程 使用教程 redis学习 参数 选项 {$nowClassify} {$name} {$name}命令 {$name}语法",
+        );
+        return $arr[$type];
+    }
+
+    public function getContentWords($type,$name,$nowClassify){
+        $arr = array(
+            1=>"Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 {$nowClassify} {$name} {$name}命令 {$name}语法",
+            3=>"Git命令大全 常用 命令 大全 git使用教程 教程 参数 用法 git {$nowClassify} {$name} {$name}命令 {$name}语法",
+            2=>"Redis命令大全 php 常用 命令 大全 redis教程 使用教程 redis学习 参数 选项 {$nowClassify} {$name} {$name}命令 {$name}语法",
+        );
+        return $arr[$type];
+    }
+    public function getTitle($type,$nowClassify,$name){
+        $arr = array(
+            1=>"Linux命令大全 {$nowClassify} {$name}",
+            3=>"Git命令大全 {$nowClassify} {$name}",
+            2=>"Redis命令大全 {$nowClassify} {$name}",
+        );
+        return $arr[$type];
 
     }
 
@@ -127,6 +170,11 @@ class Command extends  CI_Model{
     public function position($typeName,$classityName,$name){
         $html = '<div id="position"><span>当前位置></span><span><a href="'.base_url().'LinuxCommand/index.html?m='.$name.'">'.$typeName.'</a>><a href="'.base_url().'LinuxCommand/index.html?m='.$name.'">'.$classityName.'</a>><a href="'.base_url().'LinuxCommand/index.html?m='.$name.'">'.$name.'</a></span></div>';
         return $html;
+    }
+
+    public function seachCommand($type = false,$intClassify = false,$name = false){
+        $re = $this->CommandDb->getSeachCommand($type,$intClassify,$name);
+        return empty($re) ? array() : $re;
     }
 
 }

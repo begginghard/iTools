@@ -37,35 +37,5 @@ class LinuxCommand extends CI_Controller {
     	$data['position'] = $this->Command->position($typeName,$nowClassify,$m);
        	$this->load->view('html/tools/linux',$data);
     }
-
-    public function test(){
-        $type = 1;
-        $this->load->helper('url');
-        $this->load->model('manager/Command');
-        $re = $this->Command->getCommandByDisplaySort($type);
-        $arr = array();
-        if(!empty($re)){
-            foreach($re as $key=>$val){
-                $arr[$val['classify']][$val['name']] = $val;
-            }
-        }
-        ksort($arr,1);
-        #加载分类配置
-        $this->config->load('config', true);
-        $classify    = $this->config->item('classify');#二级分类
-        $classify = isset($classify[$type]) ? $classify[$type] : array();
-        $data['data'] = $arr;
-        $data['classify'] = $classify;
-        $this->load->helper('url');
-        $m = trim($this->input->get('m'));
-        $m = !empty($m) ? $m : 'cd';
-        $commandArr = $this->Command->searchCommand($m,$type=1);
-        $content = '';
-        if(!empty($commandArr)){
-            $content = $commandArr['content'];
-        }
-        $data['content'] = $content;
-        $this->load->view('html/tools/test2',$data);
-    }
 }
 ?>
