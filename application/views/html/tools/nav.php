@@ -49,7 +49,7 @@
                       <li><a role="menuitem" tabindex="-1" href="<?php echo base_url();?>Md5/index.html?p=6">md5加密</a></li>
                     </ul>
                 </li>
-                <li class='li_list <?php if (isset($_GET["p"]) && $_GET["p"] == 7) {echo "now";}?>'><a href="<?php echo base_url();?>linux/cd.htm?p=7">Linux命令大全</a></li>
+                <li class='li_list <?php if (isset($_GET["p"]) && $_GET["p"] == 7) {echo "now";}?>'><a href="<?php echo base_url();?>linux/mv.htm?p=7">Linux命令大全</a></li>
                 <li class='li_list <?php if (isset($_GET["p"]) && $_GET["p"] == 8) {echo "now";}?>'><a href="<?php echo base_url();?>git/init.htm?p=8">Git命令大全</a></li>
                 <li class='li_list <?php if (isset($_GET["p"]) && $_GET["p"] == 9) {echo "now";}?>'><a href="<?php echo base_url();?>redis/del.htm?p=9">Redis命令大全</a></li>
 
