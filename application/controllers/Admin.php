@@ -100,6 +100,7 @@ class Admin extends CI_Controller {
             #当前位置部分处理
             $nowClassify = isset($classify[$intClassify]) ? $classify[$intClassify] : 'default';
             $typeName = $this->Command->getPositionName($type);
+            $data['type_flag'] = $type;
             #url前缀
             $data['command_url_pre'] = $this->Command->getCommandUrl($dirName);
             $data['position'] = $this->Command->position($data['command_url_pre'],$typeName,$nowClassify,$name);
@@ -167,6 +168,7 @@ class Admin extends CI_Controller {
             #当前位置部分处理
             $nowClassify = isset($classify[$intClassify]) ? $classify[$intClassify] : 'default';
             $typeName = $this->Command->getPositionName($type);
+            $data['type_flag'] = $type;
             #url前缀
             $data['command_url_pre'] = $this->Command->getCommandUrl($dirName);
             $data['position'] = $this->Command->position($data['command_url_pre'],$typeName,$nowClassify,$name);
@@ -259,6 +261,7 @@ class Admin extends CI_Controller {
                 $nowClassify = isset($classify[$intClassify]) ? $classify[$intClassify] : 'default';
                 $typeName = $this->Command->getPositionName($type);
                 #url前缀
+                $data['type_flag'] = $type;
                 $data['command_url_pre'] = $this->Command->getCommandUrl($dirName);
                 $data['position'] = $this->Command->position($data['command_url_pre'],$typeName,$nowClassify,$name);
                 #title keywords description
@@ -269,10 +272,12 @@ class Admin extends CI_Controller {
                 $this->load->view('html/tools/tmp',$data);
                 #获取全部输出内容以备生成静态化
                 $allContent = ob_get_contents();
+
                 #清空 防止输出到页面
                 if(!empty($allContent)){
                     ob_end_clean();
                 }
+
                 $ret = $this->Command->makeHtml($name,$allContent,$dirName);
                 if(!$ret){
                     echo "更新失败{$name}\n";

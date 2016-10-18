@@ -76,15 +76,16 @@
         <?php include('bottom_map.php');?>
         <?php include('footer.php');?>
         </div>
-
+        <input type="hidden" value="<?php echo $type_flag;?>">
         <script>
             function searchLinux(){
              window.event.returnValue = false;
                             var name = $('input[name="name"]').val();
-                            var type = 1;
+                            var pre_url = '<?php echo $command_url_pre;?>';
+                            var type = '<?php echo $type_flag;?>';
                             $.ajax({
                                 type:'get',
-                                url: '/admin/searchCommand?name='+name+'&type'+type,
+                                url: '/admin/searchCommand?name='+name+'&type='+type,
                                 cache:false,
                                 success:function(data){
 
@@ -92,7 +93,7 @@
                                         var dataObj = eval('(' + data + ')');
                                         var html = '';
                                         for( var i in dataObj){
-                                            html = html+'<li role="presentation"><a role="menuitem" tabindex="-1" href="/LinuxCommand/index?m='+dataObj[i].name+'">'+dataObj[i].name+'</a></li>';
+                                            html = html+'<li role="presentation"><a role="menuitem" tabindex="-1" href="'+pre_url+dataObj[i].name+'.htm">'+dataObj[i].name+'</a></li>';
                                         }
 
                                         if(html){
