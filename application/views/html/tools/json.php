@@ -30,8 +30,10 @@
 
             <div class="jiantou" style="float:left;">
                 <div class="botton-div">
-                    <div class="bt zip">压缩结果</div>
+                    <div class="bt zip" id="compress">压缩结果</div>
                     <div class="bt hover" style="cursor:pointer" id="copy">复制结果</div>
+                    <div class="bt zip" id="escape" onclick="escape()">转义</div>
+                    <div class="bt zip" id="invertEscape" onclick="invertEscape()">反转义</div>
                 </div>
             </div>
 
@@ -76,6 +78,9 @@
         }
         $('#json-src').keyup(function(){
             keyup();
+            zip_flag=false;
+            $("#compress").html('');
+            $("#compress").html('压缩结果');
         });
 
         function keyup(){
@@ -109,7 +114,7 @@
                 $('.numberedtextarea-line-numbers').show();
         }
 
-        $('.zip').click(function(){
+        $('#compress').click(function(){
             if (zip_flag) {
                 $('#json-src').keyup();
                 $(this).html('');
@@ -121,6 +126,24 @@
                 zip_flag = true;
             }
         });
+
+        function escape() {
+            if(zip_flag) {
+                var json_target = $('#json-target').text();
+                $('#json-target').text(json_target.replace(/\//g, "\/\/").replace(/\"/g, "\/\""));
+            } else {
+                var json_target = current_json_str;
+                zip_flag = true;
+                $('#json-target').text(json_target.replace(/\//g, "\/\/").replace(/\"/g, "\/\""));
+            }
+        }
+
+        function invertEscape() {
+            if(zip_flag) {
+                var json_target = $('#json-target').text();
+                $("#json-target").text(json_target.replace(/\/\"/g, "\"").replace(/\/\//g, "\/"));
+            }
+        }
     </script>
 </body>
 </html>
