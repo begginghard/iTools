@@ -313,15 +313,16 @@ Hello&nbsp;World9
 
  </div>
         </div>
-
+        <input type="hidden" value="1">
         <script>
             function searchLinux(){
              window.event.returnValue = false;
                             var name = $('input[name="name"]').val();
-                            var type = 1;
+                            var pre_url = 'http://www.123itools.com/linux/';
+                            var type = '1';
                             $.ajax({
                                 type:'get',
-                                url: '/admin/searchCommand?name='+name+'&type'+type,
+                                url: '/admin/searchCommand?name='+name+'&type='+type,
                                 cache:false,
                                 success:function(data){
 
@@ -329,7 +330,7 @@ Hello&nbsp;World9
                                         var dataObj = eval('(' + data + ')');
                                         var html = '';
                                         for( var i in dataObj){
-                                            html = html+'<li role="presentation"><a role="menuitem" tabindex="-1" href="/LinuxCommand/index?m='+dataObj[i].name+'">'+dataObj[i].name+'</a></li>';
+                                            html = html+'<li role="presentation"><a role="menuitem" tabindex="-1" href="'+pre_url+dataObj[i].name+'.htm">'+dataObj[i].name+'</a></li>';
                                         }
 
                                         if(html){

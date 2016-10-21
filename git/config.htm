@@ -232,15 +232,16 @@ core.logallrefupdates=true</pre><h3>3. 使用方法</h3><blockquote><p>git confi
 
  </div>
         </div>
-
+        <input type="hidden" value="3">
         <script>
             function searchLinux(){
              window.event.returnValue = false;
                             var name = $('input[name="name"]').val();
-                            var type = 1;
+                            var pre_url = 'http://www.123itools.com/git/';
+                            var type = '3';
                             $.ajax({
                                 type:'get',
-                                url: '/admin/searchCommand?name='+name+'&type'+type,
+                                url: '/admin/searchCommand?name='+name+'&type='+type,
                                 cache:false,
                                 success:function(data){
 
@@ -248,7 +249,7 @@ core.logallrefupdates=true</pre><h3>3. 使用方法</h3><blockquote><p>git confi
                                         var dataObj = eval('(' + data + ')');
                                         var html = '';
                                         for( var i in dataObj){
-                                            html = html+'<li role="presentation"><a role="menuitem" tabindex="-1" href="/LinuxCommand/index?m='+dataObj[i].name+'">'+dataObj[i].name+'</a></li>';
+                                            html = html+'<li role="presentation"><a role="menuitem" tabindex="-1" href="'+pre_url+dataObj[i].name+'.htm">'+dataObj[i].name+'</a></li>';
                                         }
 
                                         if(html){
