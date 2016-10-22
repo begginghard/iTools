@@ -91,7 +91,38 @@ $('.has_son *').hover(
 
             <div class="containter">
              <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/git/help.htm">Git命令大全</a>><a href="http://www.123itools.com/git/help.htm">Git配置</a>><a href="http://www.123itools.com/git/help.htm">help</a></span></div>            <div class="main" id="main">
-                <h3>1. 命令<br/></h3><blockquote><p>help -- 查看命令使用手册<br/></p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>查看 config 的使用手册<br/></h4></li></ul><blockquote><p>git config<br/></p></blockquote><blockquote><p>git config --help</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>查看 git 的使用手册<br/></h4></li></ul><blockquote><p>git</p></blockquote><p><br/></p><p><br/></p><p><br/></p>            </div>
+                <h3>1. 命令<br/></h3><blockquote><p>help -- 查看命令使用手册<br/></p></blockquote><h3>2. 使用样例</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>查看某个命令的详细使用手册 和 简洁使用手册</h4></li></ul><blockquote><p>git &lt;verbs&gt; --help</p><p>git &lt;verbs&gt; -h</p></blockquote><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>查看 branch 的详细使用手册</h4></li></ul><blockquote><p>git branch --help</p><p>git branch -h</p><pre class=\"brush:bash;toolbar:false\">localhost:datalink&nbsp;zhangguanghui$&nbsp;git&nbsp;branch&nbsp;-h
+usage:&nbsp;git&nbsp;branch&nbsp;[&lt;options&gt;]&nbsp;[-r&nbsp;|&nbsp;-a]&nbsp;[--merged&nbsp;|&nbsp;--no-merged]
+&nbsp;&nbsp;&nbsp;or:&nbsp;git&nbsp;branch&nbsp;[&lt;options&gt;]&nbsp;[-l]&nbsp;[-f]&nbsp;&lt;branch-name&gt;&nbsp;[&lt;start-point&gt;]
+&nbsp;&nbsp;&nbsp;or:&nbsp;git&nbsp;branch&nbsp;[&lt;options&gt;]&nbsp;[-r]&nbsp;(-d&nbsp;|&nbsp;-D)&nbsp;&lt;branch-name&gt;...
+&nbsp;&nbsp;&nbsp;or:&nbsp;git&nbsp;branch&nbsp;[&lt;options&gt;]&nbsp;(-m&nbsp;|&nbsp;-M)&nbsp;[&lt;old-branch&gt;]&nbsp;&lt;new-branch&gt;
+
+Generic&nbsp;options
+&nbsp;&nbsp;&nbsp;&nbsp;-v,&nbsp;--verbose&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show&nbsp;hash&nbsp;and&nbsp;subject,&nbsp;give&nbsp;twice&nbsp;for&nbsp;upstream&nbsp;branch
+&nbsp;&nbsp;&nbsp;&nbsp;-q,&nbsp;--quiet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;suppress&nbsp;informational&nbsp;messages
+&nbsp;&nbsp;&nbsp;&nbsp;-t,&nbsp;--track&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;up&nbsp;tracking&nbsp;mode&nbsp;(see&nbsp;git-pull(1))
+&nbsp;&nbsp;&nbsp;&nbsp;--set-upstream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;change&nbsp;upstream&nbsp;info
+&nbsp;&nbsp;&nbsp;&nbsp;-u,&nbsp;--set-upstream-to&nbsp;&lt;upstream&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;change&nbsp;the&nbsp;upstream&nbsp;info
+&nbsp;&nbsp;&nbsp;&nbsp;--unset-upstream&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unset&nbsp;the&nbsp;upstream&nbsp;info
+&nbsp;&nbsp;&nbsp;&nbsp;--color[=&lt;when&gt;]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use&nbsp;colored&nbsp;output
+&nbsp;&nbsp;&nbsp;&nbsp;-r,&nbsp;--remotes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;act&nbsp;on&nbsp;remote-tracking&nbsp;branches
+&nbsp;&nbsp;&nbsp;&nbsp;--contains&nbsp;&lt;commit&gt;&nbsp;&nbsp;&nbsp;print&nbsp;only&nbsp;branches&nbsp;that&nbsp;contain&nbsp;the&nbsp;commit
+&nbsp;&nbsp;&nbsp;&nbsp;--abbrev[=&lt;n&gt;]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use&nbsp;&lt;n&gt;&nbsp;digits&nbsp;to&nbsp;display&nbsp;SHA-1s
+
+Specific&nbsp;git-branch&nbsp;actions:
+&nbsp;&nbsp;&nbsp;&nbsp;-a,&nbsp;--all&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;both&nbsp;remote-tracking&nbsp;and&nbsp;local&nbsp;branches
+&nbsp;&nbsp;&nbsp;&nbsp;-d,&nbsp;--delete&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete&nbsp;fully&nbsp;merged&nbsp;branch
+&nbsp;&nbsp;&nbsp;&nbsp;-D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete&nbsp;branch&nbsp;(even&nbsp;if&nbsp;not&nbsp;merged)
+&nbsp;&nbsp;&nbsp;&nbsp;-m,&nbsp;--move&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;move/rename&nbsp;a&nbsp;branch&nbsp;and&nbsp;its&nbsp;reflog
+&nbsp;&nbsp;&nbsp;&nbsp;-M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;move/rename&nbsp;a&nbsp;branch,&nbsp;even&nbsp;if&nbsp;target&nbsp;exists
+&nbsp;&nbsp;&nbsp;&nbsp;--list&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;branch&nbsp;names
+&nbsp;&nbsp;&nbsp;&nbsp;-l,&nbsp;--create-reflog&nbsp;&nbsp;&nbsp;create&nbsp;the&nbsp;branch&#39;s&nbsp;reflog
+&nbsp;&nbsp;&nbsp;&nbsp;--edit-description&nbsp;&nbsp;&nbsp;&nbsp;edit&nbsp;the&nbsp;description&nbsp;for&nbsp;the&nbsp;branch
+&nbsp;&nbsp;&nbsp;&nbsp;-f,&nbsp;--force&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;force&nbsp;creation,&nbsp;move/rename,&nbsp;deletion
+&nbsp;&nbsp;&nbsp;&nbsp;--no-merged&nbsp;&lt;commit&gt;&nbsp;&nbsp;print&nbsp;only&nbsp;not&nbsp;merged&nbsp;branches
+&nbsp;&nbsp;&nbsp;&nbsp;--merged&nbsp;&lt;commit&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print&nbsp;only&nbsp;merged&nbsp;branches
+&nbsp;&nbsp;&nbsp;&nbsp;--column[=&lt;style&gt;]&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;branches&nbsp;in&nbsp;columns</pre><p><br/></p></blockquote><p><br/></p><p><br/></p><p><br/></p>            </div>
             <div class="sidebar">
             <div class="dropdown">
                 <div class="input-group">

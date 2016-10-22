@@ -91,7 +91,33 @@ $('.has_son *').hover(
 
             <div class="containter">
              <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/git/init.htm">Git命令大全</a>><a href="http://www.123itools.com/git/init.htm">初始化</a>><a href="http://www.123itools.com/git/init.htm">init</a></span></div>            <div class="main" id="main">
-                <p>1. 命令</p><p>init -- 初始化一个 git 仓库</p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p>            </div>
+                <h3>1. 命令</h3><blockquote><p>init -- 初始化一个 git 仓库</p></blockquote><h3>2. 使用样例</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>初始化空的本地 git 仓库</h4></li></ul><blockquote><p>git init</p></blockquote><pre class=\"brush:bash;toolbar:false\">localhost:tmp&nbsp;zhangguanghui$&nbsp;pwd
+/Users/zhangguanghui/tmp
+localhost:tmp&nbsp;zhangguanghui$&nbsp;mkdir&nbsp;initgit
+localhost:tmp&nbsp;zhangguanghui$&nbsp;cd&nbsp;initgit/
+localhost:initgit&nbsp;zhangguanghui$&nbsp;pwd
+/Users/zhangguanghui/tmp/initgit
+localhost:initgit&nbsp;zhangguanghui$&nbsp;git&nbsp;init
+Initialized&nbsp;empty&nbsp;Git&nbsp;repository&nbsp;in&nbsp;/Users/zhangguanghui/tmp/initgit/.git/
+localhost:initgit&nbsp;zhangguanghui$&nbsp;ls&nbsp;-al
+total&nbsp;0
+drwxr-xr-x&nbsp;&nbsp;&nbsp;3&nbsp;zhangguanghui&nbsp;&nbsp;staff&nbsp;&nbsp;102&nbsp;10&nbsp;22&nbsp;08:57&nbsp;.
+drwxr-xr-x&nbsp;&nbsp;&nbsp;4&nbsp;zhangguanghui&nbsp;&nbsp;staff&nbsp;&nbsp;136&nbsp;10&nbsp;22&nbsp;08:57&nbsp;..
+drwxr-xr-x&nbsp;&nbsp;10&nbsp;zhangguanghui&nbsp;&nbsp;staff&nbsp;&nbsp;340&nbsp;10&nbsp;22&nbsp;08:57&nbsp;.git</pre><p><br/></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>将本地的 git 仓库与远程仓库建立连接，远程仓库地址为：<a href=\"https://github.com/begginghard/initgit.git\">https://github.com/begginghard/initgit.git</a></h4></li></ul><blockquote><p><a href=\"https://github.com/begginghard/initgit.git\"></a>git remote add [-t &lt;branch&gt;] [-m &lt;master&gt;] [-f] [--tags | --no-tags] [--mirror=&lt;fetch|push&gt;] &lt;name&gt; &lt;url&gt;</p></blockquote><pre class=\"brush:bash;toolbar:false\">localhost:initgit&nbsp;zhangguanghui$&nbsp;git&nbsp;status
+fatal:&nbsp;Not&nbsp;a&nbsp;git&nbsp;repository&nbsp;(or&nbsp;any&nbsp;of&nbsp;the&nbsp;parent&nbsp;directories):&nbsp;.git
+localhost:initgit&nbsp;zhangguanghui$&nbsp;git&nbsp;init
+Initialized&nbsp;empty&nbsp;Git&nbsp;repository&nbsp;in&nbsp;/Users/zhangguanghui/tmp/initgit/.git/
+localhost:initgit&nbsp;zhangguanghui$&nbsp;git&nbsp;remote&nbsp;add&nbsp;origin&nbsp;https://github.com/begginghard/initgit.git
+localhost:initgit&nbsp;zhangguanghui$&nbsp;git&nbsp;pull&nbsp;origin&nbsp;master
+remote:&nbsp;Counting&nbsp;objects:&nbsp;11,&nbsp;done.
+remote:&nbsp;Compressing&nbsp;objects:&nbsp;100%&nbsp;(6/6),&nbsp;done.
+remote:&nbsp;Total&nbsp;11&nbsp;(delta&nbsp;2),&nbsp;reused&nbsp;7&nbsp;(delta&nbsp;2),&nbsp;pack-reused&nbsp;0
+Unpacking&nbsp;objects:&nbsp;100%&nbsp;(11/11),&nbsp;done.
+From&nbsp;https://github.com/begginghard/initgit
+&nbsp;*&nbsp;branch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;master&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&nbsp;FETCH_HEAD
+&nbsp;*&nbsp;[new&nbsp;branch]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;master&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&nbsp;origin/master
+localhost:initgit&nbsp;zhangguanghui$&nbsp;git&nbsp;br
+*&nbsp;master</pre><p><br/></p><p><br/></p>            </div>
             <div class="sidebar">
             <div class="dropdown">
                 <div class="input-group">
