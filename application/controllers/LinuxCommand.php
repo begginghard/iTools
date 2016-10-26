@@ -34,8 +34,16 @@ class LinuxCommand extends CI_Controller {
 
     	$nowClassify = isset($classify[$commandArr['classify']]) ? $classify[$commandArr['classify']] : 'default';
     	$typeName = 'Linux命令大全';
-    	$data['position'] = $this->Command->position($typeName,$nowClassify,$m);
+    	$dirName = $this->getDirName($type);
+        $data['command_url_pre'] = $this->Command->getCommandUrl($dirName);
+        $data['position'] = $this->Command->position($data['command_url_pre'],$typeName,$nowClassify,$m);
        	$this->load->view('html/tools/linux',$data);
+    }
+    private function getDirName($type){
+        $this->config->load('config', true);
+        $commandType = $this->config->item('command_type');#1一级命令分类
+        $dirName = isset($commandType[$type]) ? $commandType[$type] : 'linux';
+        return $dirName;
     }
 }
 ?>

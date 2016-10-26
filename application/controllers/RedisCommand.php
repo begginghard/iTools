@@ -30,10 +30,18 @@ class RedisCommand extends CI_Controller {
         #当前位置部分处理
         $nowClassify = isset($classify[$commandArr['classify']]) ? $classify[$commandArr['classify']] : 'default';
         $typeName = 'Redis命令大全';
-        $data['position'] = $this->Command->position($typeName,$nowClassify,$m);
+        $dirName = $this->getDirName($type);
+        $data['command_url_pre'] = $this->Command->getCommandUrl($dirName);
+        $data['position'] = $this->Command->position($data['command_url_pre'],$typeName,$nowClassify,$m);
         $data['data'] = $arr;
         $data['classify'] = $classify;
     	$this->load->view('html/tools/redis',$data);
+    }
+    private function getDirName($type){
+        $this->config->load('config', true);
+        $commandType = $this->config->item('command_type');#1一级命令分类
+        $dirName = isset($commandType[$type]) ? $commandType[$type] : 'linux';
+        return $dirName;
     }
 }
 ?>
