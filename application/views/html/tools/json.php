@@ -136,18 +136,18 @@
         function escape() {
             if(zip_flag) {
                 var json_target = $('#json-target').text();
-                $('#json-target').text(json_target.replace(/\//g, "\/\/").replace(/\"/g, "\/\""));
+                $('#json-target').text(json_target.replace(/\/g, "\\").replace(/\"/g, "\\""));
             } else {
                 var json_target = current_json_str;
                 zip_flag = true;
-                $('#json-target').text(json_target.replace(/\//g, "\/\/").replace(/\"/g, "\/\""));
+                $('#json-target').text(json_target.replace(/\/g, "\\").replace(/\"/g, "\\""));
             }
         }
 
         function invertEscape() {
             if(zip_flag) {
                 var json_target = $('#json-target').text();
-                $("#json-target").text(json_target.replace(/\/\"/g, "\"").replace(/\/\//g, "\/"));
+                $("#json-target").text(json_target.replace(/\\"/g, "\"").replace(/\\/g, "\"));
             }
         }
     </script>
