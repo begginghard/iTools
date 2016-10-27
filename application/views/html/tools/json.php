@@ -8,6 +8,11 @@
     <meta name="google-site-verification" content="wJHmpaG5IpZT-QrPKHh6ugEQWmu8jCePnavT_xHchMM" />
     <title>json格式化,json压缩,json在线解析,json格式化工具</title>
     <?php include('meta.php');?>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="JSON格式,JS,CSS压缩,Md5编码,Base64编码,URL编码,时间戳转换,正则表达式在线解析,Linux命令大全,Git命令大全,Redis命令大全" />
+    <meta property="og:description" content="JSON格式,JS,CSS压缩,Md5编码,Base64编码,URL编码,时间戳转换,正则表达式在线解析,Linux命令大全,Git命令大全,Redis命令大全" />
+    <meta property="og:url" content="www.123itools.com" />
+ 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/index.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style/css/numberedtextarea.css" />
