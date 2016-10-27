@@ -5,10 +5,6 @@ http://www.123itools.com/regex/index.html?p=3
 http://www.123itools.com/Url/index.html?p=4
 http://www.123itools.com/base64/index.html?p=5
 http://www.123itools.com/Md5/index.html?p=6
-http://www.123itools.com/linux/mv.htm?p=7
-http://www.123itools.com/git/init.htm?p=8
-http://www.123itools.com/redis/DEL.htm?p=9
-http://www.123itools.com/linux/cd.htm?p=7
 http://www.123itools.com/linux/mv.htm
 http://www.123itools.com/linux/touch.htm
 http://www.123itools.com/linux/mkdir.htm
@@ -48,13 +44,12 @@ http://www.123itools.com/linux/kill.htm
 http://www.123itools.com/linux/&.htm
 http://www.123itools.com/linux/ctrl+z.htm
 http://www.123itools.com/linux/bg.htm
-http://www.123itools.com/LinuxCommand/index.html?m=init
 http://www.123itools.com/git/help.htm
+http://www.123itools.com/redis/DEL.htm?p=9
 http://www.123itools.com/git/config.htm
 http://www.123itools.com/git/init.htm
-http://www.123itools.com/linuxCommand/index.html?p=7
-http://www.123itools.com/gitCommand/index.html?p=8
-http://www.123itools.com/redisCommand/index.html?p=9
+http://www.123itools.com/linux/mv.htm?p=7
+http://www.123itools.com/git/init.htm?p=8
 http://www.123itools.com/redis/DEL.htm
 http://www.123itools.com/redis/EXISTS.htm
 http://www.123itools.com/redis/EXPIRE.htm

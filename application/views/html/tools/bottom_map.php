@@ -23,7 +23,7 @@
         <dl>
           <dt>命令大全</dt>
           <dd>·
-            <a href="<?php echo base_url()?>linux/cd.htm?p=7" title="Linux命令大全">Linux命令大全</a></dd>
+            <a href="<?php echo base_url()?>linux/mv.htm?p=7" title="Linux命令大全">Linux命令大全</a></dd>
           <dd>·
             <a href="<?php echo base_url()?>git/init.htm?p=8" title="Git命令大全">Git命令大全</a></dd>
           <dd>·

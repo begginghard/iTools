@@ -42,7 +42,18 @@
         </div>
         <div class="nav_list">
             <ul class="ul_div">
-                <li class='li_list now'><a href="http://www.123itools.com/json/index.html">json格式转换</a></li>
+
+
+                <li class='li_list  has_son '><a href="#">
+                    格式化压缩                </a>
+                    <ul class="son">
+                      <li ><a role="menuitem" tabindex="-1" href="http://www.123itools.com/json/index.html?p=10">JSON格式化&压缩</a></li>
+                      <li><a role="menuitem" tabindex="-1" href="http://www.123itools.com/css/index.html?p=11">CSS格式化&压缩</a></li>
+                      <li><a role="menuitem" tabindex="-1" href="http://www.123itools.com/js/index.html?p=12">JS格式化&压缩</a></li>
+                      <li><a role="menuitem" tabindex="-1" href="http://www.123itools.com/jsonxml/index.html?p=12">XML转换JSON</a></li>
+                    </ul>
+                </li>
+
                 <li class='li_list '><a href="http://www.123itools.com/timestamp/index.html?p=2">时间格式转换</a></li>
                 <li class='li_list '><a href="http://www.123itools.com/regex/index.html?p=3">正则表达式</a></li>
                 <li class='li_list  has_son '><a href="#">
@@ -57,8 +68,6 @@
                 <li class='li_list '><a href="http://www.123itools.com/linux/mv.htm?p=7">Linux命令大全</a></li>
                 <li class='li_list '><a href="http://www.123itools.com/git/init.htm?p=8">Git命令大全</a></li>
                 <li class='li_list '><a href="http://www.123itools.com/redis/DEL.htm?p=9">Redis命令大全</a></li>
-
-
             </ul>
         </div>
     </div>
@@ -91,11 +100,11 @@ $('.has_son *').hover(
 
             <div class="containter">
              <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/fg.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/fg.htm">进程管理</a>><a href="http://www.123itools.com/linux/fg.htm">fg</a></span></div>            <div class="main" id="main">
-                <h3>1. 命令</h3><blockquote><p>fg -- 将后台中的程序调到前台继续执行</p></blockquote><h3>2. 使用样例</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>默认将后台中的带 &quot;+&quot; 的进行调至到前台继续执行<br/></h4></li></ul><pre class=\"brush:bash;toolbar:false\">[root@shengqian&nbsp;tmp]#&nbsp;jobs
+                <h3>1. 命令</h3><blockquote><p>fg -- 将后台中的程序调到前台继续执行</p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>默认将后台中的带 &quot;+&quot; 的进行调至到前台继续执行<br/></h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;tmp]#&nbsp;jobs
 [1]-&nbsp;&nbsp;已停止&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim&nbsp;a
 [2]+&nbsp;&nbsp;已停止&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim&nbsp;b
 [root@shengqian&nbsp;tmp]#&nbsp;fg
-vim&nbsp;b</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>选择后台中的某个进程调至到前台运行</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[root@shengqian&nbsp;tmp]#&nbsp;jobs
+vim&nbsp;b</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>选择后台中的某个进程调至到前台运行</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;tmp]#&nbsp;jobs
 [1]-&nbsp;&nbsp;已停止&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim&nbsp;a
 [2]+&nbsp;&nbsp;已停止&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim&nbsp;b
 [root@shengqian&nbsp;tmp]#&nbsp;fg&nbsp;%1
@@ -105,7 +114,7 @@ vim&nbsp;a
 [1]+&nbsp;&nbsp;已停止&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim&nbsp;a
 [2]-&nbsp;&nbsp;已停止&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vim&nbsp;b
 [root@shengqian&nbsp;tmp]#&nbsp;fg&nbsp;%2
-vim&nbsp;b</pre><h3>3. 使用方法</h3><blockquote><p>fg [%number]</p></blockquote><h3>4. 参数说明</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>%number</h4></li></ul><blockquote><p>当后台有多个进程时，通过指定 number 来唤醒某一个进程</p></blockquote>            </div>
+vim&nbsp;b</pre><h3>3. 使用方法</h3><blockquote><p>fg [%number]</p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>%number</h4></li></ul><blockquote><p>当后台有多个进程时，通过指定 number 来唤醒某一个进程</p></blockquote>            </div>
             <div class="sidebar">
             <div class="dropdown">
                 <div class="input-group">
@@ -134,19 +143,19 @@ vim&nbsp;b</pre><h3>3. 使用方法</h3><blockquote><p>fg [%number]</p></blockqu
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/mkdir.htm" title="cd">mkdir</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/pwd.htm" title="cd">pwd</a></li>
-
                                                                     <li class=""><a href="http://www.123itools.com/linux/cd.htm" title="cd">cd</a></li>
 
+                                                                    <li class=""><a href="http://www.123itools.com/linux/pwd.htm" title="cd">pwd</a></li>
+
                                                                     <li class=""><a href="http://www.123itools.com/linux/ls.htm" title="cd">ls</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/cp.htm" title="cd">cp</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/rm.htm" title="cd">rm</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/mv.htm" title="cd">mv</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/rmdir.htm" title="cd">rmdir</a></li>
-
-                                                                    <li class=""><a href="http://www.123itools.com/linux/cp.htm" title="cd">cp</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/ln.htm" title="cd">ln</a></li>
 
@@ -161,15 +170,15 @@ vim&nbsp;b</pre><h3>3. 使用方法</h3><blockquote><p>fg [%number]</p></blockqu
                                                          <li class="">
                                 <div class="link"><i class="fa fa-paint-brush"></i>文件内容查看<i class="fa fa-chevron-down"></i></div>
                                 <ul class="submenu" style="display:none">
-                                                                    <li class=""><a href="http://www.123itools.com/linux/uniq.htm" title="cd">uniq</a></li>
-
-                                                                    <li class=""><a href="http://www.123itools.com/linux/tail.htm" title="cd">tail</a></li>
-
-                                                                    <li class=""><a href="http://www.123itools.com/linux/wc.htm" title="cd">wc</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/cat.htm" title="cd">cat</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/head.htm" title="cd">head</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/cat.htm" title="cd">cat</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/tail.htm" title="cd">tail</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/uniq.htm" title="cd">uniq</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/wc.htm" title="cd">wc</a></li>
 
                                                                 </ul>
                             </li>
@@ -180,9 +189,9 @@ vim&nbsp;b</pre><h3>3. 使用方法</h3><blockquote><p>fg [%number]</p></blockqu
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/chown.htm" title="cd">chown</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/df.htm" title="cd">df</a></li>
-
                                                                     <li class=""><a href="http://www.123itools.com/linux/du.htm" title="cd">du</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/df.htm" title="cd">df</a></li>
 
                                                                 </ul>
                             </li>
@@ -214,24 +223,28 @@ vim&nbsp;b</pre><h3>3. 使用方法</h3><blockquote><p>fg [%number]</p></blockqu
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/vmstat.htm" title="cd">vmstat</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/ps.htm" title="cd">ps</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/crontab.htm" title="cd">crontab</a></li>
 
                                                                 </ul>
                             </li>
                                                          <li class="open">
                                 <div class="link"><i class="fa fa-paint-brush"></i>进程管理<i class="fa fa-chevron-down"></i></div>
                                 <ul class="submenu" style="display:block">
-                                                                    <li class=""><a href="http://www.123itools.com/linux/kill.htm" title="cd">kill</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/ctrl+z.htm" title="cd">ctrl+z</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/&.htm" title="cd">&</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/ctrl+z.htm" title="cd">ctrl+z</a></li>
-
                                                                     <li class=""><a href="http://www.123itools.com/linux/bg.htm" title="cd">bg</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/kill.htm" title="cd">kill</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/pstree.htm" title="cd">pstree</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/jobs.htm" title="cd">jobs</a></li>
 
                                                                     <li class="now_command"><a href="http://www.123itools.com/linux/fg.htm" title="cd">fg</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/ps.htm" title="cd">ps</a></li>
 
                                                                 </ul>
                             </li>

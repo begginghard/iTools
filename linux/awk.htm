@@ -4,9 +4,9 @@
         <meta charset="utf-8"/>
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
-        <title>Linux命令大全 文件目录管理 mkdir</title>
-        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件目录管理 mkdir mkdir命令 mkdir语法"/>
-        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件目录管理 mkdir mkdir命令 mkdir语法"/>
+        <title>Linux命令大全 文件内容查看 awk</title>
+        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件内容查看 awk awk命令 awk语法"/>
+        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件内容查看 awk awk命令 awk语法"/>
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command.css" />
@@ -99,8 +99,61 @@ $('.has_son *').hover(
 </script>
 
             <div class="containter">
-             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/mkdir.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/mkdir.htm">文件目录管理</a>><a href="http://www.123itools.com/linux/mkdir.htm">mkdir</a></span></div>            <div class="main" id="main">
-                <h3>1. 命令</h3><blockquote><p>mkdir--创建目录</p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>创建一个空目录为 test1</h4></li></ul><blockquote><p>mkdir test1</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>创建一个多级目录为 test1/test2/test3</h4></li></ul><blockquote><p>mkdir -p test1/test2/test3</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>一次创建多个多级目录, test1/test11, test1/test12</h4></li></ul><blockquote><p>mkdir -p test1/{test11, test12}</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>一次性创建多个多级目录，test/test1, test/test1/test11, test/test2, test/test2/test21, test/test2/testt22, test/test2/test22/test222<br/></h4></li></ul><blockquote><p>mkdir -p test/{test1/{test11, test12}, test2/{test21, test22/{test222}}}</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>创建属性为 777 的目录，test</h4></li></ul><blockquote><p>mkdir -m 777 test</p></blockquote><h3>3. 使用方法</h3><blockquote><p>mkdir [属性]... [目录名]...<br/></p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-p</h4></li></ul><blockquote><p>自动创建该目录路径中的父目录</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-m --mode=MODE</h4></li></ul><blockquote><p>创建属性为 MODE 的 目录</p></blockquote>            </div>
+             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/awk.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/awk.htm">文件内容查看</a>><a href="http://www.123itools.com/linux/awk.htm">awk</a></span></div>            <div class="main" id="main">
+                <h3>1. 命令</h3><blockquote><p>awk -- 文本处理工具</p></blockquote><h3>2. 使用样例</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>有一份成绩单如下，列之间是按 Tab 来分割的，从成绩单中选出姓名，英语成绩，并输出。<br/></h4></li></ul><pre class=\"brush:bash;toolbar:false\">[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a
+name		math		chinese		english
+xiaoming	96		98		100
+xiaohong	59		78		98
+xiaobai		97		98		99
+[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a&nbsp;|&nbsp;awk&nbsp;&#39;{print&nbsp;$1,&nbsp;$4}&#39;
+name&nbsp;english
+xiaoming&nbsp;100
+xiaohong&nbsp;98
+xiaobai&nbsp;99</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>有一份成绩单如下，列之间是按 Tab 来分割的，从成绩单中选出姓名，英语成绩，并格式化输出。</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a
+name		math		chinese		english
+xiaoming	96		98		100
+xiaohong	59		78		98
+xiaobai		97		98		99
+[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a&nbsp;|&nbsp;awk&nbsp;&#39;{printf&nbsp;&quot;%10s&nbsp;%10s\\n&quot;,&nbsp;$1,&nbsp;$4}&#39;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;&nbsp;&nbsp;&nbsp;english
+&nbsp;&nbsp;xiaoming&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100
+&nbsp;&nbsp;xiaohong&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;98
+&nbsp;&nbsp;&nbsp;xiaobai&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;99</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>有一份成绩单如下，列之间是按 : 来分割的，从成绩单中选出姓名，英语成绩，并格式化输出<br/></h4></li></ul><pre class=\"brush:bash;toolbar:false\">[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;b
+name:math:chinese:english
+xiaoming:96:98:100
+xiaohong:59:78:98
+xiaobai:97:98:99
+[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;b&nbsp;|&nbsp;awk&nbsp;-F&nbsp;&#39;:&#39;&nbsp;&#39;{printf&nbsp;&quot;%10s&nbsp;%10s\\n&quot;,&nbsp;$1,&nbsp;$4}&#39;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;&nbsp;&nbsp;&nbsp;english
+&nbsp;&nbsp;xiaoming&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100
+&nbsp;&nbsp;xiaohong&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;98
+&nbsp;&nbsp;&nbsp;xiaobai&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;99</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>有一份成绩单如下，从中选出英语大于 98 分的同学</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a
+name		math		chinese		english
+xiaoming	96		98		100
+xiaohong	59		78		98
+xiaobai		97		98		99
+[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a&nbsp;|&nbsp;awk&nbsp;&#39;$4&gt;=99&#39;
+name		math		chinese		english
+xiaoming	96		98		100
+xiaobai		97		98		99</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>有一份成绩单如下，打印出英语大于 98 分，数学等于 97 分的同学的语文成绩。</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a
+name		math		chinese		english
+xiaoming	96		98		100
+xiaohong	59		78		98
+xiaobai		97		98		99
+[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a&nbsp;|&nbsp;awk&nbsp;&#39;$2==97&nbsp;&amp;&amp;&nbsp;$4&gt;98&nbsp;{print&nbsp;$1,&nbsp;$3}&#39;
+xiaobai&nbsp;98</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>有一份成绩单如下，计算所有同学数学成绩之和</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a
+name		math		chinese		english
+xiaoming	96		98		100
+xiaohong	59		78		98
+xiaobai		97		98		99
+[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a&nbsp;|&nbsp;awk&nbsp;&#39;BEGIN{sum=0}&nbsp;{sum+=$2}&nbsp;END{print&nbsp;sum}&#39;
+252</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>有一份成绩单如下，计算英语成绩大于98 分的同学的数学成绩综合</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a
+name		math		chinese		english
+xiaoming	96		98		100
+xiaohong	59		78		98
+xiaobai		97		98		99
+[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a&nbsp;|&nbsp;awk&nbsp;&#39;BEGIN{sum=0}&nbsp;$4&gt;98&nbsp;{sum+=$2}&nbsp;END{print&nbsp;sum}&#39;
+193</pre><h3>3. 使用方法</h3><blockquote><p>awk [cmd] file</p></blockquote><blockquote><p>cat file | awk [cmd]</p></blockquote><h3>4. 参数说明</h3><p><br/></p>            </div>
             <div class="sidebar">
             <div class="dropdown">
                 <div class="input-group">
@@ -122,12 +175,12 @@ $('.has_son *').hover(
 
                     <div class="bd">
                         <ul id="accordion" class="accordion">
-                                                        <li class="open">
+                                                        <li class="">
                                 <div class="link"><i class="fa fa-paint-brush"></i>文件目录管理<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:block">
+                                <ul class="submenu" style="display:none">
                                                                     <li class=""><a href="http://www.123itools.com/linux/touch.htm" title="cd">touch</a></li>
 
-                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/mkdir.htm" title="cd">mkdir</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/mkdir.htm" title="cd">mkdir</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/cd.htm" title="cd">cd</a></li>
 
@@ -135,13 +188,13 @@ $('.has_son *').hover(
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/ls.htm" title="cd">ls</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/cp.htm" title="cd">cp</a></li>
-
                                                                     <li class=""><a href="http://www.123itools.com/linux/rm.htm" title="cd">rm</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/mv.htm" title="cd">mv</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/rmdir.htm" title="cd">rmdir</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/cp.htm" title="cd">cp</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/ln.htm" title="cd">ln</a></li>
 
@@ -153,18 +206,20 @@ $('.has_son *').hover(
 
                                                                 </ul>
                             </li>
-                                                         <li class="">
+                                                         <li class="open">
                                 <div class="link"><i class="fa fa-paint-brush"></i>文件内容查看<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:none">
+                                <ul class="submenu" style="display:block">
+                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/awk.htm" title="cd">awk</a></li>
+
                                                                     <li class=""><a href="http://www.123itools.com/linux/cat.htm" title="cd">cat</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/head.htm" title="cd">head</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/tail.htm" title="cd">tail</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/uniq.htm" title="cd">uniq</a></li>
-
                                                                     <li class=""><a href="http://www.123itools.com/linux/wc.htm" title="cd">wc</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/uniq.htm" title="cd">uniq</a></li>
 
                                                                 </ul>
                             </li>
@@ -186,8 +241,6 @@ $('.has_son *').hover(
                                 <ul class="submenu" style="display:none">
                                                                     <li class=""><a href="http://www.123itools.com/linux/ssh.htm" title="cd">ssh</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/scp.htm" title="cd">scp</a></li>
-
                                                                     <li class=""><a href="http://www.123itools.com/linux/ping.htm" title="cd">ping</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/ifconfig.htm" title="cd">ifconfig</a></li>
@@ -195,6 +248,8 @@ $('.has_son *').hover(
                                                                     <li class=""><a href="http://www.123itools.com/linux/netstat.htm" title="cd">netstat</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/telnet.htm" title="cd">telnet</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/scp.htm" title="cd">scp</a></li>
 
                                                                 </ul>
                             </li>
@@ -216,11 +271,11 @@ $('.has_son *').hover(
                                                          <li class="">
                                 <div class="link"><i class="fa fa-paint-brush"></i>进程管理<i class="fa fa-chevron-down"></i></div>
                                 <ul class="submenu" style="display:none">
-                                                                    <li class=""><a href="http://www.123itools.com/linux/ctrl+z.htm" title="cd">ctrl+z</a></li>
-
                                                                     <li class=""><a href="http://www.123itools.com/linux/&.htm" title="cd">&</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/bg.htm" title="cd">bg</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/ctrl+z.htm" title="cd">ctrl+z</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/kill.htm" title="cd">kill</a></li>
 
