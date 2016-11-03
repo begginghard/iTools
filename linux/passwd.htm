@@ -4,9 +4,9 @@
         <meta charset="utf-8"/>
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
-        <title>Linux命令大全 文件目录管理 tar</title>
-        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件目录管理 tar tar命令 tar语法"/>
-        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件目录管理 tar tar命令 tar语法"/>
+        <title>Linux命令大全 用户管理 passwd</title>
+        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 用户管理 passwd passwd命令 passwd语法"/>
+        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 用户管理 passwd passwd命令 passwd语法"/>
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command.css" />
@@ -99,8 +99,43 @@ $('.has_son *').hover(
 </script>
 
             <div class="containter">
-             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/tar.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/tar.htm">文件目录管理</a>><a href="http://www.123itools.com/linux/tar.htm">tar</a></span></div>            <div class="main" id="main">
-                <h3>1. 命令</h3><blockquote><p>tar -- 打包，解包，压缩，解压缩</p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将某个目录下的文件打包成一个 tar 包，将 /path/to/foo/ 打包到 /path/to/foo.tar</h4></li></ul><blockquote><p>tar -cvf /path/to/foo.tar /path/to/foo/</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将一个 tar 包解开<br/></h4></li></ul><blockquote><p>tar -xvf /path/to/foo.tar</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>展示一个 tar 包的内容<br/></h4></li></ul><blockquote><p>tar -tvf /path/to/foo.tar<br/></p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将某个目录下的文件压缩打包成一个 .gz 包，将 /path/to/foo 压缩打包到 /path/to/foo.gz<br/></h4></li></ul><blockquote><p>tar -czvf /path/to/foo.gz /path/to/foo/</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将一个 gz 包解压缩<br/></h4></li></ul><blockquote><p>tar -xzvf /path/to/foo.gz</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>展示一个 gz 包的内容</h4></li></ul><blockquote><p>tar -tzvf /path/to/foo.gz</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将某个目录下的文件压缩打包成一个 bz2 包，将 /path/to/foo 压缩打包到 /path/to/foo.bz2<br/></h4></li></ul><blockquote><p>tar -cjvf /path/to/foo.bz2 /path/to/foo/</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将一个 bz2 包解压缩</h4></li></ul><blockquote><p>tar -xjvf /path/to/foo.bz2</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>展示一个 bz2 包的内容</h4></li></ul><blockquote><p>tar -tjvf /path/to/foo.bz2</p></blockquote><h3>3. 使用方法</h3><blockquote><p>tar [属性]... [文件]...</p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-c, --create<br/></h4></li></ul><blockquote><p>创建一个新的 tar 文件</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-x, --extract</h4></li></ul><blockquote><p>对一个 tar 文件解包</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4 style="white-space: normal;">-t,--list</h4></li></ul><blockquote><p style="white-space: normal;">显示 tar 包文件的内容列表</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4 style="white-space: normal;">-f, --file=ARCHIVE</h4></li></ul><blockquote><p style="white-space: normal;">执行一个 tar 文件</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-v</h4></li></ul><blockquote><p>展示执行过程</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-z, --gzip<br/></h4></li></ul><blockquote><p>通过 gzip 进行压缩</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-j,--bzip2</h4></li></ul><blockquote><p>通过 bzip2 进行压缩</p></blockquote>            </div>
+             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/passwd.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/passwd.htm">用户管理</a>><a href="http://www.123itools.com/linux/passwd.htm">passwd</a></span></div>            <div class="main" id="main">
+                <h3>1. 命令</h3><blockquote><p>passwd -- 设置某个用户的登录密码<br/></p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>对 123itools 用户名设置登录密码。【root 用户功能】</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;passwd&nbsp;123itools
+更改用户&nbsp;123itools&nbsp;的密码&nbsp;。
+新的&nbsp;密码：
+重新输入新的&nbsp;密码：
+passwd：所有的身份验证令牌已经成功更新。</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>修改当前用户的登录密码</h4></li></ul><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;~]$&nbsp;passwd
+更改用户&nbsp;123itools&nbsp;的密码&nbsp;。
+为&nbsp;123itools&nbsp;更改&nbsp;STRESS&nbsp;密码。
+（当前）UNIX&nbsp;密码：
+新的&nbsp;密码：
+重新输入新的&nbsp;密码：
+passwd：所有的身份验证令牌已经成功更新。</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>查看123itools用户密码的状态<br/></h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;passwd&nbsp;-S&nbsp;123itools
+[root@shengqian&nbsp;~]#&nbsp;passwd&nbsp;-S&nbsp;123itools
+123itools&nbsp;PS&nbsp;2016-11-02&nbsp;0&nbsp;99999&nbsp;7&nbsp;-1&nbsp;(密码已设置，使用&nbsp;SHA512&nbsp;算法。)
+
+每列内容分别为：用户，密码状态，设置密码时间&nbsp;2016-11-02，0天内不可以修改密码，更改密码天数&nbsp;99999，
+密码失效前&nbsp;7&nbsp;天警告，永久不失效.</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>设置 123itools 的密码，并设置 1 天内不可以修改密码。【root 功能】<br/></h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;passwd&nbsp;123itools&nbsp;-n&nbsp;1
+调整用户密码老化数据123itools。
+passwd:&nbsp;操作成功
+
+[root@shengqian&nbsp;~]#&nbsp;passwd&nbsp;-S&nbsp;123itools
+123itools&nbsp;PS&nbsp;2016-11-02&nbsp;1&nbsp;99999&nbsp;7&nbsp;-1&nbsp;(密码已设置，使用&nbsp;SHA512&nbsp;算法。)
+
+[123itools@shengqian&nbsp;~]$&nbsp;passwd
+更改用户&nbsp;123itools&nbsp;的密码&nbsp;。
+为&nbsp;123itools&nbsp;更改&nbsp;STRESS&nbsp;密码。
+（当前）UNIX&nbsp;密码：
+您必须等待更长时间以更改密码
+passwd:&nbsp;鉴定令牌操作错误</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>设置 123itools 的密码，并设置密码失效日期为 20161103，并且提前 1 天警告。</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;passwd&nbsp;-w&nbsp;1&nbsp;-i&nbsp;20161103&nbsp;123itools
+调整用户密码老化数据123itools。
+passwd:&nbsp;操作成功
+[root@shengqian&nbsp;~]#&nbsp;passwd&nbsp;-S&nbsp;123itools
+123itools&nbsp;PS&nbsp;2016-11-02&nbsp;1&nbsp;99999&nbsp;1&nbsp;20161103&nbsp;(密码已设置，使用&nbsp;SHA512&nbsp;算法。)</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>锁定 123itools 用户密码，使其无法登陆。</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;passwd&nbsp;-l&nbsp;123itools
+锁定用户&nbsp;123itools&nbsp;的密码&nbsp;。
+passwd:&nbsp;操作成功</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>解锁 123itools 用户密码，使其可以登录。</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;passwd&nbsp;-u&nbsp;123itools
+解锁用户&nbsp;123itools&nbsp;的密码。
+passwd:&nbsp;操作成功</pre><p></p><h3>3. 使用说明</h3><blockquote><p>passwd [-l] [-u] [-S] [-n 天数] [-x 天数] [-w 天数] [-i 日期] 账号</p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-l</h4></li></ul><blockquote><p>锁定某个用户密码，使其不可以登录</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-u</h4></li></ul><blockquote><p>解锁某个用户密码，使其可以登录</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-S</h4></li></ul><blockquote><p>查看某个用户的密码状态</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-n 天数</h4></li></ul><blockquote><p>表示多久不可以修改密码天数。</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-x 天数</h4></li></ul><blockquote><p>多久内必须要改动密码。</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-w 天数</h4></li></ul><blockquote><p>密码过期前的警告天数</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-i 日期</h4></li></ul><blockquote><p>设置密码过期日期</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>/etc/shadow</h4></li></ul><blockquote><p>shadow 文件用来保存用户的密码信息，下面是 shadow 文件的样例 以及 每列含义：</p><pre class="brush:bash;toolbar:false">123itools:$6$fm7zxyP1$YJSHjr3NimZe2USnWXP7sDgsBSw0hgXRqfrLIim8oB5B7lfelv1qxqu9xnLJBuvD/kfrYJ9LapKa0CqH1cdlI/:17107:1:99999:1:20161103::</pre><p><strong>账号名称</strong>；<br/></p><p><strong>密码</strong>：这个字段内的数据才是真正的密码，而且是加密后的密码。</p><p><strong>最近更改密码的日期</strong>：该日期是以 1970年1月1日起按天来累计的天数。</p><p><strong>密码不可被更改的天数</strong>。</p><p><strong>密码必须更改的天数</strong>：强制要求用户修改密码，否则这个密码将会过期。</p><p><strong>密码需要更改期限前的警告天数</strong>：当前密码有效期限快到的时候，系统会一句这个字段设置发出“警告”，提醒这个账号再过 n 天密码就要过期了，请重新设置你的密码。</p><p><strong>密码过期后的账号宽限时间</strong>：即密码失效期。</p><p><strong>账号失效日期</strong>：这个账号在此字段规定的日期之后，将无法再使用。</p></blockquote>            </div>
             <div class="sidebar">
             <div class="dropdown">
                 <div class="input-group">
@@ -122,9 +157,9 @@ $('.has_son *').hover(
 
                     <div class="bd">
                         <ul id="accordion" class="accordion">
-                                                        <li class="open">
+                                                        <li class="">
                                 <div class="link"><i class="fa fa-paint-brush"></i>文件目录管理<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:block">
+                                <ul class="submenu" style="display:none">
                                                                     <li class=""><a href="http://www.123itools.com/linux/touch.htm" title="cd">touch</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/mkdir.htm" title="cd">mkdir</a></li>
@@ -149,7 +184,7 @@ $('.has_son *').hover(
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/find.htm" title="cd">find</a></li>
 
-                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/tar.htm" title="cd">tar</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/tar.htm" title="cd">tar</a></li>
 
                                                                 </ul>
                             </li>
@@ -238,12 +273,12 @@ $('.has_son *').hover(
 
                                                                 </ul>
                             </li>
-                                                         <li class="">
+                                                         <li class="open">
                                 <div class="link"><i class="fa fa-paint-brush"></i>用户管理<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:none">
+                                <ul class="submenu" style="display:block">
                                                                     <li class=""><a href="http://www.123itools.com/linux/userdel.htm" title="cd">userdel</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/passwd.htm" title="cd">passwd</a></li>
+                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/passwd.htm" title="cd">passwd</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/useradd.htm" title="cd">useradd</a></li>
 

@@ -4,9 +4,9 @@
         <meta charset="utf-8"/>
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
-        <title>Linux命令大全 文件目录管理 tar</title>
-        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件目录管理 tar tar命令 tar语法"/>
-        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件目录管理 tar tar命令 tar语法"/>
+        <title>Linux命令大全 用户管理 useradd</title>
+        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 用户管理 useradd useradd命令 useradd语法"/>
+        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 用户管理 useradd useradd命令 useradd语法"/>
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command.css" />
@@ -99,8 +99,32 @@ $('.has_son *').hover(
 </script>
 
             <div class="containter">
-             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/tar.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/tar.htm">文件目录管理</a>><a href="http://www.123itools.com/linux/tar.htm">tar</a></span></div>            <div class="main" id="main">
-                <h3>1. 命令</h3><blockquote><p>tar -- 打包，解包，压缩，解压缩</p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将某个目录下的文件打包成一个 tar 包，将 /path/to/foo/ 打包到 /path/to/foo.tar</h4></li></ul><blockquote><p>tar -cvf /path/to/foo.tar /path/to/foo/</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将一个 tar 包解开<br/></h4></li></ul><blockquote><p>tar -xvf /path/to/foo.tar</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>展示一个 tar 包的内容<br/></h4></li></ul><blockquote><p>tar -tvf /path/to/foo.tar<br/></p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将某个目录下的文件压缩打包成一个 .gz 包，将 /path/to/foo 压缩打包到 /path/to/foo.gz<br/></h4></li></ul><blockquote><p>tar -czvf /path/to/foo.gz /path/to/foo/</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将一个 gz 包解压缩<br/></h4></li></ul><blockquote><p>tar -xzvf /path/to/foo.gz</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>展示一个 gz 包的内容</h4></li></ul><blockquote><p>tar -tzvf /path/to/foo.gz</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将某个目录下的文件压缩打包成一个 bz2 包，将 /path/to/foo 压缩打包到 /path/to/foo.bz2<br/></h4></li></ul><blockquote><p>tar -cjvf /path/to/foo.bz2 /path/to/foo/</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将一个 bz2 包解压缩</h4></li></ul><blockquote><p>tar -xjvf /path/to/foo.bz2</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>展示一个 bz2 包的内容</h4></li></ul><blockquote><p>tar -tjvf /path/to/foo.bz2</p></blockquote><h3>3. 使用方法</h3><blockquote><p>tar [属性]... [文件]...</p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-c, --create<br/></h4></li></ul><blockquote><p>创建一个新的 tar 文件</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-x, --extract</h4></li></ul><blockquote><p>对一个 tar 文件解包</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4 style="white-space: normal;">-t,--list</h4></li></ul><blockquote><p style="white-space: normal;">显示 tar 包文件的内容列表</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4 style="white-space: normal;">-f, --file=ARCHIVE</h4></li></ul><blockquote><p style="white-space: normal;">执行一个 tar 文件</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-v</h4></li></ul><blockquote><p>展示执行过程</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-z, --gzip<br/></h4></li></ul><blockquote><p>通过 gzip 进行压缩</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-j,--bzip2</h4></li></ul><blockquote><p>通过 bzip2 进行压缩</p></blockquote>            </div>
+             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/useradd.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/useradd.htm">用户管理</a>><a href="http://www.123itools.com/linux/useradd.htm">useradd</a></span></div>            <div class="main" id="main">
+                <h3>1. 命令</h3><p>useradd -- 新增一个用户</p><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>查看当前系统所有用户<br/></h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;cat&nbsp;/etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP&nbsp;User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>新增一个用户 123itools</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;useradd&nbsp;123itools
+正在创建信箱文件:&nbsp;文件已存在
+[root@shengqian&nbsp;~]#&nbsp;ls&nbsp;-al&nbsp;/home
+总用量&nbsp;4
+drwxr-xr-x&nbsp;&nbsp;&nbsp;3&nbsp;root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22&nbsp;11月&nbsp;&nbsp;1&nbsp;22:59&nbsp;.
+drwxr-xr-x.&nbsp;17&nbsp;root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4096&nbsp;10月&nbsp;13&nbsp;21:26&nbsp;..
+drwx------&nbsp;&nbsp;&nbsp;2&nbsp;123itools&nbsp;123itools&nbsp;&nbsp;&nbsp;59&nbsp;11月&nbsp;&nbsp;1&nbsp;22:59&nbsp;123itools
+[root@shengqian&nbsp;~]#&nbsp;cat&nbsp;/etc/passwd&nbsp;|&nbsp;grep&nbsp;&quot;123itools&quot;
+123itools:x:1002:1003::/home/123itools:/bin/bash</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>新增一个用户，指定 UID 和 GID<br/></h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;useradd&nbsp;-u&nbsp;600&nbsp;-g&nbsp;users&nbsp;zgh
+[root@shengqian&nbsp;~]#&nbsp;cat&nbsp;/etc/passwd&nbsp;|&nbsp;grep&nbsp;&quot;zgh&quot;
+zgh:x:600:100::/home/zgh:/bin/bash</pre><h3>3. 使用方法</h3><blockquote><p>useradd [-u UID] [-g 初始用户组] [-G次要用户组] [-mM] [-c 说明栏] [-d 主文件夹的绝对路径] [-s shell] 用户账号名</p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>/etc/passwd</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;cat&nbsp;/etc/passwd&nbsp;|&nbsp;grep&nbsp;&quot;123itools&quot;
+123itools:x:1002:1003::/home/123itools:/bin/bash</pre><blockquote><p>账号名称: &nbsp;对应 UID。例如 root 的 UID 对应的就是 0。</p><p>密码: &nbsp;早期 UNIX 系统的密码就是放到这个字段上，但是因为这个文件的特性是所有程序都能够读取，故将密码修改到 /etc/shadow，在这里你只能看到一个 X</p><p>用户标识符：0 系统管理员；1~499 系统账号；500~65535 可登陆账号<br/></p><p>GID: 组 ID</p><p>用户信息说明列： 解释账号的意义</p><p>Shell: 登录 shell</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4><br/>-u</h4></li></ul><blockquote><p>UID，指定固定的 UID</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-g&nbsp;</h4></li></ul><blockquote><p>group，指定该用户所属的 group，或者 gid</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-c&nbsp;</h4></li></ul><blockquote><p>指定 /etc/passwd 第 5 列，解释账号的意义</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-d</h4></li></ul><blockquote><p>指定主目录文件夹，即指定 /etc/passwd 第6列，登录该用户之后默认的文件夹。</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-s shell</h4></li></ul><blockquote><p>后面接一个 shell，不指定默认 /bin/bash。</p></blockquote><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p>            </div>
             <div class="sidebar">
             <div class="dropdown">
                 <div class="input-group">
@@ -122,9 +146,9 @@ $('.has_son *').hover(
 
                     <div class="bd">
                         <ul id="accordion" class="accordion">
-                                                        <li class="open">
+                                                        <li class="">
                                 <div class="link"><i class="fa fa-paint-brush"></i>文件目录管理<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:block">
+                                <ul class="submenu" style="display:none">
                                                                     <li class=""><a href="http://www.123itools.com/linux/touch.htm" title="cd">touch</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/mkdir.htm" title="cd">mkdir</a></li>
@@ -149,7 +173,7 @@ $('.has_son *').hover(
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/find.htm" title="cd">find</a></li>
 
-                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/tar.htm" title="cd">tar</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/tar.htm" title="cd">tar</a></li>
 
                                                                 </ul>
                             </li>
@@ -238,14 +262,14 @@ $('.has_son *').hover(
 
                                                                 </ul>
                             </li>
-                                                         <li class="">
+                                                         <li class="open">
                                 <div class="link"><i class="fa fa-paint-brush"></i>用户管理<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:none">
+                                <ul class="submenu" style="display:block">
                                                                     <li class=""><a href="http://www.123itools.com/linux/userdel.htm" title="cd">userdel</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/passwd.htm" title="cd">passwd</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/useradd.htm" title="cd">useradd</a></li>
+                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/useradd.htm" title="cd">useradd</a></li>
 
                                                                 </ul>
                             </li>

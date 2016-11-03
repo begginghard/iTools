@@ -4,9 +4,9 @@
         <meta charset="utf-8"/>
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
-        <title>Linux命令大全 文件目录管理 tar</title>
-        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件目录管理 tar tar命令 tar语法"/>
-        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件目录管理 tar tar命令 tar语法"/>
+        <title>Linux命令大全 文件内容查看 printf</title>
+        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件内容查看 printf printf命令 printf语法"/>
+        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件内容查看 printf printf命令 printf语法"/>
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command.css" />
@@ -99,8 +99,52 @@ $('.has_son *').hover(
 </script>
 
             <div class="containter">
-             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/tar.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/tar.htm">文件目录管理</a>><a href="http://www.123itools.com/linux/tar.htm">tar</a></span></div>            <div class="main" id="main">
-                <h3>1. 命令</h3><blockquote><p>tar -- 打包，解包，压缩，解压缩</p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将某个目录下的文件打包成一个 tar 包，将 /path/to/foo/ 打包到 /path/to/foo.tar</h4></li></ul><blockquote><p>tar -cvf /path/to/foo.tar /path/to/foo/</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将一个 tar 包解开<br/></h4></li></ul><blockquote><p>tar -xvf /path/to/foo.tar</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>展示一个 tar 包的内容<br/></h4></li></ul><blockquote><p>tar -tvf /path/to/foo.tar<br/></p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将某个目录下的文件压缩打包成一个 .gz 包，将 /path/to/foo 压缩打包到 /path/to/foo.gz<br/></h4></li></ul><blockquote><p>tar -czvf /path/to/foo.gz /path/to/foo/</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将一个 gz 包解压缩<br/></h4></li></ul><blockquote><p>tar -xzvf /path/to/foo.gz</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>展示一个 gz 包的内容</h4></li></ul><blockquote><p>tar -tzvf /path/to/foo.gz</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将某个目录下的文件压缩打包成一个 bz2 包，将 /path/to/foo 压缩打包到 /path/to/foo.bz2<br/></h4></li></ul><blockquote><p>tar -cjvf /path/to/foo.bz2 /path/to/foo/</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将一个 bz2 包解压缩</h4></li></ul><blockquote><p>tar -xjvf /path/to/foo.bz2</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>展示一个 bz2 包的内容</h4></li></ul><blockquote><p>tar -tjvf /path/to/foo.bz2</p></blockquote><h3>3. 使用方法</h3><blockquote><p>tar [属性]... [文件]...</p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-c, --create<br/></h4></li></ul><blockquote><p>创建一个新的 tar 文件</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-x, --extract</h4></li></ul><blockquote><p>对一个 tar 文件解包</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4 style="white-space: normal;">-t,--list</h4></li></ul><blockquote><p style="white-space: normal;">显示 tar 包文件的内容列表</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4 style="white-space: normal;">-f, --file=ARCHIVE</h4></li></ul><blockquote><p style="white-space: normal;">执行一个 tar 文件</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-v</h4></li></ul><blockquote><p>展示执行过程</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-z, --gzip<br/></h4></li></ul><blockquote><p>通过 gzip 进行压缩</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-j,--bzip2</h4></li></ul><blockquote><p>通过 bzip2 进行压缩</p></blockquote>            </div>
+             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/printf.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/printf.htm">文件内容查看</a>><a href="http://www.123itools.com/linux/printf.htm">printf</a></span></div>            <div class="main" id="main">
+                <h3>1. 命令&nbsp;</h3><blockquote><p>printf--将数据格式化输出</p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>有一个文件保存了某班同学的成绩，如下：<br/></h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a
+name		math		chinese		english
+xiaoming	96		98		100
+xiaohong	59		78		98
+xiaobai		97		98		99</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将文件中的每列内容间隔一个 空行 或 tab 格式输出</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a
+name		math		chinese		english
+xiaoming	96		98		100
+xiaohong	59		78		98
+xiaobai		97		98		99
+[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a&nbsp;|&nbsp;awk&nbsp;&#39;{printf&nbsp;&quot;%s\t&nbsp;%s\t&nbsp;%s\t&nbsp;%s\t&nbsp;\n&quot;,&nbsp;$1,&nbsp;$2,&nbsp;$3,&nbsp;$4}&#39;
+name	&nbsp;math	&nbsp;chinese	&nbsp;english
+xiaoming	&nbsp;96	&nbsp;98	&nbsp;100
+xiaohong	&nbsp;59	&nbsp;78	&nbsp;98
+xiaobai	&nbsp;97	&nbsp;98	&nbsp;99
+[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a&nbsp;|&nbsp;awk&nbsp;&#39;{printf&nbsp;&quot;%s&nbsp;%s&nbsp;%s&nbsp;%s&nbsp;\n&quot;,&nbsp;$1,&nbsp;$2,&nbsp;$3,&nbsp;$4}&#39;
+name&nbsp;math&nbsp;chinese&nbsp;english
+xiaoming&nbsp;96&nbsp;98&nbsp;100
+xiaohong&nbsp;59&nbsp;78&nbsp;98
+xiaobai&nbsp;97&nbsp;98&nbsp;99</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将文件中的每列内容占位 20 字符，且右对齐。<br/></h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a
+name		math		chinese		english
+xiaoming	96		98		100
+xiaohong	59		78		98
+xiaobai		97		98		99
+[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a&nbsp;|&nbsp;awk&nbsp;&#39;{printf&nbsp;&quot;%20s&nbsp;%20s&nbsp;%20s&nbsp;%20s&nbsp;\n&quot;,&nbsp;$1,&nbsp;$2,&nbsp;$3,&nbsp;$4}&#39;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;math&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chinese&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;english
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xiaoming&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;96&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;98&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xiaohong&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;59&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;78&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;98
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xiaobai&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;97&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;98&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;99</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将文件中的每列内容占位 20 字符，且左对齐。</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a
+name		math		chinese		english
+xiaoming	96		98		100
+xiaohong	59		78		98
+xiaobai		97		98		99
+[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a&nbsp;|&nbsp;awk&nbsp;&#39;{printf&nbsp;&quot;%-20s&nbsp;%-20s&nbsp;%-20s&nbsp;%-20s&nbsp;\n&quot;,&nbsp;$1,&nbsp;$2,&nbsp;$3,&nbsp;$4}&#39;
+name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;math&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chinese&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;english
+xiaoming&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;96&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;98&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100
+xiaohong&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;59&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;78&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;98
+xiaobai&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;97&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;98&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;99</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将英语成绩按浮点型表示，10位整型，2位浮点。其他按照 占位 20 个字符的字符串格式化。<br/></h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a
+name		math		chinese		english
+xiaoming	96		98		100
+xiaohong	59		78		98
+xiaobai		97		98		99
+[root@shengqian&nbsp;tmp]#&nbsp;cat&nbsp;a&nbsp;|&nbsp;grep&nbsp;-v&nbsp;&#39;name&#39;&nbsp;|&nbsp;awk&nbsp;&#39;{printf&nbsp;&quot;%-20s&nbsp;%-20s&nbsp;%-20s&nbsp;%-10.2f&nbsp;\n&quot;,&nbsp;$1,&nbsp;$2,&nbsp;$3,&nbsp;$4}&#39;
+xiaoming&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;96&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;98&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100.00
+xiaohong&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;59&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;78&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;98.00
+xiaobai&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;97&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;98&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;99.00</pre><h3>3. 使用说明</h3><blockquote><p>printf &#39;打印格式&#39; 实际内容</p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>\t</h4></li></ul><blockquote><p>水平的 Tab 按键</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>%ns</h4></li></ul><blockquote><p>n 是数字，s 是字符串，即表示该列占用 n 个字符宽度</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>%ni</h4></li></ul><blockquote><p>n 是数字，i 是整形，即表示该列占用 n 个整数字数宽度</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>%N.nf</h4></li></ul><blockquote><p>f 是浮点型，N 表示整数部分的长度，n 表示浮点型部分的长度。</p></blockquote><p><br/></p>            </div>
             <div class="sidebar">
             <div class="dropdown">
                 <div class="input-group">
@@ -122,9 +166,9 @@ $('.has_son *').hover(
 
                     <div class="bd">
                         <ul id="accordion" class="accordion">
-                                                        <li class="open">
+                                                        <li class="">
                                 <div class="link"><i class="fa fa-paint-brush"></i>文件目录管理<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:block">
+                                <ul class="submenu" style="display:none">
                                                                     <li class=""><a href="http://www.123itools.com/linux/touch.htm" title="cd">touch</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/mkdir.htm" title="cd">mkdir</a></li>
@@ -149,14 +193,14 @@ $('.has_son *').hover(
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/find.htm" title="cd">find</a></li>
 
-                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/tar.htm" title="cd">tar</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/tar.htm" title="cd">tar</a></li>
 
                                                                 </ul>
                             </li>
-                                                         <li class="">
+                                                         <li class="open">
                                 <div class="link"><i class="fa fa-paint-brush"></i>文件内容查看<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:none">
-                                                                    <li class=""><a href="http://www.123itools.com/linux/printf.htm" title="cd">printf</a></li>
+                                <ul class="submenu" style="display:block">
+                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/printf.htm" title="cd">printf</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/awk.htm" title="cd">awk</a></li>
 

@@ -4,9 +4,9 @@
         <meta charset="utf-8"/>
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
-        <title>Linux命令大全 文件目录管理 tar</title>
-        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件目录管理 tar tar命令 tar语法"/>
-        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件目录管理 tar tar命令 tar语法"/>
+        <title>Linux命令大全 用户管理 userdel</title>
+        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 用户管理 userdel userdel命令 userdel语法"/>
+        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 用户管理 userdel userdel命令 userdel语法"/>
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command.css" />
@@ -99,8 +99,8 @@ $('.has_son *').hover(
 </script>
 
             <div class="containter">
-             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/tar.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/tar.htm">文件目录管理</a>><a href="http://www.123itools.com/linux/tar.htm">tar</a></span></div>            <div class="main" id="main">
-                <h3>1. 命令</h3><blockquote><p>tar -- 打包，解包，压缩，解压缩</p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将某个目录下的文件打包成一个 tar 包，将 /path/to/foo/ 打包到 /path/to/foo.tar</h4></li></ul><blockquote><p>tar -cvf /path/to/foo.tar /path/to/foo/</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将一个 tar 包解开<br/></h4></li></ul><blockquote><p>tar -xvf /path/to/foo.tar</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>展示一个 tar 包的内容<br/></h4></li></ul><blockquote><p>tar -tvf /path/to/foo.tar<br/></p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将某个目录下的文件压缩打包成一个 .gz 包，将 /path/to/foo 压缩打包到 /path/to/foo.gz<br/></h4></li></ul><blockquote><p>tar -czvf /path/to/foo.gz /path/to/foo/</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将一个 gz 包解压缩<br/></h4></li></ul><blockquote><p>tar -xzvf /path/to/foo.gz</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>展示一个 gz 包的内容</h4></li></ul><blockquote><p>tar -tzvf /path/to/foo.gz</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将某个目录下的文件压缩打包成一个 bz2 包，将 /path/to/foo 压缩打包到 /path/to/foo.bz2<br/></h4></li></ul><blockquote><p>tar -cjvf /path/to/foo.bz2 /path/to/foo/</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将一个 bz2 包解压缩</h4></li></ul><blockquote><p>tar -xjvf /path/to/foo.bz2</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>展示一个 bz2 包的内容</h4></li></ul><blockquote><p>tar -tjvf /path/to/foo.bz2</p></blockquote><h3>3. 使用方法</h3><blockquote><p>tar [属性]... [文件]...</p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-c, --create<br/></h4></li></ul><blockquote><p>创建一个新的 tar 文件</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-x, --extract</h4></li></ul><blockquote><p>对一个 tar 文件解包</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4 style="white-space: normal;">-t,--list</h4></li></ul><blockquote><p style="white-space: normal;">显示 tar 包文件的内容列表</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4 style="white-space: normal;">-f, --file=ARCHIVE</h4></li></ul><blockquote><p style="white-space: normal;">执行一个 tar 文件</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-v</h4></li></ul><blockquote><p>展示执行过程</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-z, --gzip<br/></h4></li></ul><blockquote><p>通过 gzip 进行压缩</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-j,--bzip2</h4></li></ul><blockquote><p>通过 bzip2 进行压缩</p></blockquote>            </div>
+             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/userdel.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/userdel.htm">用户管理</a>><a href="http://www.123itools.com/linux/userdel.htm">userdel</a></span></div>            <div class="main" id="main">
+                <h3>1. 命令</h3><blockquote><p>userdel -- 删除用户</p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>删除 123itools 账号，一起删除主文件</h4></li></ul><pre class="brush:bash;toolbar:false">userdel&nbsp;-r&nbsp;123itools</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>删除 123itools 账号，不删除主文件</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;userdel&nbsp;zgh</pre><h3>3. 使用说明</h3><blockquote><p>user [-r] 账号名</p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-r</h4></li></ul><blockquote><p>是否连同主文件夹一起删除</p></blockquote>            </div>
             <div class="sidebar">
             <div class="dropdown">
                 <div class="input-group">
@@ -122,9 +122,9 @@ $('.has_son *').hover(
 
                     <div class="bd">
                         <ul id="accordion" class="accordion">
-                                                        <li class="open">
+                                                        <li class="">
                                 <div class="link"><i class="fa fa-paint-brush"></i>文件目录管理<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:block">
+                                <ul class="submenu" style="display:none">
                                                                     <li class=""><a href="http://www.123itools.com/linux/touch.htm" title="cd">touch</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/mkdir.htm" title="cd">mkdir</a></li>
@@ -149,7 +149,7 @@ $('.has_son *').hover(
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/find.htm" title="cd">find</a></li>
 
-                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/tar.htm" title="cd">tar</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/tar.htm" title="cd">tar</a></li>
 
                                                                 </ul>
                             </li>
@@ -238,10 +238,10 @@ $('.has_son *').hover(
 
                                                                 </ul>
                             </li>
-                                                         <li class="">
+                                                         <li class="open">
                                 <div class="link"><i class="fa fa-paint-brush"></i>用户管理<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:none">
-                                                                    <li class=""><a href="http://www.123itools.com/linux/userdel.htm" title="cd">userdel</a></li>
+                                <ul class="submenu" style="display:block">
+                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/userdel.htm" title="cd">userdel</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/passwd.htm" title="cd">passwd</a></li>
 
