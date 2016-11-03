@@ -4,9 +4,9 @@
         <meta charset="utf-8"/>
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
-        <title>Linux命令大全 文件内容查看 uniq</title>
-        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件内容查看 uniq uniq命令 uniq语法"/>
-        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件内容查看 uniq uniq命令 uniq语法"/>
+        <title>Linux命令大全 用户管理 groupadd</title>
+        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 用户管理 groupadd groupadd命令 groupadd语法"/>
+        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 用户管理 groupadd groupadd命令 groupadd语法"/>
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command.css" />
@@ -99,8 +99,20 @@ $('.has_son *').hover(
 </script>
 
             <div class="containter">
-             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/uniq.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/uniq.htm">文件内容查看</a>><a href="http://www.123itools.com/linux/uniq.htm">uniq</a></span></div>            <div class="main" id="main">
-                <h3 style="white-space: normal;">1. 命令<br/></h3><blockquote style="white-space: normal;"><p>uniq -- 统计或删除相邻相同内容的行</p></blockquote><h3 style="white-space: normal;">2. 使用样例</h3><ul class=" list-paddingleft-2" style="width: 934.797px; white-space: normal;"><li><h4>将 file 文件内容相邻相同的行去掉，只保留一行</h4></li></ul><blockquote style="white-space: normal;"><p>uniq file</p><p>cat file | uniq</p></blockquote><ul class=" list-paddingleft-2" style="width: 934.797px; white-space: normal;"><li><h4>将 file 文件中内容相同的行去掉，只保留一行</h4></li></ul><blockquote style="white-space: normal;"><p>cat file | sort | uniq</p><p>sort file | uniq</p></blockquote><ul class=" list-paddingleft-2" style="width: 934.797px; white-space: normal;"><li><h4>将 file 文件中内容相同的行去掉，只保留一行，并统计行信息</h4></li></ul><blockquote style="white-space: normal;"><p>cat file | sort | uniq -c</p><p>sort file | uniq -c</p></blockquote><ul class=" list-paddingleft-2" style="width: 934.797px; white-space: normal;"><li><h4>仅显示 file 文件中内容相同的行</h4></li></ul><blockquote style="white-space: normal;"><p>cat&nbsp;file&nbsp;| sort | uniq -d</p></blockquote><ul class=" list-paddingleft-2" style="width: 934.797px; white-space: normal;"><li><h4>仅显示&nbsp;file 文件中内容不同的行</h4></li></ul><blockquote style="white-space: normal;"><p>cat file | sort |&nbsp;uniq -u</p></blockquote><ul class=" list-paddingleft-2" style="width: 934.797px; white-space: normal;"><li><h4>显示文件 a 和 文件 b 的交集</h4></li></ul><blockquote style="white-space: normal;"><p>cat a | sort | uniq &gt; a_sort</p><p>cat b | sort | uniq &gt; b_sort</p><p>cat a_sort b_sort | sort | uniq -d</p></blockquote><ul class=" list-paddingleft-2" style="width: 934.797px; white-space: normal;"><li><h4>显示文件 a&nbsp;和 文件 b 的并集</h4></li></ul><blockquote style="white-space: normal;"><p>cat a | sort | uniq &gt; a_sort</p><p>cat b | sort | uniq &gt; b_sort</p><p>cat a_sort b_sort | sort | uniq</p></blockquote><ul class=" list-paddingleft-2" style="width: 934.797px; white-space: normal;"><li><h4>显示文件 a 和&nbsp;文件 b 的差集</h4></li></ul><blockquote style="white-space: normal;"><p>cat a | sort | uniq &gt; a_sort</p><p>cat b | sort | uniq &gt; b_sort</p><p>cat a_sort b_sort b_sort | sort | uniq -u</p></blockquote><h3 style="white-space: normal;"><span style="font-size: 16px;">3. 使用方法</span><br/></h3><blockquote style="white-space: normal;"><p>uniq [属性].... [输入 [输出]]</p></blockquote><h3 style="white-space: normal;">4. 参数说明</h3><ul class=" list-paddingleft-2" style="width: 934.797px; white-space: normal;"><li><h4>-c, --count<br/></h4></li></ul><blockquote style="white-space: normal;"><p>将相同内容的行数信息打印出来<br/></p></blockquote><ul class=" list-paddingleft-2" style="width: 934.797px; white-space: normal;"><li><h4>-d, --repeated<br/></h4></li></ul><blockquote style="white-space: normal;"><p>只打印相邻内容重复的行数<br/></p></blockquote><ul class=" list-paddingleft-2" style="width: 934.797px; white-space: normal;"><li><h4>-u, --uniq<br/></h4></li></ul><blockquote style="white-space: normal;"><p>只打印唯一行内容的行数</p></blockquote><p style="white-space: normal;"><br/></p><p style="white-space: normal;"><br/></p><p><br/></p>            </div>
+             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/groupadd.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/groupadd.htm">用户管理</a>><a href="http://www.123itools.com/linux/groupadd.htm">groupadd</a></span></div>            <div class="main" id="main">
+                <h3>1. 命令</h3><blockquote><p>groupadd -- 新增用户组</p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>新增一个用户组 newusers</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;cat&nbsp;/etc/group&nbsp;|&nbsp;grep&nbsp;&quot;newusers&quot;
+[root@shengqian&nbsp;~]#&nbsp;groupadd&nbsp;newusers
+[root@shengqian&nbsp;~]#&nbsp;cat&nbsp;/etc/group&nbsp;|&nbsp;grep&nbsp;&quot;newusers&quot;
+newusers:x:1004:</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>新增一个用户组 newusers1，并指定 gid 为 1006</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;groupadd&nbsp;-g&nbsp;1006&nbsp;newusers1
+[root@shengqian&nbsp;~]#&nbsp;cat&nbsp;/etc/group&nbsp;|&nbsp;grep&nbsp;&quot;newusers1&quot;
+newusers1:x:1006:</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将用户 123itools 加入 newusers 组内。<br/></h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;id&nbsp;123itools
+uid=1002(123itools)&nbsp;gid=1003(123itools)&nbsp;组=1003(123itools)
+[root@shengqian&nbsp;~]#&nbsp;usermod&nbsp;-g&nbsp;1004&nbsp;123itools
+[root@shengqian&nbsp;~]#&nbsp;id&nbsp;123itools
+uid=1002(123itools)&nbsp;gid=1004(newusers)&nbsp;组=1004(newusers)</pre><h3>3. 使用说明</h3><blockquote><p>groupadd [-g gid] 用户组名</p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-g gid</h4></li></ul><blockquote><p>指定新增用户组名的 gid</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>/etc/group</h4></li></ul><blockquote><p>该文件包含了所有用户组信息。</p><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;tail&nbsp;-n&nbsp;3&nbsp;/etc/group
+123itools:x:1003:
+newusers:x:1004:
+newusers1:x:1006:</pre><p><br/></p></blockquote>            </div>
             <div class="sidebar">
             <div class="dropdown">
                 <div class="input-group">
@@ -153,9 +165,9 @@ $('.has_son *').hover(
 
                                                                 </ul>
                             </li>
-                                                         <li class="open">
+                                                         <li class="">
                                 <div class="link"><i class="fa fa-paint-brush"></i>文件内容查看<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:block">
+                                <ul class="submenu" style="display:none">
                                                                     <li class=""><a href="http://www.123itools.com/linux/awk.htm" title="cd">awk</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/printf.htm" title="cd">printf</a></li>
@@ -168,7 +180,7 @@ $('.has_son *').hover(
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/wc.htm" title="cd">wc</a></li>
 
-                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/uniq.htm" title="cd">uniq</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/uniq.htm" title="cd">uniq</a></li>
 
                                                                 </ul>
                             </li>
@@ -238,16 +250,16 @@ $('.has_son *').hover(
 
                                                                 </ul>
                             </li>
-                                                         <li class="">
+                                                         <li class="open">
                                 <div class="link"><i class="fa fa-paint-brush"></i>用户管理<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:none">
+                                <ul class="submenu" style="display:block">
                                                                     <li class=""><a href="http://www.123itools.com/linux/usermod.htm" title="cd">usermod</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/groupdel.htm" title="cd">groupdel</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/groupmod.htm" title="cd">groupmod</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/groupadd.htm" title="cd">groupadd</a></li>
+                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/groupadd.htm" title="cd">groupadd</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/id.htm" title="cd">id</a></li>
 

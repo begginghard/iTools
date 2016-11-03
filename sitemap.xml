@@ -38,7 +38,7 @@
 </url>
 <url>
   <loc>http://www.123itools.com/linux/mv.htm?p=7</loc>
-  <lastmod>2016-11-02T14:28:53+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:42+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/git/init.htm?p=8</loc>
@@ -53,187 +53,207 @@
 </url>
 <url>
   <loc>http://www.123itools.com/linux/mv.htm</loc>
-  <lastmod>2016-11-02T14:28:53+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:42+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/touch.htm</loc>
-  <lastmod>2016-11-02T14:28:53+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:42+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/mkdir.htm</loc>
-  <lastmod>2016-11-02T14:28:53+00:00</lastmod>
-</url>
-<url>
-  <loc>http://www.123itools.com/linux/cd.htm</loc>
-  <lastmod>2016-11-02T14:28:53+00:00</lastmod>
-</url>
-<url>
-  <loc>http://www.123itools.com/linux/ls.htm</loc>
-  <lastmod>2016-11-02T14:28:53+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:42+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/pwd.htm</loc>
-  <lastmod>2016-11-02T14:28:53+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:42+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/ls.htm</loc>
+  <lastmod>2016-11-03T14:39:42+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/cd.htm</loc>
+  <lastmod>2016-11-03T14:39:42+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/rm.htm</loc>
-  <lastmod>2016-11-02T14:28:53+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:42+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/rmdir.htm</loc>
-  <lastmod>2016-11-02T14:28:53+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:42+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/cp.htm</loc>
-  <lastmod>2016-11-02T14:28:53+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:42+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/ln.htm</loc>
-  <lastmod>2016-11-02T14:28:53+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:42+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/which.htm</loc>
-  <lastmod>2016-11-02T14:28:53+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:42+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/find.htm</loc>
-  <lastmod>2016-11-02T14:28:53+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:42+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/tar.htm</loc>
-  <lastmod>2016-11-02T14:28:53+00:00</lastmod>
-</url>
-<url>
-  <loc>http://www.123itools.com/linux/printf.htm</loc>
-  <lastmod>2016-11-02T14:27:00+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:42+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/awk.htm</loc>
-  <lastmod>2016-11-02T14:27:00+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:47+00:00</lastmod>
 </url>
 <url>
-  <loc>http://www.123itools.com/linux/tail.htm</loc>
-  <lastmod>2016-11-02T14:27:00+00:00</lastmod>
-</url>
-<url>
-  <loc>http://www.123itools.com/linux/head.htm</loc>
-  <lastmod>2016-11-02T14:27:00+00:00</lastmod>
+  <loc>http://www.123itools.com/linux/printf.htm</loc>
+  <lastmod>2016-11-03T14:39:47+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/cat.htm</loc>
-  <lastmod>2016-11-02T14:27:00+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:46+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/head.htm</loc>
+  <lastmod>2016-11-03T14:39:46+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/tail.htm</loc>
+  <lastmod>2016-11-03T14:39:46+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/wc.htm</loc>
-  <lastmod>2016-11-02T14:27:00+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:47+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/uniq.htm</loc>
-  <lastmod>2016-11-02T14:27:00+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:47+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/chown.htm</loc>
-  <lastmod>2016-11-02T14:27:04+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:51+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/chmod.htm</loc>
-  <lastmod>2016-11-02T14:27:04+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:51+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/df.htm</loc>
-  <lastmod>2016-11-02T14:27:04+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:51+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/du.htm</loc>
-  <lastmod>2016-11-02T14:27:04+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:51+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/ssh.htm</loc>
-  <lastmod>2016-11-02T14:27:09+00:00</lastmod>
-</url>
-<url>
-  <loc>http://www.123itools.com/linux/ping.htm</loc>
-  <lastmod>2016-11-02T14:27:09+00:00</lastmod>
-</url>
-<url>
-  <loc>http://www.123itools.com/linux/netstat.htm</loc>
-  <lastmod>2016-11-02T14:27:09+00:00</lastmod>
-</url>
-<url>
-  <loc>http://www.123itools.com/linux/ifconfig.htm</loc>
-  <lastmod>2016-11-02T14:27:09+00:00</lastmod>
-</url>
-<url>
-  <loc>http://www.123itools.com/linux/telnet.htm</loc>
-  <lastmod>2016-11-02T14:27:09+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:55+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/scp.htm</loc>
-  <lastmod>2016-11-02T14:27:09+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:55+00:00</lastmod>
 </url>
 <url>
-  <loc>http://www.123itools.com/linux/vmstat.htm</loc>
-  <lastmod>2016-11-02T14:27:13+00:00</lastmod>
+  <loc>http://www.123itools.com/linux/telnet.htm</loc>
+  <lastmod>2016-11-03T14:39:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/ping.htm</loc>
+  <lastmod>2016-11-03T14:39:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/ifconfig.htm</loc>
+  <lastmod>2016-11-03T14:39:55+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/netstat.htm</loc>
+  <lastmod>2016-11-03T14:39:55+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/free.htm</loc>
-  <lastmod>2016-11-02T14:27:13+00:00</lastmod>
+  <lastmod>2016-11-03T14:40:00+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/vmstat.htm</loc>
+  <lastmod>2016-11-03T14:40:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/iostat.htm</loc>
-  <lastmod>2016-11-02T14:27:13+00:00</lastmod>
+  <lastmod>2016-11-03T14:40:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/top.htm</loc>
-  <lastmod>2016-11-02T14:27:13+00:00</lastmod>
+  <lastmod>2016-11-03T14:40:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/crontab.htm</loc>
-  <lastmod>2016-11-02T14:27:13+00:00</lastmod>
-</url>
-<url>
-  <loc>http://www.123itools.com/linux/ctrl+z.htm</loc>
-  <lastmod>2016-11-02T14:27:21+00:00</lastmod>
-</url>
-<url>
-  <loc>http://www.123itools.com/linux/&amp;.htm</loc>
-  <lastmod>2016-11-02T14:27:21+00:00</lastmod>
-</url>
-<url>
-  <loc>http://www.123itools.com/linux/bg.htm</loc>
-  <lastmod>2016-11-02T14:27:21+00:00</lastmod>
+  <lastmod>2016-11-03T14:40:00+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/kill.htm</loc>
-  <lastmod>2016-11-02T14:27:21+00:00</lastmod>
+  <lastmod>2016-11-03T14:40:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/bg.htm</loc>
+  <lastmod>2016-11-03T14:40:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/ctrl+z.htm</loc>
+  <lastmod>2016-11-03T14:40:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/&amp;.htm</loc>
+  <lastmod>2016-11-03T14:40:04+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/pstree.htm</loc>
-  <lastmod>2016-11-02T14:27:21+00:00</lastmod>
-</url>
-<url>
-  <loc>http://www.123itools.com/linux/fg.htm</loc>
-  <lastmod>2016-11-02T14:27:21+00:00</lastmod>
-</url>
-<url>
-  <loc>http://www.123itools.com/linux/jobs.htm</loc>
-  <lastmod>2016-11-02T14:27:21+00:00</lastmod>
+  <lastmod>2016-11-03T14:40:04+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/ps.htm</loc>
-  <lastmod>2016-11-02T14:27:21+00:00</lastmod>
+  <lastmod>2016-11-03T14:40:04+00:00</lastmod>
 </url>
 <url>
-  <loc>http://www.123itools.com/linux/userdel.htm</loc>
-  <lastmod>2016-11-02T14:29:49+00:00</lastmod>
+  <loc>http://www.123itools.com/linux/fg.htm</loc>
+  <lastmod>2016-11-03T14:40:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/jobs.htm</loc>
+  <lastmod>2016-11-03T14:40:04+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/usermod.htm</loc>
+  <lastmod>2016-11-03T14:40:08+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/groupdel.htm</loc>
+  <lastmod>2016-11-03T14:40:08+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/groupmod.htm</loc>
+  <lastmod>2016-11-03T14:40:08+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/groupadd.htm</loc>
+  <lastmod>2016-11-03T14:40:08+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/id.htm</loc>
+  <lastmod>2016-11-03T14:40:08+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/passwd.htm</loc>
-  <lastmod>2016-11-02T14:29:49+00:00</lastmod>
+  <lastmod>2016-11-03T14:40:08+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.123itools.com/linux/userdel.htm</loc>
+  <lastmod>2016-11-03T14:40:08+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/linux/useradd.htm</loc>
-  <lastmod>2016-11-02T14:29:49+00:00</lastmod>
+  <lastmod>2016-11-03T14:40:08+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/git/init.htm</loc>
@@ -249,7 +269,7 @@
 </url>
 <url>
   <loc>http://www.123itools.com/linux/cd.htm?p=7</loc>
-  <lastmod>2016-11-02T14:28:53+00:00</lastmod>
+  <lastmod>2016-11-03T14:39:42+00:00</lastmod>
 </url>
 <url>
   <loc>http://www.123itools.com/redis/DEL.htm</loc>
