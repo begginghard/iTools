@@ -57,7 +57,11 @@ class Server
     }
 
     public function onReceive( swoole_server $serv, $fd, $from_id, $data ) {
-        echo "Get Message From Client {$fd}:{$data}\n";
+        if($data == 1){
+            swoole_timer_after(1000, function(){
+                echo "启动一次";
+            });
+        }
     }
 
     public function onClose( $serv, $fd, $from_id ) {
