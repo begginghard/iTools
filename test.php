@@ -27,7 +27,7 @@ class Server
 
     public function onWorkerStart( $serv , $worker_id) {
         // 在Worker进程开启时绑定定时器
-        echo "onWorkerStart\n";
+        echo "onWorkerStart {$worker_id}\n";
         // 只有当worker_id为0时才添加定时器,避免重复添加
         if($worker_id == 0){
             swoole_timer_after(1000, function(){
