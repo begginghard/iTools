@@ -48,7 +48,7 @@ class Server
     public function onReceive( swoole_server $serv, $fd, $from_id, $data ) {
         if($data == 1){
             swoole_timer_after(1000, function(){
-                echo "启动一次";
+                echo "启动一次".$fd;
             });
         }
     }
