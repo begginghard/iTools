@@ -30,7 +30,7 @@ class Server
         echo "onWorkerStart\n";
         // 只有当worker_id为0时才添加定时器,避免重复添加
         swoole_timer_tick(1000, function(){
-            echo "timeout\n";
+            echo "timeout\n".time().'_'.$worker_id;
         });
     }
 
