@@ -12,15 +12,38 @@ class Server
             'daemonize' => false,
             'max_request' => 10000,
             'dispatch_mode' => 2,
-            'debug_mode'=> 1
+            'debug_mode'=> 1,
+            'heartbeat_check_interval' => 60,
+            'heartbeat_idle_time' => 600,
         ));
-
+        $this->serv->on('WorkerStart', array($this, 'onWorkerStart'));
         $this->serv->on('Start', array($this, 'onStart'));
         $this->serv->on('Connect', array($this, 'onConnect'));
         $this->serv->on('Receive', array($this, 'onReceive'));
         $this->serv->on('Close', array($this, 'onClose'));
-
+        $this->serv->on('Timer', array($this, 'onTimer'));
         $this->serv->start();
+    }
+
+    public function onWorkerStart( $serv , $worker_id) {
+        // 在Worker进程开启时绑定定时器
+        echo "onWorkerStart\n";
+        // 只有当worker_id为0时才添加定时器,避免重复添加
+        if( $worker_id == 0 ) {
+            $serv->addtimer(100);
+
+        }
+    }
+
+
+    public function onTimer($serv, $interval) {
+        switch( $interval ) {
+            case 500: {	//
+                echo "Do Thing A at interval 500\n";
+                break;
+            }
+
+        }
     }
 
     public function onStart( $serv ) {
