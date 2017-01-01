@@ -44,6 +44,8 @@ class Command extends  CI_Model{
             1=>'Linux命令大全',
             2=>'Redis命令大全',
             3=>'Git命令大全',
+            4=>'Vim快捷键',
+            5=>'Bash快捷键',
         );
         return $arr[$type];
     }
@@ -59,6 +61,8 @@ class Command extends  CI_Model{
             1=>"Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 {$nowClassify} {$name} {$name}命令 {$name}语法",
             3=>"Git命令大全 常用 命令 大全 git使用教程 教程 参数 用法 git {$nowClassify} {$name} {$name}命令 {$name}语法",
             2=>"Redis命令大全 php 常用 命令 大全 redis教程 使用教程 redis学习 参数 选项 {$nowClassify} {$name} {$name}命令 {$name}语法",
+            4=>"Vim快捷键，vim 常用 快捷键 vim移动光标 vim删除字符 vim 替换字符 {$nowClassify} {$name} {$name} 命令 {$name}语法",
+            5=>"Bash快捷键，bash 常用 快捷键 bash移动光标 bash删除字符 bash 替换字符 {$nowClassify} {$name} {$name} 命令 {$name}语法",
         );
         return $arr[$type];
     }
@@ -68,6 +72,8 @@ class Command extends  CI_Model{
             1=>"Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 {$nowClassify} {$name} {$name}命令 {$name}语法",
             3=>"Git命令大全 常用 命令 大全 git使用教程 教程 参数 用法 git {$nowClassify} {$name} {$name}命令 {$name}语法",
             2=>"Redis命令大全 php 常用 命令 大全 redis教程 使用教程 redis学习 参数 选项 {$nowClassify} {$name} {$name}命令 {$name}语法",
+            4=>"Vim快捷键，vim 常用 快捷键 vim移动光标 vim删除字符 vim 替换字符 {$nowClassify} {$name} {$name} 命令 {$name}语法",
+            5=>"Bash快捷键，bash 常用 快捷键 bash移动光标 bash删除字符 bash 替换字符 {$nowClassify} {$name} {$name} 命令 {$name}语法",
         );
         return $arr[$type];
     }
@@ -76,6 +82,8 @@ class Command extends  CI_Model{
             1=>"Linux命令大全 {$nowClassify} {$name}",
             3=>"Git命令大全 {$nowClassify} {$name}",
             2=>"Redis命令大全 {$nowClassify} {$name}",
+            4=>"VIM快捷键 {$nowClassify} {$name}",
+            5=>"Bash快捷键 {$nowClassify} {$name}",
         );
         return $arr[$type];
 

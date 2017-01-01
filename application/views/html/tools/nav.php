@@ -77,8 +77,9 @@
                     </ul>
                 </li>
                 <li class='li_list <?php if (isset($_GET["p"]) && $_GET["p"] == 7) {echo "now";}?>'><a href="<?php echo base_url();?>linux/mv.htm?p=7">Linux命令大全</a></li>
-                <li class='li_list <?php if (isset($_GET["p"]) && $_GET["p"] == 8) {echo "now";}?>'><a href="<?php echo base_url();?>git/init.htm?p=8">Git命令大全</a></li>
                 <li class='li_list <?php if (isset($_GET["p"]) && $_GET["p"] == 9) {echo "now";}?>'><a href="<?php echo base_url();?>redis/DEL.htm?p=9">Redis命令大全</a></li>
+                <li class='li_list <?php if (isset($_GET["p"]) && $_GET["p"] == 10) {echo "now";}?>'><a href="<?php echo base_url();?>redis/DEL.htm?p=9">Vim快捷键</a></li>
+                <li class='li_list <?php if (isset($_GET["p"]) && $_GET["p"] == 11) {echo "now";}?>'><a href="<?php echo base_url();?>redis/DEL.htm?p=9">Bash快捷键</a></li>
             </ul>
         </div>
     </div>

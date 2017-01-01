@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://www.123itools.com/';
-#$config['base_url'] = 'http://127.0.0.1/';
+#$config['base_url'] = 'http://www.123itools.com/';
+$config['base_url'] = 'http://127.0.0.1/';
 
 /*
 |--------------------------------------------------------------------------
@@ -518,7 +518,8 @@ $config['command_type'] = array(
     1=>'linux',
     2=>'redis',
     3=>'git',
-    4=>'mysql',
+    4=>'vim',
+    5=>'bash',
 );
 $config['classify']=array(
     1=>array(
@@ -542,6 +543,12 @@ $config['classify']=array(
     ),
     3=>array(
         1=>'Git配置',
-	2=>'初始化',
+     	2=>'初始化',
+    ),
+    4=>array(
+        1=>'Vim快捷键',
+    ),
+    5=>array(
+        1=>'Bash快捷键',
     )
 );

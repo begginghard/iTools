@@ -38,8 +38,8 @@ font-size:14px;
         <?php include('nav.php');?>
         <div class="containter">
             <p class="text-center form-inline">
-                <span><input type="text" class="form-control" disabled="disabled" style="width:250px; margin-right:40px" id="cur_unix_stamp" value="<?php echo time(); ?>" ></span>
-                <span><input type="text" class="form-control" disabled="disabled" style="width:250px;" id="cur_bj_datetime" value="<?php date_default_timezone_set("UTC"); echo date('Y-m-d h:i:s',time()); ?>"></span>
+                <span><input type="text" class="form-control"  style="width:250px; margin-right:40px" id="cur_unix_stamp" value="<?php echo time(); ?>" ></span>
+                <span><input type="text" class="form-control"  style="width:250px;" id="cur_bj_datetime" value="<?php date_default_timezone_set("UTC"); echo date('Y-m-d h:i:s',time()); ?>"></span>
             </p>
             <p class="text-center form-inline">
                 <span><input type="text" class="form-control" placeholder="Unix timestamp" style="width:250px" id="src_unix_stamp"></span>
@@ -121,7 +121,7 @@ font-size:14px;
         }
     }
 
-    setInterval(function(){setCurTime();},1000);
+    setInterval(function(){setCurTime();},2000);
     function setCurTime() {
         var unixStamp = new Date().getTime();
         console.log(unixStamp);
