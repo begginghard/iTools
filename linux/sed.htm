@@ -66,8 +66,9 @@
                     </ul>
                 </li>
                 <li class='li_list '><a href="http://www.123itools.com/linux/mv.htm?p=7">Linux命令大全</a></li>
-                <li class='li_list '><a href="http://www.123itools.com/git/init.htm?p=8">Git命令大全</a></li>
                 <li class='li_list '><a href="http://www.123itools.com/redis/DEL.htm?p=9">Redis命令大全</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/vim/移动光标.htm?p=10">Vim快捷键</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/bash/移动光标.htm?p=11">Bash快捷键</a></li>
             </ul>
         </div>
     </div>
@@ -100,35 +101,35 @@ $('.has_son *').hover(
 
             <div class="containter">
              <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/sed.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/sed.htm">文件内容查看</a>><a href="http://www.123itools.com/linux/sed.htm">sed</a></span></div>            <div class="main" id="main">
-                <h3>1. 命令</h3><p>sed -- 可以对数据进行替换、删除、新增、选取特定行等的功能。</p><h3>2. 使用方法</h3><p><span style=\"background-color: rgb(227, 108, 9);\"><span style=\"background-color: rgb(255, 255, 255);\">sed -n [n1,[n2]] function</span></span></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4><span style=\"background-color: rgb(227, 108, 9);\"><span style=\"background-color: rgb(255, 255, 255);\">-n</span></span></h4></li></ul><p><span style=\"background-color: rgb(255, 255, 255);\">使用安静模式，在一般 sed 的用法中，所有来自 STDIN 的数据一般都会被列出到屏幕上。但如果加上 -n 参数后，则只有经过 sed 特殊处理的那一行才会被列出来。</span></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>n1, n2</h4></li></ul><p>是可选的，一般选择进行动作的行数。</p><p>如果只有 n1 的话，则表示第 n1 行。</p><p>如果两者都存在的话，则表示第 n1-n2 行。</p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>function</h4></li></ul><p>a: 新增，a 的后面可以接字符串，将字符串插入到当前行的下一行。</p><p>c: 替换，c 的后面可以接字符串，这些字符串可以替换 n1, n2 之间的行。</p><p>d: 删除，删除 n1, n2 之间的行。</p><p>i: 插入，i 的后面可以接字符串，将字符串插入到当前行的上一行。</p><p>s: 替换，对每行字符串的内容进行部分替换。例如：1,20s/old/new/g<br/></p><p>p: 打印，将选择的数据行打印出来，通常 p 和 -n 一起运行。</p><h3>3. 使用样例</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>删除 /etc/passwd 的第 2-5 行字符串</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;&#39;2,5d&#39;
+                <h3>1. 命令</h3><p>sed -- 可以对数据进行替换、删除、新增、选取特定行等的功能。</p><h3>2. 使用方法</h3><p><span style="background-color: rgb(227, 108, 9);"><span style="background-color: rgb(255, 255, 255);">sed -n [n1,[n2]] function</span></span></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4><span style="background-color: rgb(227, 108, 9);"><span style="background-color: rgb(255, 255, 255);">-n</span></span></h4></li></ul><p><span style="background-color: rgb(255, 255, 255);">使用安静模式，在一般 sed 的用法中，所有来自 STDIN 的数据一般都会被列出到屏幕上。但如果加上 -n 参数后，则只有经过 sed 特殊处理的那一行才会被列出来。</span></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>n1, n2</h4></li></ul><p>是可选的，一般选择进行动作的行数。</p><p>如果只有 n1 的话，则表示第 n1 行。</p><p>如果两者都存在的话，则表示第 n1-n2 行。</p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>function</h4></li></ul><p>a: 新增，a 的后面可以接字符串，将字符串插入到当前行的下一行。</p><p>c: 替换，c 的后面可以接字符串，这些字符串可以替换 n1, n2 之间的行。</p><p>d: 删除，删除 n1, n2 之间的行。</p><p>i: 插入，i 的后面可以接字符串，将字符串插入到当前行的上一行。</p><p>s: 替换，对每行字符串的内容进行部分替换。例如：1,20s/old/new/g<br/></p><p>p: 打印，将选择的数据行打印出来，通常 p 和 -n 一起运行。</p><h3>3. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>删除 /etc/passwd 的第 2-5 行字符串</h4></li></ul><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;&#39;2,5d&#39;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1	root:x:0:0:root:/root:/bin/bash
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6	sync:x:5:0:sync:/sbin:/bin/sync
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7	shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8	halt:x:7:0:halt:/sbin:/sbin/halt
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9	mail:x:8:12:mail:/var/spool/mail:/sbin/nologin</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>只删除 /etc/passwd 的第 2 行字符串</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;&#39;2d&#39;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9	mail:x:8:12:mail:/var/spool/mail:/sbin/nologin</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>只删除 /etc/passwd 的第 2 行字符串</h4></li></ul><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;&#39;2d&#39;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1	root:x:0:0:root:/root:/bin/bash
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3	daemon:x:2:2:daemon:/sbin:/sbin/nologin</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>删除 /etc/passwd 的第 3 - 最后一行字符串<br/></h4></li></ul><pre class=\"brush:bash;toolbar:false\">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;&#39;3,$d&#39;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3	daemon:x:2:2:daemon:/sbin:/sbin/nologin</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>删除 /etc/passwd 的第 3 - 最后一行字符串<br/></h4></li></ul><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;&#39;3,$d&#39;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1	root:x:0:0:root:/root:/bin/bash
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2	bin:x:1:1:bin:/bin:/sbin/nologin</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>在第2行后面加一行字符串 &quot;drink tea&quot;</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;&#39;2a&nbsp;drink&nbsp;tea&#39;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2	bin:x:1:1:bin:/bin:/sbin/nologin</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>在第2行后面加一行字符串 &quot;drink tea&quot;</h4></li></ul><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;&#39;2a&nbsp;drink&nbsp;tea&#39;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1	root:x:0:0:root:/root:/bin/bash
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2	bin:x:1:1:bin:/bin:/sbin/nologin
 drink&nbsp;tea
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3	daemon:x:2:2:daemon:/sbin:/sbin/nologin</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>在第2行前面加一行字符串 &quot;drink tea&quot;</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;&#39;2i&nbsp;drink&nbsp;tea&#39;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3	daemon:x:2:2:daemon:/sbin:/sbin/nologin</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>在第2行前面加一行字符串 &quot;drink tea&quot;</h4></li></ul><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;&#39;2i&nbsp;drink&nbsp;tea&#39;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1	root:x:0:0:root:/root:/bin/bash
 drink&nbsp;tea
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2	bin:x:1:1:bin:/bin:/sbin/nologin</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>在第2行前面加两行字符串&quot;drink tea&quot; 和 &quot;drink beer&quot;</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;&#39;2i&nbsp;drink&nbsp;tea\\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2	bin:x:1:1:bin:/bin:/sbin/nologin</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>在第2行前面加两行字符串&quot;drink tea&quot; 和 &quot;drink beer&quot;</h4></li></ul><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;&#39;2i&nbsp;drink&nbsp;tea\
 &gt;&nbsp;drink&nbsp;beer&#39;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1	root:x:0:0:root:/root:/bin/bash
 drink&nbsp;tea
 drink&nbsp;beer
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2	bin:x:1:1:bin:/bin:/sbin/nologin</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>将第 2-5行替换成 &quot;No 2-5 number&quot;</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;&#39;2,5c&nbsp;No&nbsp;2-5&nbsp;number&#39;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2	bin:x:1:1:bin:/bin:/sbin/nologin</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将第 2-5行替换成 &quot;No 2-5 number&quot;</h4></li></ul><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;&#39;2,5c&nbsp;No&nbsp;2-5&nbsp;number&#39;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1	root:x:0:0:root:/root:/bin/bash
 No&nbsp;2-5&nbsp;number
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6	sync:x:5:0:sync:/sbin:/bin/sync</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>仅将 /etc/passwd 的第 2-5 行打印出来</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;-n&nbsp;&#39;2,5p&#39;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6	sync:x:5:0:sync:/sbin:/bin/sync</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>仅将 /etc/passwd 的第 2-5 行打印出来</h4></li></ul><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;-n&nbsp;&#39;2,5p&#39;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2	bin:x:1:1:bin:/bin:/sbin/nologin
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3	daemon:x:2:2:daemon:/sbin:/sbin/nologin
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4	adm:x:3:4:adm:/var/adm:/sbin/nologin
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5	lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin</pre><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><h4>将第 2-5 行中的 sbin 替换成 bin。</h4></li></ul><pre class=\"brush:bash;toolbar:false\">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;-n&nbsp;&#39;2,5p&#39;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5	lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>将第 2-5 行中的 sbin 替换成 bin。</h4></li></ul><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;~]$&nbsp;nl&nbsp;/etc/passwd&nbsp;|&nbsp;sed&nbsp;-n&nbsp;&#39;2,5p&#39;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2	bin:x:1:1:bin:/bin:/sbin/nologin
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3	daemon:x:2:2:daemon:/sbin:/sbin/nologin
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4	adm:x:3:4:adm:/var/adm:/sbin/nologin
