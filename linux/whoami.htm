@@ -4,9 +4,9 @@
         <meta charset="utf-8"/>
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
-        <title>Linux命令大全 文件内容查看 head</title>
-        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件内容查看 head head命令 head语法"/>
-        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 文件内容查看 head head命令 head语法"/>
+        <title>Linux命令大全 用户管理 whoami</title>
+        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 用户管理 whoami whoami命令 whoami语法"/>
+        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 用户管理 whoami whoami命令 whoami语法"/>
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command.css" />
@@ -99,8 +99,13 @@ $('.has_son *').hover(
 </script>
 
             <div class="containter">
-             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/head.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/head.htm">文件内容查看</a>><a href="http://www.123itools.com/linux/head.htm">head</a></span></div>            <div class="main" id="main">
-                <h3>1. 命令<br/></h3><blockquote><p>head -- 显示文件的前部分内容<br/></p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>显示某个文件的前部分内容，例如查看 file 前10行内容</h4></li></ul><blockquote><p>head file</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>显示某个文件的前1000字节内容</h4></li></ul><blockquote><p>head -c 1000 file</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>显示某个文件的前1000行内容</h4></li></ul><blockquote><p>head -n 1000 file</p></blockquote><h3>3. 使用方法</h3><blockquote><p>head [属性]... [文件]...<br/></p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-c --bytes=[-]K<br/></h4></li></ul><blockquote><p>显示每个文件的前 K 个字节的内容；如果加 - 的话，则输出除了最后 K 个字节的所有内容。<br/></p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-n --lines=[-]K</h4></li></ul><blockquote><p>显示每个文件的前 K 行的内容；如果加 - 的话，则输出除了最后 K 行的所有内容。</p></blockquote>            </div>
+             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/whoami.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/whoami.htm">用户管理</a>><a href="http://www.123itools.com/linux/whoami.htm">whoami</a></span></div>            <div class="main" id="main">
+                <h3>1. 命令</h3><p>whoami -- 显示当前有效用户</p><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>显示当前有效用户</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;whoami
+root
+[root@shengqian&nbsp;~]#&nbsp;su&nbsp;-&nbsp;123itools
+上一次登录：一&nbsp;11月&nbsp;&nbsp;7&nbsp;22:08:23&nbsp;CST&nbsp;2016pts/0&nbsp;上
+[123itools@shengqian&nbsp;~]$&nbsp;whoami
+123itools</pre><p><br/></p>            </div>
             <div class="sidebar">
             <div class="dropdown">
                 <div class="input-group">
@@ -153,14 +158,14 @@ $('.has_son *').hover(
 
                                                                 </ul>
                             </li>
-                                                         <li class="open">
+                                                         <li class="">
                                 <div class="link"><i class="fa fa-paint-brush"></i>文件内容查看<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:block">
+                                <ul class="submenu" style="display:none">
                                                                     <li class=""><a href="http://www.123itools.com/linux/awk.htm" title="cd">awk</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/printf.htm" title="cd">printf</a></li>
 
-                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/head.htm" title="cd">head</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/head.htm" title="cd">head</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/cat.htm" title="cd">cat</a></li>
 
@@ -238,10 +243,10 @@ $('.has_son *').hover(
 
                                                                 </ul>
                             </li>
-                                                         <li class="">
+                                                         <li class="open">
                                 <div class="link"><i class="fa fa-paint-brush"></i>用户管理<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:none">
-                                                                    <li class=""><a href="http://www.123itools.com/linux/whoami.htm" title="cd">whoami</a></li>
+                                <ul class="submenu" style="display:block">
+                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/whoami.htm" title="cd">whoami</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/su.htm" title="cd">su</a></li>
 

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="robots" content="all" />
+        <meta name="author" content="www.123itools.com" />
+        <title>Git命令大全 初始化 clone</title>
+        <meta name="keywords" content="Git命令大全 常用 命令 大全 git使用教程 教程 参数 用法 git 初始化 clone clone命令 clone语法"/>
+        <meta name="description" content="Git命令大全 常用 命令 大全 git使用教程 教程 参数 用法 git 初始化 clone clone命令 clone语法"/>
+        <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/index.css" />
+        <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command.css" />
+        <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command2.css" />
+        <script src="http://www.123itools.com/style/js/jquery-3.1.0.min.js"></script>
+        <script src="http://www.123itools.com/style/js/index.js"></script>
+    </head>
+
+    <body id="editor">
+        <div id="wrapper">
+        <style>
+.has_son {
+    position: relative;
+}
+.son{
+    position: absolute;
+    top: 40px;
+    display:none;
+    z-index:999;
+}
+.son li {
+    width: 100%;
+    background-color: #373D41;
+}
+
+.son li:hover{
+    background-color:#3f474c;
+}
+</style>
+<div id="header">
+    <div class="nav">
+        <div class="logo">开发者工具箱logo
+        </div>
+        <div class="nav_list">
+            <ul class="ul_div">
+
+
+                <li class='li_list  has_son '><a href="#">
+                    格式化压缩                </a>
+                    <ul class="son">
+                      <li ><a role="menuitem" tabindex="-1" href="http://www.123itools.com/json/index.html?p=10">JSON格式化&压缩</a></li>
+                      <li><a role="menuitem" tabindex="-1" href="http://www.123itools.com/css/index.html?p=11">CSS格式化&压缩</a></li>
+                      <li><a role="menuitem" tabindex="-1" href="http://www.123itools.com/js/index.html?p=12">JS格式化&压缩</a></li>
+                      <li><a role="menuitem" tabindex="-1" href="http://www.123itools.com/jsonxml/index.html?p=12">XML转换JSON</a></li>
+                    </ul>
+                </li>
+
+                <li class='li_list '><a href="http://www.123itools.com/timestamp/index.html?p=2">时间格式转换</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/regex/index.html?p=3">正则表达式</a></li>
+                <li class='li_list  has_son '><a href="#">
+                    编解码
+                </a>
+                    <ul class="son">
+                      <li ><a role="menuitem" tabindex="-1" href="http://www.123itools.com/Url/index.html?p=4">URL编码</a></li>
+                      <li><a role="menuitem" tabindex="-1" href="http://www.123itools.com/base64/index.html?p=5">Base64编码</a></li>
+                      <li><a role="menuitem" tabindex="-1" href="http://www.123itools.com/Md5/index.html?p=6">md5加密</a></li>
+                    </ul>
+                </li>
+                <li class='li_list '><a href="http://www.123itools.com/linux/mv.htm?p=7">Linux命令大全</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/git/init.htm?p=8">Git命令大全</a></li>
+                <li class='li_list '><a href="http://www.123itools.com/redis/DEL.htm?p=9">Redis命令大全</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+$('.has_son *').hover(
+    function(){
+        $('.son').show();
+    },
+    function(){
+        $('.son').hide();
+
+    }
+);
+
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+            <div class="containter">
+             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/git/clone.htm">Git命令大全</a>><a href="http://www.123itools.com/git/clone.htm">初始化</a>><a href="http://www.123itools.com/git/clone.htm">clone</a></span></div>            <div class="main" id="main">
+                <h3>1. 命令</h3><blockquote><p>git clone -- 从远程仓库中拷贝一份全量的代码。</p></blockquote><h3>2. 使用样例</h3><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p>在本地同步一份&nbsp;<a href=\"http://www.123itools.com/%22https://github.com/begginghard/initgit.git/%22\" style=\"font-family: inherit; font-size: 14px; margin: 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; box-sizing: border-box; color: rgb(102, 102, 102); text-decoration: none;\">https://github.com/begginghard/initgit.git</a>&nbsp;代码</p></li></ul><pre class=\"brush:bash;toolbar:false\">zhangguanghuideMacBook-Pro-2:tmp&nbsp;zhangguanghui$&nbsp;git&nbsp;clone&nbsp;https://github.com/begginghard/initgit.git
+Cloning&nbsp;into&nbsp;&#39;initgit&#39;...
+remote:&nbsp;Counting&nbsp;objects:&nbsp;11,&nbsp;done.
+remote:&nbsp;Total&nbsp;11&nbsp;(delta&nbsp;0),&nbsp;reused&nbsp;0&nbsp;(delta&nbsp;0),&nbsp;pack-reused&nbsp;11
+Unpacking&nbsp;objects:&nbsp;100%&nbsp;(11/11),&nbsp;done.
+Checking&nbsp;connectivity...&nbsp;done.
+zhangguanghuideMacBook-Pro-2:tmp&nbsp;zhangguanghui$&nbsp;ls&nbsp;-al
+total&nbsp;0
+drwxr-xr-x&nbsp;&nbsp;&nbsp;3&nbsp;zhangguanghui&nbsp;&nbsp;staff&nbsp;&nbsp;&nbsp;102&nbsp;11&nbsp;21&nbsp;19:32&nbsp;.
+drwxr-xr-x+&nbsp;53&nbsp;zhangguanghui&nbsp;&nbsp;staff&nbsp;&nbsp;1802&nbsp;11&nbsp;21&nbsp;19:24&nbsp;..
+drwxr-xr-x&nbsp;&nbsp;&nbsp;6&nbsp;zhangguanghui&nbsp;&nbsp;staff&nbsp;&nbsp;&nbsp;204&nbsp;11&nbsp;21&nbsp;19:32&nbsp;initgit</pre><p><br/></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p>在本地同步一份&nbsp;<a href=\"http://www.123itools.com/%22https://github.com/begginghard/initgit.git/%22\" style=\"font-family: inherit; white-space: normal; font-size: 14px; margin: 0px; padding: 0px; border: 0px; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; box-sizing: border-box; color: rgb(102, 102, 102); text-decoration: none;\">https://github.com/begginghard/initgit.git</a>&nbsp;代码，并初始化为 init 目录</p></li></ul><pre class=\"brush:bash;toolbar:false\">zhangguanghuideMacBook-Pro-2:tmp&nbsp;zhangguanghui$&nbsp;git&nbsp;clone&nbsp;https://github.com/begginghard/initgit.git&nbsp;init
+Cloning&nbsp;into&nbsp;&#39;init&#39;...
+remote:&nbsp;Counting&nbsp;objects:&nbsp;11,&nbsp;done.
+remote:&nbsp;Total&nbsp;11&nbsp;(delta&nbsp;0),&nbsp;reused&nbsp;0&nbsp;(delta&nbsp;0),&nbsp;pack-reused&nbsp;11
+Unpacking&nbsp;objects:&nbsp;100%&nbsp;(11/11),&nbsp;done.
+Checking&nbsp;connectivity...&nbsp;done.
+zhangguanghuideMacBook-Pro-2:tmp&nbsp;zhangguanghui$&nbsp;ls&nbsp;-al
+total&nbsp;0
+drwxr-xr-x&nbsp;&nbsp;&nbsp;4&nbsp;zhangguanghui&nbsp;&nbsp;staff&nbsp;&nbsp;&nbsp;136&nbsp;11&nbsp;21&nbsp;19:34&nbsp;.
+drwxr-xr-x+&nbsp;53&nbsp;zhangguanghui&nbsp;&nbsp;staff&nbsp;&nbsp;1802&nbsp;11&nbsp;21&nbsp;19:24&nbsp;..
+drwxr-xr-x&nbsp;&nbsp;&nbsp;6&nbsp;zhangguanghui&nbsp;&nbsp;staff&nbsp;&nbsp;&nbsp;204&nbsp;11&nbsp;21&nbsp;19:34&nbsp;init
+drwxr-xr-x&nbsp;&nbsp;&nbsp;6&nbsp;zhangguanghui&nbsp;&nbsp;staff&nbsp;&nbsp;&nbsp;204&nbsp;11&nbsp;21&nbsp;19:32&nbsp;initgit</pre><h3><span style=\"font-size: 16px;\">3. 使用说明</span></h3><p><span style=\"font-size: 16px;\">git clone &lt;repo&gt; [&lt;dir&gt;]</span></p><p><span style=\"font-size: 16px;\"><br/></span></p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p><span style=\"font-size: 16px;\">&lt;dir&gt;</span></p></li></ul><p><span style=\"font-size: 16px;\">将代码同步到本地 &lt;dir&gt; 目录下</span></p><p><br/></p>            </div>
+            <div class="sidebar">
+            <div class="dropdown">
+                <div class="input-group">
+                    <input type="text" class="form-control" autocomplete="off" name="name" onkeyup="searchLinux();" value="命令搜索" onfocus="if (value =='命令搜索'){value =''}" onblur="if (value ==''){value='命令搜索'}">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" onclick="searchLinux();">Go</button>
+                    </span>
+                </div>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="searchList">
+
+                </ul>
+            </div>
+                <br>
+                <div class="widget related">
+
+                    <div class="hd">
+                            <span>常用命令</span>
+                    </div>
+
+                    <div class="bd">
+                        <ul id="accordion" class="accordion">
+                                                        <li class="">
+                                <div class="link"><i class="fa fa-paint-brush"></i>Git配置<i class="fa fa-chevron-down"></i></div>
+                                <ul class="submenu" style="display:none">
+                                                                    <li class=""><a href="http://www.123itools.com/git/help.htm" title="cd">help</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/git/config.htm" title="cd">config</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/git/name.htm" title="cd">name</a></li>
+
+                                                                </ul>
+                            </li>
+                                                         <li class="open">
+                                <div class="link"><i class="fa fa-paint-brush"></i>初始化<i class="fa fa-chevron-down"></i></div>
+                                <ul class="submenu" style="display:block">
+                                                                    <li class="now_command"><a href="http://www.123itools.com/git/clone.htm" title="cd">clone</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/git/init.htm" title="cd">init</a></li>
+
+                                                                </ul>
+                            </li>
+                             
+                        	</ul>
+
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        <div class="bottom_map">
+  <div class="bottom_map_main">
+    <div class="bottom_map_nav">
+      <a href="javascript:" class="ToCurt" ref="tools1">站长工具</a></div>
+    <div class="bottom_map_content">
+      <div id="tools1" style="display:block">
+        <dl>
+          <dt>格式转换</dt>
+          <dd>·
+            <a href="http://www.123itools.com/json/index.html">json格式转换</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/timestamp/index.html?p=2">时间格式转换</a></dd>
+        </dl>
+        <dl>
+          <dt>编码工具</dt>
+          <dd>·
+            <a href="http://www.123itools.com/Url/index.html?p=4">URL编码</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/base64/index.html?p=5">Base64编码</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/Md5/index.html?p=6">md5编码</a></dd>
+        </dl>
+        <dl>
+          <dt>命令大全</dt>
+          <dd>·
+            <a href="http://www.123itools.com/linux/mv.htm?p=7" title="Linux命令大全">Linux命令大全</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/git/init.htm?p=8" title="Git命令大全">Git命令大全</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/redis/DEL.htm?p=9" title="Redis命令大全">Redis命令大全</a></dd>
+        </dl>
+        <dl>
+          <dt>站点信息</dt>
+          <dd>·
+            <a target="_blank" href="#" rel="external nofollow">意见反馈</a></dd>
+          <dd>·
+            <a href="#">免责声明</a></dd>
+          <dd>·
+            <a href="#">关于我们</a></dd>
+          <dd>·
+            <a href="#">文章归档</a></dd>
+        </dl>
+        <dl>
+          <dt>其他</dt>
+          <dd>·
+            <a target="_blank" href="#" rel="external nofollow">收藏我们</a></dd>
+          <dd>·
+            <a href="http://www.123itools.com/sitemap.xml">网站地图</a></dd>
+          <dd>·
+            <a href="/aboutus">TAG标签</a></dd>
+          <dd>·
+            <a href="/archives">RSS地图</a></dd>
+        </dl>
+      </div>
+      <div class="search-share">
+        <div class="app-download">
+          <div>
+            <strong>交流微信</strong></div>
+        </div>
+        <div class="share">
+          <img width="150" height="150" src="http://www.123itools.com/style/img/wx.jpeg"></div>
+      </div>
+    </div>
+  </div>
+</div>
+         <div id="footer">
+
+ </div>
+        </div>
+        <input type="hidden" value="3">
+        <script>
+            function searchLinux(){
+             window.event.returnValue = false;
+                            var name = $('input[name="name"]').val();
+                            var pre_url = 'http://www.123itools.com/git/';
+                            var type = '3';
+                            $.ajax({
+                                type:'get',
+                                url: '/admin/searchCommand?name='+name+'&type='+type,
+                                cache:false,
+                                success:function(data){
+
+                                    if(data){
+                                        var dataObj = eval('(' + data + ')');
+                                        var html = '';
+                                        for( var i in dataObj){
+                                            html = html+'<li role="presentation"><a role="menuitem" tabindex="-1" href="'+pre_url+dataObj[i].name+'.htm">'+dataObj[i].name+'</a></li>';
+                                        }
+
+                                        if(html){
+                                            $('#searchList').html('');
+
+                                            $('#searchList').html(html);
+                                            $('#searchList').show();
+                                        }else{
+                                            $('#searchList').hide();
+                                        }
+                                    }else{
+                                       $('#searchList').hide();
+                                    }
+                                }
+                            });
+                        }
+
+        </script>
+    </body>
+</html>
+

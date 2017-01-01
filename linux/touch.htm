@@ -100,7 +100,71 @@ $('.has_son *').hover(
 
             <div class="containter">
              <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/touch.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/touch.htm">文件目录管理</a>><a href="http://www.123itools.com/linux/touch.htm">touch</a></span></div>            <div class="main" id="main">
-                <h3>1. 命令</h3><blockquote><p>touch -- 创建文件，改变文件的访问时间 和 修改时间。</p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>创建文件，名为 test</h4></li></ul><blockquote><p>touch test</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4 style="white-space: normal;">如何查看文件的访问时间，修改时间，例如查看文件 test 的状态</h4></li></ul><blockquote><p style="white-space: normal;">stat test</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>改变 test 文件的访问时间为当前时间</h4></li></ul><blockquote><p>touch -a test</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>改变 test 文件的修改时间为当前时间<br/></h4></li></ul><blockquote><p>touch -m test</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>改变 test 文件的修改时间为 2016-09-30 00:01:20</h4></li></ul><blockquote><p>touch -m -d &quot;2016-09-30 00:01:20&quot; test</p></blockquote><h3>3. 使用方法</h3><blockquote><p>touch [属性]... 文件...</p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-a&nbsp;</h4></li></ul><blockquote><p>修改文件的访问时间</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-m</h4></li></ul><blockquote><p>修改文件的修改时间</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-d</h4></li></ul><blockquote><p>指定要修改成的时间</p></blockquote>            </div>
+                <h3>1. 命令</h3><blockquote><p>touch -- 创建文件，改变文件的访问时间 和 修改时间。</p></blockquote><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>创建文件，名为 test</h4></li></ul><h4>touch test<br/></h4><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;tmp]$&nbsp;touch&nbsp;test
+[123itools@shengqian&nbsp;tmp]$&nbsp;ls
+test</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4 style="white-space: normal;">如何查看文件的访问时间，修改时间，例如查看文件 test 的状态</h4></li></ul><h4 style="white-space: normal;">stat test<br/></h4><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;tmp]$&nbsp;stat&nbsp;test
+&nbsp;&nbsp;File:&nbsp;‘test’
+&nbsp;&nbsp;Size:&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Blocks:&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IO&nbsp;Block:&nbsp;4096&nbsp;&nbsp;&nbsp;regular&nbsp;empty&nbsp;file
+Device:&nbsp;fd01h/64769d	Inode:&nbsp;855767&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links:&nbsp;1
+Access:&nbsp;(0664/-rw-rw-r--)&nbsp;&nbsp;Uid:&nbsp;(&nbsp;1002/123itools)&nbsp;&nbsp;&nbsp;Gid:&nbsp;(&nbsp;1007/123itools)
+Access:&nbsp;2016-11-13&nbsp;19:18:52.280760804&nbsp;+0800
+Modify:&nbsp;2016-11-13&nbsp;19:18:52.280760804&nbsp;+0800
+Change:&nbsp;2016-11-13&nbsp;19:18:52.280760804&nbsp;+0800
+&nbsp;Birth:&nbsp;-</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>改变 test 文件的访问时间为当前时间，Access 时间由 19:18:52 切换到 19:20:14</h4></li></ul><h4>touch -a test<br/></h4><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;tmp]$&nbsp;stat&nbsp;test
+&nbsp;&nbsp;File:&nbsp;‘test’
+&nbsp;&nbsp;Size:&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Blocks:&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IO&nbsp;Block:&nbsp;4096&nbsp;&nbsp;&nbsp;regular&nbsp;empty&nbsp;file
+Device:&nbsp;fd01h/64769d	Inode:&nbsp;855767&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links:&nbsp;1
+Access:&nbsp;(0664/-rw-rw-r--)&nbsp;&nbsp;Uid:&nbsp;(&nbsp;1002/123itools)&nbsp;&nbsp;&nbsp;Gid:&nbsp;(&nbsp;1007/123itools)
+Access:&nbsp;2016-11-13&nbsp;19:18:52.280760804&nbsp;+0800
+Modify:&nbsp;2016-11-13&nbsp;19:18:52.280760804&nbsp;+0800
+Change:&nbsp;2016-11-13&nbsp;19:18:52.280760804&nbsp;+0800
+&nbsp;Birth:&nbsp;-
+[123itools@shengqian&nbsp;tmp]$&nbsp;touch&nbsp;-a&nbsp;test
+[123itools@shengqian&nbsp;tmp]$&nbsp;stat&nbsp;test
+&nbsp;&nbsp;File:&nbsp;‘test’
+&nbsp;&nbsp;Size:&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Blocks:&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IO&nbsp;Block:&nbsp;4096&nbsp;&nbsp;&nbsp;regular&nbsp;empty&nbsp;file
+Device:&nbsp;fd01h/64769d	Inode:&nbsp;855767&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links:&nbsp;1
+Access:&nbsp;(0664/-rw-rw-r--)&nbsp;&nbsp;Uid:&nbsp;(&nbsp;1002/123itools)&nbsp;&nbsp;&nbsp;Gid:&nbsp;(&nbsp;1007/123itools)
+Access:&nbsp;2016-11-13&nbsp;19:20:14.830962102&nbsp;+0800
+Modify:&nbsp;2016-11-13&nbsp;19:18:52.280760804&nbsp;+0800
+Change:&nbsp;2016-11-13&nbsp;19:20:14.830962102&nbsp;+0800
+&nbsp;Birth:&nbsp;-</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>改变 test 文件的修改时间为当前时间</h4></li></ul><h4>touch -m test<br/></h4><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;tmp]$&nbsp;stat&nbsp;test
+&nbsp;&nbsp;File:&nbsp;‘test’
+&nbsp;&nbsp;Size:&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Blocks:&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IO&nbsp;Block:&nbsp;4096&nbsp;&nbsp;&nbsp;regular&nbsp;empty&nbsp;file
+Device:&nbsp;fd01h/64769d	Inode:&nbsp;855767&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links:&nbsp;1
+Access:&nbsp;(0664/-rw-rw-r--)&nbsp;&nbsp;Uid:&nbsp;(&nbsp;1002/123itools)&nbsp;&nbsp;&nbsp;Gid:&nbsp;(&nbsp;1007/123itools)
+Access:&nbsp;2016-11-13&nbsp;19:20:14.830962102&nbsp;+0800
+Modify:&nbsp;2016-11-13&nbsp;19:18:52.280760804&nbsp;+0800
+Change:&nbsp;2016-11-13&nbsp;19:20:14.830962102&nbsp;+0800
+&nbsp;Birth:&nbsp;-
+[123itools@shengqian&nbsp;tmp]$&nbsp;touch&nbsp;-m&nbsp;test
+[123itools@shengqian&nbsp;tmp]$&nbsp;stat&nbsp;test
+&nbsp;&nbsp;File:&nbsp;‘test’
+&nbsp;&nbsp;Size:&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Blocks:&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IO&nbsp;Block:&nbsp;4096&nbsp;&nbsp;&nbsp;regular&nbsp;empty&nbsp;file
+Device:&nbsp;fd01h/64769d	Inode:&nbsp;855767&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links:&nbsp;1
+Access:&nbsp;(0664/-rw-rw-r--)&nbsp;&nbsp;Uid:&nbsp;(&nbsp;1002/123itools)&nbsp;&nbsp;&nbsp;Gid:&nbsp;(&nbsp;1007/123itools)
+Access:&nbsp;2016-11-13&nbsp;19:20:14.830962102&nbsp;+0800
+Modify:&nbsp;2016-11-13&nbsp;19:21:11.976101450&nbsp;+0800
+Change:&nbsp;2016-11-13&nbsp;19:21:11.976101450&nbsp;+0800
+&nbsp;Birth:&nbsp;-</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>改变 test 文件的修改时间为 2016-09-30 00:01:20</h4></li></ul><p>touch -m -d &quot;2016-09-30 00:01:20&quot; test</p><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;tmp]$&nbsp;stat&nbsp;test
+&nbsp;&nbsp;File:&nbsp;‘test’
+&nbsp;&nbsp;Size:&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Blocks:&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IO&nbsp;Block:&nbsp;4096&nbsp;&nbsp;&nbsp;regular&nbsp;empty&nbsp;file
+Device:&nbsp;fd01h/64769d	Inode:&nbsp;855767&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links:&nbsp;1
+Access:&nbsp;(0664/-rw-rw-r--)&nbsp;&nbsp;Uid:&nbsp;(&nbsp;1002/123itools)&nbsp;&nbsp;&nbsp;Gid:&nbsp;(&nbsp;1007/123itools)
+Access:&nbsp;2016-11-13&nbsp;19:20:14.830962102&nbsp;+0800
+Modify:&nbsp;2016-11-13&nbsp;19:21:11.976101450&nbsp;+0800
+Change:&nbsp;2016-11-13&nbsp;19:21:11.976101450&nbsp;+0800
+&nbsp;Birth:&nbsp;-
+[123itools@shengqian&nbsp;tmp]$&nbsp;touch&nbsp;-m&nbsp;-d&nbsp;&quot;2016-09-30&nbsp;00:01:20&quot;&nbsp;test
+[123itools@shengqian&nbsp;tmp]$&nbsp;stat&nbsp;test
+&nbsp;&nbsp;File:&nbsp;‘test’
+&nbsp;&nbsp;Size:&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Blocks:&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IO&nbsp;Block:&nbsp;4096&nbsp;&nbsp;&nbsp;regular&nbsp;empty&nbsp;file
+Device:&nbsp;fd01h/64769d	Inode:&nbsp;855767&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Links:&nbsp;1
+Access:&nbsp;(0664/-rw-rw-r--)&nbsp;&nbsp;Uid:&nbsp;(&nbsp;1002/123itools)&nbsp;&nbsp;&nbsp;Gid:&nbsp;(&nbsp;1007/123itools)
+Access:&nbsp;2016-11-13&nbsp;19:20:14.830962102&nbsp;+0800
+Modify:&nbsp;2016-09-30&nbsp;00:01:20.000000000&nbsp;+0800
+Change:&nbsp;2016-11-13&nbsp;19:22:17.860262108&nbsp;+0800
+&nbsp;Birth:&nbsp;-</pre><h3>3. 使用方法</h3><blockquote><p>touch [属性]... 文件...</p></blockquote><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-a&nbsp;</h4></li></ul><blockquote><p>修改文件的访问时间</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-m</h4></li></ul><blockquote><p>修改文件的修改时间</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-d</h4></li></ul><blockquote><p>指定要修改成的时间</p></blockquote>            </div>
             <div class="sidebar">
             <div class="dropdown">
                 <div class="input-group">
@@ -131,9 +195,11 @@ $('.has_son *').hover(
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/pwd.htm" title="cd">pwd</a></li>
 
+                                                                    <li class=""><a href="http://www.123itools.com/linux/cd.htm" title="cd">cd</a></li>
+
                                                                     <li class=""><a href="http://www.123itools.com/linux/ls.htm" title="cd">ls</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/cd.htm" title="cd">cd</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/cp.htm" title="cd">cp</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/rm.htm" title="cd">rm</a></li>
 
@@ -141,13 +207,11 @@ $('.has_son *').hover(
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/rmdir.htm" title="cd">rmdir</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/cp.htm" title="cd">cp</a></li>
-
                                                                     <li class=""><a href="http://www.123itools.com/linux/ln.htm" title="cd">ln</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/which.htm" title="cd">which</a></li>
-
                                                                     <li class=""><a href="http://www.123itools.com/linux/find.htm" title="cd">find</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/which.htm" title="cd">which</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/tar.htm" title="cd">tar</a></li>
 
@@ -160,15 +224,15 @@ $('.has_son *').hover(
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/printf.htm" title="cd">printf</a></li>
 
+                                                                    <li class=""><a href="http://www.123itools.com/linux/head.htm" title="cd">head</a></li>
+
                                                                     <li class=""><a href="http://www.123itools.com/linux/cat.htm" title="cd">cat</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/head.htm" title="cd">head</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/uniq.htm" title="cd">uniq</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/tail.htm" title="cd">tail</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/wc.htm" title="cd">wc</a></li>
-
-                                                                    <li class=""><a href="http://www.123itools.com/linux/uniq.htm" title="cd">uniq</a></li>
 
                                                                 </ul>
                             </li>
@@ -192,22 +256,22 @@ $('.has_son *').hover(
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/scp.htm" title="cd">scp</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/telnet.htm" title="cd">telnet</a></li>
-
                                                                     <li class=""><a href="http://www.123itools.com/linux/ping.htm" title="cd">ping</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/ifconfig.htm" title="cd">ifconfig</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/telnet.htm" title="cd">telnet</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/netstat.htm" title="cd">netstat</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/ifconfig.htm" title="cd">ifconfig</a></li>
 
                                                                 </ul>
                             </li>
                                                          <li class="">
                                 <div class="link"><i class="fa fa-paint-brush"></i>系统管理<i class="fa fa-chevron-down"></i></div>
                                 <ul class="submenu" style="display:none">
-                                                                    <li class=""><a href="http://www.123itools.com/linux/free.htm" title="cd">free</a></li>
-
                                                                     <li class=""><a href="http://www.123itools.com/linux/vmstat.htm" title="cd">vmstat</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/free.htm" title="cd">free</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/iostat.htm" title="cd">iostat</a></li>
 
@@ -220,6 +284,8 @@ $('.has_son *').hover(
                                                          <li class="">
                                 <div class="link"><i class="fa fa-paint-brush"></i>进程管理<i class="fa fa-chevron-down"></i></div>
                                 <ul class="submenu" style="display:none">
+                                                                    <li class=""><a href="http://www.123itools.com/linux/pstree.htm" title="cd">pstree</a></li>
+
                                                                     <li class=""><a href="http://www.123itools.com/linux/kill.htm" title="cd">kill</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/bg.htm" title="cd">bg</a></li>
@@ -228,32 +294,34 @@ $('.has_son *').hover(
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/&.htm" title="cd">&</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/pstree.htm" title="cd">pstree</a></li>
-
                                                                     <li class=""><a href="http://www.123itools.com/linux/ps.htm" title="cd">ps</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/fg.htm" title="cd">fg</a></li>
-
                                                                     <li class=""><a href="http://www.123itools.com/linux/jobs.htm" title="cd">jobs</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/fg.htm" title="cd">fg</a></li>
 
                                                                 </ul>
                             </li>
                                                          <li class="">
                                 <div class="link"><i class="fa fa-paint-brush"></i>用户管理<i class="fa fa-chevron-down"></i></div>
                                 <ul class="submenu" style="display:none">
+                                                                    <li class=""><a href="http://www.123itools.com/linux/whoami.htm" title="cd">whoami</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/su.htm" title="cd">su</a></li>
+
                                                                     <li class=""><a href="http://www.123itools.com/linux/usermod.htm" title="cd">usermod</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/groupdel.htm" title="cd">groupdel</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/groupmod.htm" title="cd">groupmod</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/groupadd.htm" title="cd">groupadd</a></li>
-
                                                                     <li class=""><a href="http://www.123itools.com/linux/id.htm" title="cd">id</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/passwd.htm" title="cd">passwd</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/groupadd.htm" title="cd">groupadd</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/userdel.htm" title="cd">userdel</a></li>
+
+                                                                    <li class=""><a href="http://www.123itools.com/linux/passwd.htm" title="cd">passwd</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/useradd.htm" title="cd">useradd</a></li>
 
