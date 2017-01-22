@@ -4,9 +4,9 @@
         <meta charset="utf-8"/>
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
-        <title>Linux命令大全 用户管理 su</title>
-        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 用户管理 su su命令 su语法"/>
-        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 用户管理 su su命令 su语法"/>
+        <title>Linux命令大全 系统管理 yum</title>
+        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 系统管理 yum yum命令 yum语法"/>
+        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 系统管理 yum yum命令 yum语法"/>
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command.css" />
@@ -100,31 +100,36 @@ $('.has_son *').hover(
 </script>
 
             <div class="containter">
-             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/su.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/su.htm">用户管理</a>><a href="http://www.123itools.com/linux/su.htm">su</a></span></div>            <div class="main" id="main">
-                <h3>1. 命令</h3><p>su -- 切换用户</p><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>当前是 root 用户，切换到 123itools 用户，不需要输入 123itools 密码</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;whoami
-root
-[root@shengqian&nbsp;~]#&nbsp;su&nbsp;123itools
-[123itools@shengqian&nbsp;root]$&nbsp;whoami
-123itools</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>当前是 123itools 用户，切换到 root 用户，需要输入 root 用户密码</h4></li></ul><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;root]$&nbsp;whoami
-123itools
-[123itools@shengqian&nbsp;root]$&nbsp;su&nbsp;root
-密码：
-[root@shengqian&nbsp;~]#&nbsp;whoami
-root</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>当前是 root 用户，切换到 123itools 用户，并且一起切换 主目录 /home/123itools</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;pwd
-/root
-[root@shengqian&nbsp;~]#&nbsp;su&nbsp;-&nbsp;123itools
-上一次登录：一&nbsp;11月&nbsp;&nbsp;7&nbsp;22:05:37&nbsp;CST&nbsp;2016pts/0&nbsp;上
-[123itools@shengqian&nbsp;~]$&nbsp;pwd
-/home/123itools</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>当前是 root 用户，切换到 123itools 用户执行 pwd 命令 和 ls -al 命令。<br/></h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;su&nbsp;-c&nbsp;pwd&nbsp;-&nbsp;123itools
-/home/123itools
-[root@shengqian&nbsp;~]#&nbsp;su&nbsp;-c&nbsp;&quot;ls&nbsp;-al&quot;&nbsp;-&nbsp;123itools
-total&nbsp;16
-drwx------&nbsp;2&nbsp;123itools&nbsp;123itools&nbsp;&nbsp;79&nbsp;Nov&nbsp;&nbsp;7&nbsp;22:04&nbsp;.
-drwxr-xr-x&nbsp;4&nbsp;root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32&nbsp;Nov&nbsp;&nbsp;7&nbsp;22:03&nbsp;..
--rw-------&nbsp;1&nbsp;123itools&nbsp;123itools&nbsp;&nbsp;33&nbsp;Nov&nbsp;&nbsp;7&nbsp;22:07&nbsp;.bash_history
--rw-r--r--&nbsp;1&nbsp;123itools&nbsp;123itools&nbsp;&nbsp;18&nbsp;Jun&nbsp;10&nbsp;&nbsp;2014&nbsp;.bash_logout
--rw-r--r--&nbsp;1&nbsp;123itools&nbsp;123itools&nbsp;193&nbsp;Jun&nbsp;10&nbsp;&nbsp;2014&nbsp;.bash_profile
--rw-r--r--&nbsp;1&nbsp;123itools&nbsp;123itools&nbsp;231&nbsp;Jun&nbsp;10&nbsp;&nbsp;2014&nbsp;.bashrc</pre><h3>3. 使用方法</h3><p>su [选项] [-] [USER [参数]...]</p><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-c, --command&lt;命令&gt;</h4></li></ul><p>向 shell 传递一个命令<br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-, -l, --login</h4></li></ul><p>切换用户，并且切换主目录<br/></p><p><br/></p>            </div>
+             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/yum.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/yum.htm">系统管理</a>><a href="http://www.123itools.com/linux/yum.htm">yum</a></span></div>            <div class="main" id="main">
+                <h3>1. 命令<br/></h3><p>yum -- 在 Redhat, CentOs 中用来管理 rpm 包的查找，安装，更新，卸载，依赖等问题。</p><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>安装 mysql</p></li></ul><p><br/></p><p>查找 mysql 相关的 rpm 包</p><pre class="brush:bash;toolbar:false">#&nbsp;yum&nbsp;search&nbsp;mysql&nbsp;
+=========================================================================================================&nbsp;N/S&nbsp;matched:&nbsp;mysql&nbsp;=========================================================================================================
+MySQL-python.x86_64&nbsp;:&nbsp;An&nbsp;interface&nbsp;to&nbsp;MySQL
+MySQL-zrm.noarch&nbsp;:&nbsp;MySQL&nbsp;backup&nbsp;manager
+akonadi-mysql.x86_64&nbsp;:&nbsp;Akonadi&nbsp;MySQL&nbsp;backend&nbsp;support
+apr-util-mysql.x86_64&nbsp;:&nbsp;APR&nbsp;utility&nbsp;library&nbsp;MySQL&nbsp;DBD&nbsp;driver
+collectd-mysql.x86_64&nbsp;:&nbsp;MySQL&nbsp;plugin&nbsp;for&nbsp;collectd
+dmlite-plugins-mysql.x86_64&nbsp;:&nbsp;MySQL&nbsp;plugin&nbsp;for&nbsp;dmlite
+dovecot-mysql.x86_64&nbsp;:&nbsp;MySQL&nbsp;back&nbsp;end&nbsp;for&nbsp;dovecot
+dpm-copy-server-mysql.x86_64&nbsp;:&nbsp;DPM&nbsp;copy&nbsp;server&nbsp;with&nbsp;MySQL&nbsp;database&nbsp;back-end
+dpm-name-server-mysql.x86_64&nbsp;:&nbsp;DPM&nbsp;name&nbsp;server&nbsp;with&nbsp;MySQL&nbsp;database&nbsp;back-end
+dpm-server-mysql.x86_64&nbsp;:&nbsp;Disk&nbsp;Pool&nbsp;Manager&nbsp;(DPM)&nbsp;server&nbsp;with&nbsp;MySQL&nbsp;database&nbsp;back-end
+mysql++.x86_64&nbsp;:&nbsp;C++&nbsp;wrapper&nbsp;for&nbsp;the&nbsp;MySQL&nbsp;C&nbsp;API
+mysql++-devel.x86_64&nbsp;:&nbsp;MySQL++&nbsp;developer&nbsp;files&nbsp;(headers,&nbsp;examples,&nbsp;etc.)
+mysql++-manuals.x86_64&nbsp;:&nbsp;MySQL++&nbsp;user&nbsp;and&nbsp;reference&nbsp;manuals
+mysql-community-bench.x86_64&nbsp;:&nbsp;MySQL&nbsp;benchmark&nbsp;suite.....</pre><p><br/></p><p>查找以 mysql 为起始字符串的 rpm 包</p><pre class="brush:bash;toolbar:false">#&nbsp;yum&nbsp;search&nbsp;mysql&nbsp;|&nbsp;grep&nbsp;&quot;^mysql&quot;&nbsp;
+mysql++.x86_64&nbsp;:&nbsp;C++&nbsp;wrapper&nbsp;for&nbsp;the&nbsp;MySQL&nbsp;C&nbsp;API
+mysql++-devel.x86_64&nbsp;:&nbsp;MySQL++&nbsp;developer&nbsp;files&nbsp;(headers,&nbsp;examples,&nbsp;etc.)
+mysql++-manuals.x86_64&nbsp;:&nbsp;MySQL++&nbsp;user&nbsp;and&nbsp;reference&nbsp;manuals
+mysql-community-bench.x86_64&nbsp;:&nbsp;MySQL&nbsp;benchmark&nbsp;suite
+mysql-community-client.i686&nbsp;:&nbsp;MySQL&nbsp;database&nbsp;client&nbsp;applications&nbsp;and&nbsp;tools
+mysql-community-client.x86_64&nbsp;:&nbsp;MySQL&nbsp;database&nbsp;client&nbsp;applications&nbsp;and&nbsp;tools
+mysql-community-common.i686&nbsp;:&nbsp;MySQL&nbsp;database&nbsp;common&nbsp;files&nbsp;for&nbsp;server&nbsp;and&nbsp;client
+mysql-community-common.x86_64&nbsp;:&nbsp;MySQL&nbsp;database&nbsp;common&nbsp;files&nbsp;for&nbsp;server&nbsp;and
+mysql-community-devel.i686&nbsp;:&nbsp;Development&nbsp;header&nbsp;files&nbsp;and&nbsp;libraries&nbsp;for&nbsp;MySQL
+mysql-community-devel.x86_64&nbsp;:&nbsp;Development&nbsp;header&nbsp;files&nbsp;and&nbsp;libraries&nbsp;for&nbsp;MySQL
+mysql-community-embedded.x86_64&nbsp;:&nbsp;MySQL&nbsp;embedded&nbsp;library
+mysql-community-embedded.i686&nbsp;:&nbsp;MySQL&nbsp;embedded&nbsp;library
+mysql-community-server.x86_64&nbsp;:&nbsp;A&nbsp;very&nbsp;fast&nbsp;and&nbsp;reliable&nbsp;SQL&nbsp;database&nbsp;server</pre><p><br/></p><p><br/></p><p>安装 mysql server</p><pre class="brush:bash;toolbar:false">#yum&nbsp;install&nbsp;mysql-community-server.x86_64</pre><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>安装过程中默认都选择 yes</p></li></ul><pre class="brush:bash;toolbar:false">#yum&nbsp;-y&nbsp;install&nbsp;mysql-community-server.x86_64</pre><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>卸载 mysql server</p></li></ul><pre class="brush:bash;toolbar:false">#yum&nbsp;erase&nbsp;mysql-community-server.x86_64</pre><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>升级 mysql server</p></li></ul><pre class="brush:bash;toolbar:false">#yum&nbsp;update&nbsp;mysql-community-server.x86_64</pre><p><br/></p><h3>3. 使用方法</h3><p>yum [options] command package</p><h4>command</h4><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>help</p></li></ul><blockquote><p>显示用法提示</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>search</p></li></ul><blockquote><p>在软件包详细信息中搜索指定字符串</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>install</p></li></ul><blockquote><p>向系统中安装一个或多个软件包</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>update</p></li></ul><blockquote><p>更新系统中的一个或多个软件包</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>repolist</p></li></ul><blockquote><p>显示已配置的源</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>reinstall</p></li></ul><blockquote><p>覆盖安装软件包</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>deplist</p></li></ul><blockquote><p>列出软件包的依赖关系</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>check-update</p></li></ul><blockquote><p>检查是否有可用的软件包更新</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>info</p></li></ul><blockquote><p>显示关于软件包或组的详细信息</p></blockquote><h4>options</h4><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>-h, --help</p></li></ul><blockquote><p>显示此帮助消息并退出</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>--version</p></li></ul><blockquote><p>显示 Yum 版本然后退出</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>-y, --assumeyes</p></li></ul><blockquote><p>回答全部问题为是</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>-v, --verbose</p></li></ul><blockquote><p>显示详尽的操作过程</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>-q, --quiet</p></li></ul><blockquote><p>静默执行</p></blockquote><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>-c [config file], --config=[config file]</p></li></ul><blockquote><p>配置文件路径</p></blockquote><p><br/></p>            </div>
             <div class="sidebar">
             <div class="dropdown">
                 <div class="input-group">
@@ -232,10 +237,10 @@ drwxr-xr-x&nbsp;4&nbsp;root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;root&nbsp;&nbsp;&
 
                                                                 </ul>
                             </li>
-                                                         <li class="">
+                                                         <li class="open">
                                 <div class="link"><i class="fa fa-paint-brush"></i>系统管理<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:none">
-                                                                    <li class=""><a href="http://www.123itools.com/linux/yum.htm" title="cd">yum</a></li>
+                                <ul class="submenu" style="display:block">
+                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/yum.htm" title="cd">yum</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/crontab.htm" title="cd">crontab</a></li>
 
@@ -270,16 +275,16 @@ drwxr-xr-x&nbsp;4&nbsp;root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;root&nbsp;&nbsp;&
 
                                                                 </ul>
                             </li>
-                                                         <li class="open">
+                                                         <li class="">
                                 <div class="link"><i class="fa fa-paint-brush"></i>用户管理<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:block">
+                                <ul class="submenu" style="display:none">
                                                                     <li class=""><a href="http://www.123itools.com/linux/useradd.htm" title="cd">useradd</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/passwd.htm" title="cd">passwd</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/whoami.htm" title="cd">whoami</a></li>
 
-                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/su.htm" title="cd">su</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/su.htm" title="cd">su</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/usermod.htm" title="cd">usermod</a></li>
 

@@ -4,9 +4,9 @@
         <meta charset="utf-8"/>
         <meta name="robots" content="all" />
         <meta name="author" content="www.123itools.com" />
-        <title>Linux命令大全 用户管理 su</title>
-        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 用户管理 su su命令 su语法"/>
-        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 用户管理 su su命令 su语法"/>
+        <title>Linux命令大全 网络管理 curl</title>
+        <meta name="keywords" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 网络管理 curl curl命令 curl语法"/>
+        <meta name="description" content="Linux命令大全 Linux命令 Linux教程 常用 命令 大全 目录 文件 系统 权限 参数 用法  选项 网络管理 curl curl命令 curl语法"/>
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/index.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="http://www.123itools.com/style/css/command.css" />
@@ -100,31 +100,57 @@ $('.has_son *').hover(
 </script>
 
             <div class="containter">
-             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/su.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/su.htm">用户管理</a>><a href="http://www.123itools.com/linux/su.htm">su</a></span></div>            <div class="main" id="main">
-                <h3>1. 命令</h3><p>su -- 切换用户</p><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>当前是 root 用户，切换到 123itools 用户，不需要输入 123itools 密码</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;whoami
-root
-[root@shengqian&nbsp;~]#&nbsp;su&nbsp;123itools
-[123itools@shengqian&nbsp;root]$&nbsp;whoami
-123itools</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>当前是 123itools 用户，切换到 root 用户，需要输入 root 用户密码</h4></li></ul><pre class="brush:bash;toolbar:false">[123itools@shengqian&nbsp;root]$&nbsp;whoami
-123itools
-[123itools@shengqian&nbsp;root]$&nbsp;su&nbsp;root
-密码：
-[root@shengqian&nbsp;~]#&nbsp;whoami
-root</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>当前是 root 用户，切换到 123itools 用户，并且一起切换 主目录 /home/123itools</h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;pwd
-/root
-[root@shengqian&nbsp;~]#&nbsp;su&nbsp;-&nbsp;123itools
-上一次登录：一&nbsp;11月&nbsp;&nbsp;7&nbsp;22:05:37&nbsp;CST&nbsp;2016pts/0&nbsp;上
-[123itools@shengqian&nbsp;~]$&nbsp;pwd
-/home/123itools</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>当前是 root 用户，切换到 123itools 用户执行 pwd 命令 和 ls -al 命令。<br/></h4></li></ul><pre class="brush:bash;toolbar:false">[root@shengqian&nbsp;~]#&nbsp;su&nbsp;-c&nbsp;pwd&nbsp;-&nbsp;123itools
-/home/123itools
-[root@shengqian&nbsp;~]#&nbsp;su&nbsp;-c&nbsp;&quot;ls&nbsp;-al&quot;&nbsp;-&nbsp;123itools
-total&nbsp;16
-drwx------&nbsp;2&nbsp;123itools&nbsp;123itools&nbsp;&nbsp;79&nbsp;Nov&nbsp;&nbsp;7&nbsp;22:04&nbsp;.
-drwxr-xr-x&nbsp;4&nbsp;root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32&nbsp;Nov&nbsp;&nbsp;7&nbsp;22:03&nbsp;..
--rw-------&nbsp;1&nbsp;123itools&nbsp;123itools&nbsp;&nbsp;33&nbsp;Nov&nbsp;&nbsp;7&nbsp;22:07&nbsp;.bash_history
--rw-r--r--&nbsp;1&nbsp;123itools&nbsp;123itools&nbsp;&nbsp;18&nbsp;Jun&nbsp;10&nbsp;&nbsp;2014&nbsp;.bash_logout
--rw-r--r--&nbsp;1&nbsp;123itools&nbsp;123itools&nbsp;193&nbsp;Jun&nbsp;10&nbsp;&nbsp;2014&nbsp;.bash_profile
--rw-r--r--&nbsp;1&nbsp;123itools&nbsp;123itools&nbsp;231&nbsp;Jun&nbsp;10&nbsp;&nbsp;2014&nbsp;.bashrc</pre><h3>3. 使用方法</h3><p>su [选项] [-] [USER [参数]...]</p><h3>4. 参数说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-c, --command&lt;命令&gt;</h4></li></ul><p>向 shell 传递一个命令<br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><h4>-, -l, --login</h4></li></ul><p>切换用户，并且切换主目录<br/></p><p><br/></p>            </div>
+             <div id="position"><span>当前位置></span><span><a href="http://www.123itools.com/linux/curl.htm">Linux命令大全</a>><a href="http://www.123itools.com/linux/curl.htm">网络管理</a>><a href="http://www.123itools.com/linux/curl.htm">curl</a></span></div>            <div class="main" id="main">
+                <h3>1. 命令</h3><p>curl -- 向服务器发送请求，接受响应，并输出结果。</p><h3>2. 使用样例</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>向服务器发送 GET 请求，获取网页源码。301 返回码代表重定向。</p></li></ul><pre class="brush:bash;toolbar:false">localhost:~&nbsp;zhangguanghui$&nbsp;curl&nbsp;-X&nbsp;GET&nbsp;www.sina.com
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;301&nbsp;Moved&nbsp;Permanently&lt;/title&gt;&lt;/head&gt;
+&lt;body&nbsp;bgcolor=&quot;white&quot;&gt;
+&lt;center&gt;&lt;h1&gt;301&nbsp;Moved&nbsp;Permanently&lt;/h1&gt;&lt;/center&gt;
+&lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>向服务器发送 GET 请求，获取网页源码，并写入到本地文件</p></li></ul><pre class="brush:bash;toolbar:false">localhost:~&nbsp;zhangguanghui$&nbsp;curl&nbsp;-o&nbsp;a.txt&nbsp;-X&nbsp;GET&nbsp;www.sina.com&nbsp;
+&nbsp;&nbsp;%&nbsp;Total&nbsp;&nbsp;&nbsp;&nbsp;%&nbsp;Received&nbsp;%&nbsp;Xferd&nbsp;&nbsp;Average&nbsp;Speed&nbsp;&nbsp;&nbsp;Time&nbsp;&nbsp;&nbsp;&nbsp;Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time&nbsp;&nbsp;Current
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dload&nbsp;&nbsp;Upload&nbsp;&nbsp;&nbsp;Total&nbsp;&nbsp;&nbsp;Spent&nbsp;&nbsp;&nbsp;&nbsp;Left&nbsp;&nbsp;Speed
+100&nbsp;&nbsp;&nbsp;178&nbsp;&nbsp;100&nbsp;&nbsp;&nbsp;178&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;6043&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;--:--:--&nbsp;--:--:--&nbsp;--:--:--&nbsp;&nbsp;6137
+localhost:~&nbsp;zhangguanghui$&nbsp;cat&nbsp;a.txt
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;301&nbsp;Moved&nbsp;Permanently&lt;/title&gt;&lt;/head&gt;
+&lt;body&nbsp;bgcolor=&quot;white&quot;&gt;
+&lt;center&gt;&lt;h1&gt;301&nbsp;Moved&nbsp;Permanently&lt;/h1&gt;&lt;/center&gt;
+&lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>显示 response header</p></li></ul><pre class="brush:bash;toolbar:false">localhost:~&nbsp;zhangguanghui$&nbsp;curl&nbsp;-i&nbsp;-X&nbsp;GET&nbsp;www.sina.com
+HTTP/1.1&nbsp;301&nbsp;Moved&nbsp;Permanently
+Server:&nbsp;nginx
+Date:&nbsp;Sat,&nbsp;14&nbsp;Jan&nbsp;2017&nbsp;01:23:31&nbsp;GMT
+Content-Type:&nbsp;text/html
+Location:&nbsp;http://www.sina.com.cn/
+Expires:&nbsp;Sat,&nbsp;14&nbsp;Jan&nbsp;2017&nbsp;01:25:31&nbsp;GMT
+Cache-Control:&nbsp;max-age=120
+Age:&nbsp;107
+Content-Length:&nbsp;178
+X-Cache:&nbsp;HIT&nbsp;from&nbsp;xd33-93.sina.com.cn
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;301&nbsp;Moved&nbsp;Permanently&lt;/title&gt;&lt;/head&gt;
+&lt;body&nbsp;bgcolor=&quot;white&quot;&gt;
+&lt;center&gt;&lt;h1&gt;301&nbsp;Moved&nbsp;Permanently&lt;/h1&gt;&lt;/center&gt;
+&lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>向服务器发送 post 请求，提交表单</p></li></ul><pre class="brush:bash;toolbar:false">localhost:~&nbsp;zhangguanghui$&nbsp;curl&nbsp;-i&nbsp;-X&nbsp;POST&nbsp;-d&nbsp;&#39;json_data={&quot;a&quot;:1}&#39;&nbsp;www.123itools.com
+HTTP/1.1&nbsp;200&nbsp;OK
+Server:&nbsp;nginx/1.4.2
+Date:&nbsp;Sat,&nbsp;14&nbsp;Jan&nbsp;2017&nbsp;01:24:33&nbsp;GMT
+Content-Type:&nbsp;text/html;&nbsp;charset=UTF-8
+Transfer-Encoding:&nbsp;chunked
+Connection:&nbsp;keep-alive
+X-Powered-By:&nbsp;PHP/5.5.13</pre><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>向服务器发送 post 请求，设置 header 信息</p></li></ul><pre class="brush:bash;toolbar:false">localhost:~&nbsp;zhangguanghui$&nbsp;curl&nbsp;-i&nbsp;-X&nbsp;POST&nbsp;-H&nbsp;&quot;&#39;Content-type&#39;:&#39;application/x-www-form-urlencoded&#39;,&nbsp;&#39;charset&#39;:&#39;utf-8&#39;,&nbsp;&#39;Accept&#39;:&nbsp;&#39;text/plain&#39;&quot;&nbsp;-d&nbsp;&#39;json_data={&quot;a&quot;:1}&#39;&nbsp;www.123itools.com
+HTTP/1.1&nbsp;200&nbsp;OK
+Server:&nbsp;nginx/1.4.2
+Date:&nbsp;Sat,&nbsp;14&nbsp;Jan&nbsp;2017&nbsp;01:25:55&nbsp;GMT
+Content-Type:&nbsp;text/html;&nbsp;charset=UTF-8
+Transfer-Encoding:&nbsp;chunked
+Connection:&nbsp;keep-alive
+X-Powered-By:&nbsp;PHP/5.5.13</pre><h3>3. 使用说明</h3><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>命令行</p></li></ul><p><br/></p><p>curl [options] url</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>-X, --request &lt;command&gt;</p></li></ul><p><br/></p><p>指定 method，支持 GET, POST, HEAD, DELETE</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>-i, --include&nbsp;</p></li></ul><p><br/></p><p>指定返回的请求包含 header 信息</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>-H, --header &lt;header&gt;</p></li></ul><p><br/></p><p>指定 header 信息</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>-e, --referer &lt;URL&gt;</p></li></ul><p><br/></p><p>指定 referer 字段</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>-A, --user-agent &lt;name&gt;</p></li></ul><p><br/></p><p>指定 user-agent 信息</p><p><br/></p><ul class=" list-paddingleft-2" style="list-style-type: disc;"><li><p>-b, --cookie &lt;data&gt;</p></li></ul><p><br/></p><p>指定 cookie 信息</p><p><br/></p>            </div>
             <div class="sidebar">
             <div class="dropdown">
                 <div class="input-group">
@@ -211,12 +237,12 @@ drwxr-xr-x&nbsp;4&nbsp;root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;root&nbsp;&nbsp;&
 
                                                                 </ul>
                             </li>
-                                                         <li class="">
+                                                         <li class="open">
                                 <div class="link"><i class="fa fa-paint-brush"></i>网络管理<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:none">
+                                <ul class="submenu" style="display:block">
                                                                     <li class=""><a href="http://www.123itools.com/linux/wget.htm" title="cd">wget</a></li>
 
-                                                                    <li class=""><a href="http://www.123itools.com/linux/curl.htm" title="cd">curl</a></li>
+                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/curl.htm" title="cd">curl</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/ssh.htm" title="cd">ssh</a></li>
 
@@ -270,16 +296,16 @@ drwxr-xr-x&nbsp;4&nbsp;root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;root&nbsp;&nbsp;&
 
                                                                 </ul>
                             </li>
-                                                         <li class="open">
+                                                         <li class="">
                                 <div class="link"><i class="fa fa-paint-brush"></i>用户管理<i class="fa fa-chevron-down"></i></div>
-                                <ul class="submenu" style="display:block">
+                                <ul class="submenu" style="display:none">
                                                                     <li class=""><a href="http://www.123itools.com/linux/useradd.htm" title="cd">useradd</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/passwd.htm" title="cd">passwd</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/whoami.htm" title="cd">whoami</a></li>
 
-                                                                    <li class="now_command"><a href="http://www.123itools.com/linux/su.htm" title="cd">su</a></li>
+                                                                    <li class=""><a href="http://www.123itools.com/linux/su.htm" title="cd">su</a></li>
 
                                                                     <li class=""><a href="http://www.123itools.com/linux/usermod.htm" title="cd">usermod</a></li>
 
