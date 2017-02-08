@@ -86,7 +86,7 @@
             $.ajax({
                 type:'post',
                 data: postData,
-                url: 'apidoc_controller/getAllTitle',
+                url: 'getAllTitle',
                 success:function(data) {
                     console.log(data);
                     var storage=window.localStorage;
@@ -113,6 +113,8 @@
             var dom = display_suggestions.map(function(indice) {
                 return '<li role="presentation" onclick="updateUrl(\'' + indice['url'] + '\');">' + indice['title'] + '</li>'
             }).join("\n");
+
+            console.log(dom);
 
             if(dom){
                 $('#searchList').html(dom);
