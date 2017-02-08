@@ -6,7 +6,7 @@
     <meta name="author" content="www.123itools.com" />
     <meta name="360-site-verification" content="4d7c97467fc2d215cd2bae44e63ec76e" />
     <meta name="google-site-verification" content="wJHmpaG5IpZT-QrPKHh6ugEQWmu8jCePnavT_xHchMM" />
-    <title>json格式化,json压缩,json在线解析,json格式化工具</title>
+    <title>json格式化,json压缩,json转义</title>
     <?php include('meta.php');?>
     <meta property="og:type" content="article" />
     <meta property="og:title" content="JSON格式,JS,CSS压缩,Md5编码,Base64编码,URL编码,时间戳转换,正则表达式在线解析,Linux命令大全,Git命令大全,Redis命令大全" />
