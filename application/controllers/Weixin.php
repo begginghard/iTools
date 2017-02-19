@@ -13,30 +13,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 date_default_timezone_set('Asia/Shanghai');
 
 class Weixin extends CI_Controller {
+    private function verifyService() {
+        $echostr = isset($_GET['echostr']) ? $_GET['echostr'] : "";
+        echo $echostr;
+    }
+
     public function index() {
-	log_message("error", "------test------");
-	var_dump($_REQUEST);
-	var_dump($_GET);
-        $timestamp = $_REQUEST['timestamp'];
-        $nonce = $_REQUEST['nonce'];
-        $msgSignature = $REQUEST['signature'];
-        $echostr = $_REQUEST['echostr'];
-        $token = "zgh1988";
-	log_message("info", $timestamp . $nonce . $msgSignature);
-        //验证安全签名
-        $sha1 = new SHA1;
-        $array = $sha1->getSHA1($token, $timestamp, $nonce);
-        $ret = $array[0];
-
-        if ($ret != 0) {
-            return $ret;
+        $data = $GLOBALS["HTTP_RAW_POST_DATA"];
+        if (!isset($data)) {
+            log_message("error", "no data");
+            echo "";
         }
 
-        $signature = $array[1];
-        if ($signature != $msgSignature) {
-            return ErrorCode::$ValidateSignatureError;
+        $xmlParse = new XMLParse();
+        $dataArray = $xmlParse.extract($data);
+        if ($dataArray != 0) {
+            log_message("error", "failed to format xml");
+            echo "";
         }
 
-        return $echostr;
+        $toUserName = $dataArray[1];
+        $fromUserName = $dataArray[2];
+        $msgType = $dataArray[3];
+        $content = $dataArray[4];
+
+        $msg = $xmlParse.generate($fromUserName, $toUserName, $msgType, "Test");
+        echo $msg;
     }
 }
