@@ -56,13 +56,13 @@ class XMLParse
     public function generate($toUserName, $fromUserName, $msgType, $content)
     {
         $format = "<xml>
-<toUserName><![CDATA[%s]]</toUserName>
+<ToUserName><![CDATA[%s]]</ToUserName>
 <FromUserName><![CDATA[公众号]]></FromUserName>
 <CreateTime>%s</CreateTime>
 <MsgType><![CDATA[%s]]></MsgType>
 <Content><![CDATA[%s]]></Content>
 </xml>";
-        return sprintf($toUserName, $fromUserName, date(), $msgType, $content);
+        return sprintf($toUserName, $fromUserName, time(), $msgType, $content);
     }
 
 }

@@ -27,7 +27,7 @@ class Weixin extends CI_Controller {
 
         $xmlParse = new XMLParse();
         $dataArray = $xmlParse->extract($data);
-        if ($dataArray != 0) {
+        if ($dataArray[0] != 0) {
             log_message("error", "failed to format xml");
             echo "";
         }
