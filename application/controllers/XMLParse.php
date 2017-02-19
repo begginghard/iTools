@@ -33,7 +33,7 @@ class XMLParse
             $fromUserNameArray =$xml->getElementsByTagName('FromUserName');
             $fromUserName = $fromUserNameArray->item(0)->nodeValue;
 
-            $msgTypeArray = $xml->getElementsByTagName('msgType');
+            $msgTypeArray = $xml->getElementsByTagName('MsgType');
             $msgType = $msgTypeArray->item(0)->nodeValue;
 
             $ContentArray = $xml->getElementsByTagName('Content');
