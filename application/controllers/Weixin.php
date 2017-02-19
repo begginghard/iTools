@@ -8,9 +8,9 @@
 
 include_once "SHA1.php";
 include_once "ErrorCode.php";
+include_once "XMLParse.php";
 
 defined('BASEPATH') OR exit('No direct script access allowed');
-date_default_timezone_set('Asia/Shanghai');
 
 class Weixin extends CI_Controller {
     private function verifyService() {
@@ -26,7 +26,7 @@ class Weixin extends CI_Controller {
         }
 
         $xmlParse = new XMLParse();
-        $dataArray = $xmlParse.extract($data);
+        $dataArray = $xmlParse->extract($data);
         if ($dataArray != 0) {
             log_message("error", "failed to format xml");
             echo "";
@@ -37,7 +37,7 @@ class Weixin extends CI_Controller {
         $msgType = $dataArray[3];
         $content = $dataArray[4];
 
-        $msg = $xmlParse.generate($fromUserName, $toUserName, $msgType, "Test");
+        $msg = $xmlParse->generate($fromUserName, $toUserName, $msgType, "Test");
         echo $msg;
     }
 }
