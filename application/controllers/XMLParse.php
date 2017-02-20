@@ -36,14 +36,26 @@ class XMLParse
             $msgTypeArray = $xml->getElementsByTagName('MsgType');
             $msgType = $msgTypeArray->item(0)->nodeValue;
 
-            $ContentArray = $xml->getElementsByTagName('Content');
-            $content = $ContentArray->item(0)->nodeValue;
-
-            return array(0, $toUserName, $fromUserName, $msgType, $content);
+            if ($msgType == "text") {
+                $ContentArray = $xml->getElementsByTagName('Content');
+                $content = $ContentArray->item(0)->nodeValue;
+                return array(0, $msgType, $toUserName, $fromUserName, $content);
+            } elseif ($msgType == "image") {
+                $mediaIdArray = $xml->getElementsByTagName('MediaId');
+                $mediaId = $mediaIdArray->item(0)->nodeValue;
+                return array(0, $msgType, $toUserName, $fromUserName, $mediaId);
+            } else {
+                return array(ErrorCode::$ValidateMsgTypeError);
+            }
         } catch (Exception $e) {
             //print $e . "\n";
-            return array(ErrorCode::$ParseXmlError, null, null, null, null);
+            return array(ErrorCode::$ParseXmlError);
         }
+    }
+
+
+    public function extractText($xmltext) {
+
     }
 
     /**
@@ -53,16 +65,29 @@ class XMLParse
      * @param string $timestamp 时间戳
      * @param string $nonce 随机字符串
      */
-    public function generate($toUserName, $fromUserName, $msgType, $content)
+    public function generateText($toUserName, $fromUserName,  $content)
     {
         $format = "<xml>
 <ToUserName><![CDATA[%s]]></ToUserName>
 <FromUserName><![CDATA[%s]]></FromUserName>
 <CreateTime>%s</CreateTime>
-<MsgType><![CDATA[%s]]></MsgType>
+<MsgType><![CDATA[text]]></MsgType>
 <Content><![CDATA[%s]]></Content>
 </xml>";
-        return sprintf($format, $toUserName, $fromUserName, time(), $msgType, $content);
+        return sprintf($format, $toUserName, $fromUserName, time(), $content);
+    }
+
+    public function generateImage($toUserName, $fromUserName, $mediaId) {
+        $format = "<xml>
+<ToUserName><![CDATA[%s]]></ToUserName>
+<FromUserName><![CDATA[%s]]></FromUserName>
+<CreateTime>%s</CreateTime>
+<MsgType><![CDATA[image]]></MsgType>
+<Image>
+<MediaId><![CDATA[%s]]></MediaId>
+</Image>
+</xml>";
+        return sprintf($format, $toUserName, $fromUserName, time(), $mediaId);
     }
 
 }

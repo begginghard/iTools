@@ -18,7 +18,8 @@ class Weixin extends CI_Controller {
         echo $echostr;
     }
 
-    public function index() {
+    public function index()
+    {
         $data = $GLOBALS["HTTP_RAW_POST_DATA"];
         if (!isset($data)) {
             log_message("error", "no data");
@@ -32,18 +33,30 @@ class Weixin extends CI_Controller {
             echo "";
         }
 
-        $toUserName = $dataArray[1];
-        $fromUserName = $dataArray[2];
-        $msgType = $dataArray[3];
-        $content = $dataArray[4];
-	
-	log_message("info", "toUserName = " . $toUserName 
-		. " fromUserName = " . $fromUserName
-		. " msgType = " . $msgType
-		. " content = " . $content);
+        $msgType = $dataArray[1];
+        $toUserName = $dataArray[2];
+        $fromUserName = $dataArray[3];
 
-        $msg = $xmlParse->generate($fromUserName, $toUserName, $msgType, "Test");
-	log_message("info", $msg);
-        echo $msg;
+        if ($msgType == "text") {
+            $content = $dataArray[4];
+            log_message("info", "toUserName = " . $toUserName
+                . " fromUserName = " . $fromUserName
+                . " msgType = " . $msgType
+                . " content = " . $content);
+            $msg = $xmlParse->generateText($fromUserName, $toUserName, "Test");
+            log_message("info", $msg);
+            echo $msg;
+        } elseif ($msgType == "image") {
+            $mediaId = $dataArray[4];
+            log_message("info", "toUserName = " . $toUserName
+                . " fromUserName = " . $fromUserName
+                . " msgType = " . $msgType
+                . " mediaId = " . $mediaId);
+            $msg = $xmlParse->generateImage($fromUserName, $toUserName, $mediaId);
+            log_message("info", $msg);
+            echo $msg;
+        } else {
+            echo "";
+        }
     }
 }
