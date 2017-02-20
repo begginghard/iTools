@@ -36,8 +36,14 @@ class Weixin extends CI_Controller {
         $fromUserName = $dataArray[2];
         $msgType = $dataArray[3];
         $content = $dataArray[4];
+	
+	log_message("info", "toUserName = " . $toUserName 
+		. " fromUserName = " . $fromUserName
+		. " msgType = " . $msgType
+		. " content = " . $content);
 
         $msg = $xmlParse->generate($fromUserName, $toUserName, $msgType, "Test");
+	log_message("info", $msg);
         echo $msg;
     }
 }
