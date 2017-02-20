@@ -43,7 +43,7 @@ class Weixin extends CI_Controller {
                 . " fromUserName = " . $fromUserName
                 . " msgType = " . $msgType
                 . " content = " . $content);
-            $msg = $xmlParse->generateText($fromUserName, $toUserName, "Test");
+            $msg = $xmlParse->generateText($fromUserName, $toUserName, $content);
             log_message("info", $msg);
             echo $msg;
         } elseif ($msgType == "image") {
